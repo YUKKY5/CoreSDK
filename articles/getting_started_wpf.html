@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Getting started with WPF </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Getting started with WPF ">
+    <meta name="generator" content="docfx 2.10.2.0">
+    
+    <link rel="shortcut icon" href=".././images/favicons.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:rel" content="../">
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse navbar_center ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src=".././images/tobii_logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="docs_getting_started_wpf_chapter">
+              <h1 id="getting-started-with-wpf">Getting started with WPF</h1>
+              
+<p>Here we are going to show how easy it is to add gaze features into your WPF application.
+You can tag along while we create a new WPF application or just get the most important parts
+and add gaze features to your existing application.</p>
+<h2 id="installation">Installation</h2>
+<p>No development for eye tracking could successfully be done without the eye tracking device itself. 
+Please, make sure that the eye tracker and its corresponding software is working properly before proceeding. </p>
+<p>If you have a laptop or monitor with a built-in eye tracker you are most probably ready to start. 
+However, if you possess a peripheral eye tracker please follow the instructions provided with your device to 
+download and install the Tobii EyeX SDK from <a href="http://developer.tobii.com/">developer.tobii.com</a>.</p>
+<h2 id="create-a-new-wpf-application">Create a new WPF application.</h2>
+<p>An easy way to start exploring the eye tracking is to create or use an existing WPF application in 
+C# by using Visual Studio.</p>
+<h3 id="installation-of-the-unified-foundations-package">Installation of the Unified Foundations package</h3>
+<p>The <code>Tobii.EyeX.UnifiedFoundation</code> provides all tools needed to start exploring the eye tracking features. 
+We have chosen to reference this package from NuGet server via the solution explorer that hosts your project. 
+The NuGet package manager is a great and convenient way to add 3rd party libraries, such as the Unified Foundations, 
+to your application.</p>
+<p>We add the Unified Foundations package by:</p>
+<ul>
+<li><p>Right click on the project&#39;s reference folder and choose <code>Manage NuGet Packages...</code> from the menu. </p>
+</li>
+<li><p>Browse for the <code>Tobii.EyeX.UnifiedFoundation</code> package and click install. The project shall now be referencing 
+<code>Tobii.EyeX.Model.dll</code> and <code>Tobii.EyeX.Net.dll</code>. Also, notice that <code>project.json</code> has been added/updated 
+in the project folder. </p>
+</li>
+</ul>
+<p>Configure the build architecture to <code>x86</code> to prevent potential warnings and build errors.</p>
+<h3 id="interaction-engine">Interaction Engine</h3>
+<p>The Interaction Engine is part of the Tobii Core Software Bundle and works as a back-end which provides 
+connection to the eye tracker, keeps firmware up-to-date and makes development for eye tracking easier.</p>
+<p>In order for your application to use the eye tracker it needs to be registered as an Interaction Engine client. 
+Open the <code>App.xaml.cs</code> of your WPF application and add the following code:</p>
+<pre><code class="lang-csharp">// Inside App.xaml.cs
+
+...
+using Tobii.EyeX;
+using Tobii.EyeX.Wpf;
+
+...
+
+public partial class App : Application
+{
+    private Host _host;
+    private WpfInteractorAgent _wpfInteractorAgent;
+
+    protected override void OnStartup(StartupEventArgs e)
+    {
+        _host = new Host();
+        _wpfInteractorAgent = _host.InitializeWpfAgent();
+    }
+
+    protected override void OnExit(ExitEventArgs e)
+    {
+        _host.Dispose();
+        base.OnExit(e);
+    }
+}
+</code></pre><p>For now, we do not care about the precise meaning of this code. We will look into the details later in the 
+<a class="xref" href="interactors.html">Interactors</a> chapter. The main thing here is to get the application 
+up and running.</p>
+<h2 id="lets-code">Let&#39;s code</h2>
+<p>Now when all components have been installed we are ready to write some code. In this example we have 
+chosen to let the window change color when the user is looking at it.</p>
+<h3 id="gazeaware">GazeAware</h3>
+<p>In order to figure out if the user is looking at the window we use the <a class="xref" href="../api/Tobii.EyeX.GazeAwareBehavior.html">GazeAwareBehavior</a>.</p>
+<p>So let&#39;s specify that the <code>Grid</code> shall become <code>gaze aware</code> by typing the following code:</p>
+<pre><code class="lang-xml">&lt;Window 
+        ...
+        xmlns:tobii=&quot;clr-namespace:Tobii.EyeX.Wpf;assembly=Tobii.EyeX.Net&quot;
+        ...
+        &gt;
+    &lt;Grid x:Name=&quot;LayoutRoot&quot;
+          tobii:Behaviors.IsGazeAware=&quot;True&quot;&gt;
+        &lt;Grid.Style&gt;
+            &lt;Style TargetType=&quot;Grid&quot;&gt;
+                &lt;Setter Property=&quot;Background&quot; Value=&quot;White&quot; /&gt;
+
+                &lt;Style.Triggers&gt;
+                    &lt;Trigger Property=&quot;tobii:Behaviors.HasGaze&quot; Value=&quot;True&quot;&gt;
+                        &lt;Setter Property=&quot;Background&quot; Value=&quot;Magenta&quot; /&gt;
+                    &lt;/Trigger&gt;
+                &lt;/Style.Triggers&gt;
+            &lt;/Style&gt;
+        &lt;/Grid.Style&gt;
+    &lt;/Grid&gt;
+&lt;/Window&gt;
+</code></pre><p>Just to emphasize what we did:</p>
+<ul>
+<li>We have added the attached property <code>Behaviors.IsGazeAware = &quot;True&quot;</code> to the <code>Grid</code> element. </li>
+<li>Also we have created a style for the <code>Grid</code> control in which we put a trigger on another attached property, the <code>Behaviors.HasGaze</code>. 
+It means that <code>Grid</code> will have white background when nobody is looking at the window and magenta when user is looking at the window.</li>
+</ul>
+<p>Run the example to that it works.</p>
+<p>From here you can start reading about <a class="xref" href="interactors.html">Interactors</a> or jump directly into the <a class="xref" href="wpf.html">WPF</a> 
+chapter to find out what other features based on gaze you can use in a WPF application.</p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

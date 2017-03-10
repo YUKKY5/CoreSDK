@@ -1,0 +1,697 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class InteractorAgent
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class InteractorAgent
+   ">
+    <meta name="generator" content="docfx 2.10.2.0">
+    
+    <link rel="shortcut icon" href=".././images/favicons.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse navbar_center ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src=".././images/tobii_logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Tobii_EyeX_InteractorAgent" data-uid="Tobii.EyeX.InteractorAgent">Class InteractorAgent
+              </h1>
+              <div class="markdown level0 summary"><p>Base class for an interactor agent.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">InteractorAgent</span></div>
+              </div>
+              <h6><strong>Namespace</strong>:Tobii.EyeX</h6>
+              <h6><strong>Assembly</strong>:Tobii.EyeX.Net.dll</h6>
+              <h5 id="Tobii_EyeX_InteractorAgent_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public abstract class InteractorAgent : object, IInteractorAgent, IDisposable</code></pre>
+              </div>
+              <h3 id="constructors">Constructors
+              </h3>
+              
+              
+              <a id="Tobii_EyeX_InteractorAgent__ctor_" data-uid="Tobii.EyeX.InteractorAgent.#ctor*"></a>
+              <h4 id="Tobii_EyeX_InteractorAgent__ctor_System_String_" data-uid="Tobii.EyeX.InteractorAgent.#ctor(System.String)">InteractorAgent(String)</h4>
+              <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Tobii.EyeX.InteractorAgent.html">InteractorAgent</a> class.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected InteractorAgent(string agentId)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">agentId</span></td>
+                    <td><p>The agent identifier.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="properties">Properties
+              </h3>
+              
+              
+              <a id="Tobii_EyeX_InteractorAgent_Id_" data-uid="Tobii.EyeX.InteractorAgent.Id*"></a>
+              <h4 id="Tobii_EyeX_InteractorAgent_Id" data-uid="Tobii.EyeX.InteractorAgent.Id">Id</h4>
+              <div class="markdown level1 summary"><p>Gets the interactor agent identifier.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string Id { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><p>The interactor agent identifier.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Tobii.EyeX.IInteractorAgent.html#Tobii_EyeX_IInteractorAgent_Id">IInteractorAgent.Id</a></div>
+              
+              
+              <a id="Tobii_EyeX_InteractorAgent_IsDisposed_" data-uid="Tobii.EyeX.InteractorAgent.IsDisposed*"></a>
+              <h4 id="Tobii_EyeX_InteractorAgent_IsDisposed" data-uid="Tobii.EyeX.InteractorAgent.IsDisposed">IsDisposed</h4>
+              <div class="markdown level1 summary"><p>Gets a value indicating whether the agent is disposed.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool IsDisposed { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><p><code>true</code> if this agent is disposed; otherwise, <code>false</code>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_EyeX_InteractorAgent_SnapshotsSuspended_" data-uid="Tobii.EyeX.InteractorAgent.SnapshotsSuspended*"></a>
+              <h4 id="Tobii_EyeX_InteractorAgent_SnapshotsSuspended" data-uid="Tobii.EyeX.InteractorAgent.SnapshotsSuspended">SnapshotsSuspended</h4>
+              <div class="markdown level1 summary"><p>Gets a value indicating that agent won&#39;t populate snapshot with interactors.
+When all agents per client are suspended snapshots won&#39;t be created and commited at all. </p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual bool SnapshotsSuspended { get; protected set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Tobii.EyeX.IInteractorAgent.html#Tobii_EyeX_IInteractorAgent_SnapshotsSuspended">IInteractorAgent.SnapshotsSuspended</a></div>
+              <h3 id="methods">Methods
+              </h3>
+              
+              
+              <a id="Tobii_EyeX_InteractorAgent_Dispose_" data-uid="Tobii.EyeX.InteractorAgent.Dispose*"></a>
+              <h4 id="Tobii_EyeX_InteractorAgent_Dispose" data-uid="Tobii.EyeX.InteractorAgent.Dispose">Dispose()</h4>
+              <div class="markdown level1 summary"><p>Disposes the interactor agent.
+Should be called before removing the interactor agent from the <a class="xref" href="Tobii.EyeX.Host.html">Host</a>.
+Will be called by the <a class="xref" href="Tobii.EyeX.Host.html">Host</a> at shutdown.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+              </div>
+              
+              
+              <a id="Tobii_EyeX_InteractorAgent_Dispose_" data-uid="Tobii.EyeX.InteractorAgent.Dispose*"></a>
+              <h4 id="Tobii_EyeX_InteractorAgent_Dispose_System_Boolean_" data-uid="Tobii.EyeX.InteractorAgent.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><span class="parametername">disposing</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_EyeX_InteractorAgent_FindInteractorsAsync_" data-uid="Tobii.EyeX.InteractorAgent.FindInteractorsAsync*"></a>
+              <h4 id="Tobii_EyeX_InteractorAgent_FindInteractorsAsync_Tobii_EyeX_Model_Query_CancellationToken_" data-uid="Tobii.EyeX.InteractorAgent.FindInteractorsAsync(Tobii.EyeX.Model.Query,CancellationToken)">FindInteractorsAsync(Query, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Finds the interactors affected by the provided <a class="xref" href="Tobii.EyeX.Model.Query.html">Query</a>.
+This operation can be cancelled using the specified <see cref="!:CancellationToken"></see>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected abstract Task&lt;IEnumerable&lt;IInteractor&gt;&gt; FindInteractorsAsync(Query query, CancellationToken cancellationToken)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Tobii.EyeX.Model.Query.html">Query</a></td>
+                    <td><span class="parametername">query</span></td>
+                    <td><p>The query.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CancellationToken</span></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>The cancellation token.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Task</span>&lt;<span class="xref">IEnumerable</span>&lt;<a class="xref" href="Tobii.EyeX.IInteractor.html">IInteractor</a>&gt;&gt;</td>
+                    <td><p>A task that represents the asynchronous operation.
+The value of <see cref="!:IEnumerable&lt;IInteractorBase&gt;"></see> contains the found interactors.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_EyeX_InteractorAgent_HandleEvent_" data-uid="Tobii.EyeX.InteractorAgent.HandleEvent*"></a>
+              <h4 id="Tobii_EyeX_InteractorAgent_HandleEvent_Tobii_EyeX_Model_InteractionEvent_" data-uid="Tobii.EyeX.InteractorAgent.HandleEvent(Tobii.EyeX.Model.InteractionEvent)">HandleEvent(InteractionEvent)</h4>
+              <div class="markdown level1 summary"><p>Handles the provided <a class="xref" href="Tobii.EyeX.Model.InteractionEvent.html">InteractionEvent</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected virtual void HandleEvent(InteractionEvent interactionEvent)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Tobii.EyeX.Model.InteractionEvent.html">InteractionEvent</a></td>
+                    <td><span class="parametername">interactionEvent</span></td>
+                    <td><p>The interaction event.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_EyeX_InteractorAgent_PopulateSnapshotAsync_" data-uid="Tobii.EyeX.InteractorAgent.PopulateSnapshotAsync*"></a>
+              <h4 id="Tobii_EyeX_InteractorAgent_PopulateSnapshotAsync_Tobii_EyeX_Model_Snapshot_Tobii_EyeX_Model_Query_CancellationToken_" data-uid="Tobii.EyeX.InteractorAgent.PopulateSnapshotAsync(Tobii.EyeX.Model.Snapshot,Tobii.EyeX.Model.Query,CancellationToken)">PopulateSnapshotAsync(Snapshot, Query, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Populates the provided snapshot asynchronously using the provided <a class="xref" href="Tobii.EyeX.Model.Query.html">Query</a>.
+This operation can be cancelled using the specified <see cref="!:CancellationToken"></see>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected virtual Task PopulateSnapshotAsync(Snapshot snapshot, Query query, CancellationToken cancellationToken)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Tobii.EyeX.Model.Snapshot.html">Snapshot</a></td>
+                    <td><span class="parametername">snapshot</span></td>
+                    <td><p>The snapshot to populate.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Tobii.EyeX.Model.Query.html">Query</a></td>
+                    <td><span class="parametername">query</span></td>
+                    <td><p>The query.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CancellationToken</span></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>The cancellation token.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Task</span></td>
+                    <td><p>A task that represents the asynchronous operation.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_EyeX_InteractorAgent_PopulateSnapshotWithInteractor_" data-uid="Tobii.EyeX.InteractorAgent.PopulateSnapshotWithInteractor*"></a>
+              <h4 id="Tobii_EyeX_InteractorAgent_PopulateSnapshotWithInteractor_Tobii_EyeX_Model_Snapshot_Tobii_EyeX_IInteractor_" data-uid="Tobii.EyeX.InteractorAgent.PopulateSnapshotWithInteractor(Tobii.EyeX.Model.Snapshot,Tobii.EyeX.IInteractor)">PopulateSnapshotWithInteractor(Snapshot, IInteractor)</h4>
+              <div class="markdown level1 summary"><p>Populates the snapshot using an interactor.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected void PopulateSnapshotWithInteractor(Snapshot snapshot, IInteractor interactor)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Tobii.EyeX.Model.Snapshot.html">Snapshot</a></td>
+                    <td><span class="parametername">snapshot</span></td>
+                    <td><p>The snapshot to populate.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Tobii.EyeX.IInteractor.html">IInteractor</a></td>
+                    <td><span class="parametername">interactor</span></td>
+                    <td><p>The interactor.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_EyeX_InteractorAgent_PreviewHandleQueryAsync_" data-uid="Tobii.EyeX.InteractorAgent.PreviewHandleQueryAsync*"></a>
+              <h4 id="Tobii_EyeX_InteractorAgent_PreviewHandleQueryAsync_Tobii_EyeX_Model_Query_CancellationToken_" data-uid="Tobii.EyeX.InteractorAgent.PreviewHandleQueryAsync(Tobii.EyeX.Model.Query,CancellationToken)">PreviewHandleQueryAsync(Query, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Allows to preview <a class="xref" href="Tobii.EyeX.Model.Query.html">Query</a> before snapshot will be created.
+Can be used to suspend or resume agent, for example. </p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected virtual Task PreviewHandleQueryAsync(Query query, CancellationToken cancellationToken)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Tobii.EyeX.Model.Query.html">Query</a></td>
+                    <td><span class="parametername">query</span></td>
+                    <td><p>The query.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CancellationToken</span></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>The cancellation token.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Task</span></td>
+                    <td><p>A task that represents the asynchronous operation.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_EyeX_InteractorAgent_TryGetInteractor_" data-uid="Tobii.EyeX.InteractorAgent.TryGetInteractor*"></a>
+              <h4 id="Tobii_EyeX_InteractorAgent_TryGetInteractor_System_String_Tobii_EyeX_IInteractor__" data-uid="Tobii.EyeX.InteractorAgent.TryGetInteractor(System.String,Tobii.EyeX.IInteractor@)">TryGetInteractor(String, out IInteractor)</h4>
+              <div class="markdown level1 summary"><p>Tries to resolve an interactor by its identifier.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected abstract bool TryGetInteractor(string id, out IInteractor interactor)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">id</span></td>
+                    <td><p>The interactor identifier.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Tobii.EyeX.IInteractor.html">IInteractor</a></td>
+                    <td><span class="parametername">interactor</span></td>
+                    <td><p>When this method returns, contains the interactor with an identifier 
+equivalent of the string contained in <em>id</em>, if the operation succeeded, 
+or <code>null</code> if the operation failed.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><p><code>true</code> if the interactor was found; otherwise, <code>false</code>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="eii">Explicit Interface Implementations
+              </h3>
+              
+              
+              <a id="Tobii_EyeX_InteractorAgent_Tobii_EyeX_IInteractorAgent_HandleEvent_" data-uid="Tobii.EyeX.InteractorAgent.Tobii#EyeX#IInteractorAgent#HandleEvent*"></a>
+              <h4 id="Tobii_EyeX_InteractorAgent_Tobii_EyeX_IInteractorAgent_HandleEvent_Tobii_EyeX_Model_InteractionEvent_" data-uid="Tobii.EyeX.InteractorAgent.Tobii#EyeX#IInteractorAgent#HandleEvent(Tobii.EyeX.Model.InteractionEvent)">IInteractorAgent.HandleEvent(InteractionEvent)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">void IInteractorAgent.HandleEvent(InteractionEvent interactionEvent)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Tobii.EyeX.Model.InteractionEvent.html">InteractionEvent</a></td>
+                    <td><span class="parametername">interactionEvent</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Tobii.EyeX.IInteractorAgent.html#Tobii_EyeX_IInteractorAgent_HandleEvent_Tobii_EyeX_Model_InteractionEvent_">IInteractorAgent.HandleEvent(InteractionEvent)</a></div>
+              
+              
+              <a id="Tobii_EyeX_InteractorAgent_Tobii_EyeX_IInteractorAgent_PopulateSnapshotAsync_" data-uid="Tobii.EyeX.InteractorAgent.Tobii#EyeX#IInteractorAgent#PopulateSnapshotAsync*"></a>
+              <h4 id="Tobii_EyeX_InteractorAgent_Tobii_EyeX_IInteractorAgent_PopulateSnapshotAsync_Tobii_EyeX_Model_Snapshot_Tobii_EyeX_Model_Query_CancellationToken_" data-uid="Tobii.EyeX.InteractorAgent.Tobii#EyeX#IInteractorAgent#PopulateSnapshotAsync(Tobii.EyeX.Model.Snapshot,Tobii.EyeX.Model.Query,CancellationToken)">IInteractorAgent.PopulateSnapshotAsync(Snapshot, Query, CancellationToken)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">Task IInteractorAgent.PopulateSnapshotAsync(Snapshot snapshot, Query query, CancellationToken cancellationToken)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Tobii.EyeX.Model.Snapshot.html">Snapshot</a></td>
+                    <td><span class="parametername">snapshot</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Tobii.EyeX.Model.Query.html">Query</a></td>
+                    <td><span class="parametername">query</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CancellationToken</span></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Task</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Tobii.EyeX.IInteractorAgent.html#Tobii_EyeX_IInteractorAgent_PopulateSnapshotAsync_Tobii_EyeX_Model_Snapshot_Tobii_EyeX_Model_Query_CancellationToken_">IInteractorAgent.PopulateSnapshotAsync(Snapshot, Query, CancellationToken)</a></div>
+              
+              
+              <a id="Tobii_EyeX_InteractorAgent_Tobii_EyeX_IInteractorAgent_PreviewHandleQueryAsync_" data-uid="Tobii.EyeX.InteractorAgent.Tobii#EyeX#IInteractorAgent#PreviewHandleQueryAsync*"></a>
+              <h4 id="Tobii_EyeX_InteractorAgent_Tobii_EyeX_IInteractorAgent_PreviewHandleQueryAsync_Tobii_EyeX_Model_Query_CancellationToken_" data-uid="Tobii.EyeX.InteractorAgent.Tobii#EyeX#IInteractorAgent#PreviewHandleQueryAsync(Tobii.EyeX.Model.Query,CancellationToken)">IInteractorAgent.PreviewHandleQueryAsync(Query, CancellationToken)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">Task IInteractorAgent.PreviewHandleQueryAsync(Query query, CancellationToken cancellationToken)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Tobii.EyeX.Model.Query.html">Query</a></td>
+                    <td><span class="parametername">query</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CancellationToken</span></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Task</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Tobii.EyeX.IInteractorAgent.html#Tobii_EyeX_IInteractorAgent_PreviewHandleQueryAsync_Tobii_EyeX_Model_Query_CancellationToken_">IInteractorAgent.PreviewHandleQueryAsync(Query, CancellationToken)</a></div>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

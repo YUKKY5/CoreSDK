@@ -1,0 +1,374 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class EyePositionData
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class EyePositionData
+   ">
+    <meta name="generator" content="docfx 2.10.2.0">
+    
+    <link rel="shortcut icon" href=".././images/favicons.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse navbar_center ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src=".././images/tobii_logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Tobii_EyeX_EyePositionData" data-uid="Tobii.EyeX.EyePositionData">Class EyePositionData
+              </h1>
+              <div class="markdown level0 summary"><p>Class representing a <a class="xref" href="Tobii.EyeX.EyePositionData.html">EyePositionData</a> data point.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">EyePositionData</span></div>
+              </div>
+              <h6><strong>Namespace</strong>:Tobii.EyeX</h6>
+              <h6><strong>Assembly</strong>:Tobii.EyeX.Net.dll</h6>
+              <h5 id="Tobii_EyeX_EyePositionData_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public class EyePositionData : object</code></pre>
+              </div>
+              <h3 id="constructors">Constructors
+              </h3>
+              
+              
+              <a id="Tobii_EyeX_EyePositionData__ctor_" data-uid="Tobii.EyeX.EyePositionData.#ctor*"></a>
+              <h4 id="Tobii_EyeX_EyePositionData__ctor_System_Double_System_Int32_System_Int32_Tobii_EyeX_EyePosition_Tobii_EyeX_EyePosition_Tobii_EyeX_EyePosition_Tobii_EyeX_EyePosition_" data-uid="Tobii.EyeX.EyePositionData.#ctor(System.Double,System.Int32,System.Int32,Tobii.EyeX.EyePosition,Tobii.EyeX.EyePosition,Tobii.EyeX.EyePosition,Tobii.EyeX.EyePosition)">EyePositionData(Double, Int32, Int32, EyePosition, EyePosition, EyePosition, EyePosition)</h4>
+              <div class="markdown level1 summary"><p>Initializes an instance of the <a class="xref" href="Tobii.EyeX.EyePosition.html">EyePosition</a> class.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public EyePositionData(double timestamp, int hasLeftEyePosition, int hasRightEyePosition, EyePosition leftEye, EyePosition leftEyeNormalized, EyePosition rightEye, EyePosition rightEyeNormalized)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Double</span></td>
+                    <td><span class="parametername">timestamp</span></td>
+                    <td><p>Time stamp for the eye position data point.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><span class="parametername">hasLeftEyePosition</span></td>
+                    <td><p>Indicating the validity of the left eye position.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><span class="parametername">hasRightEyePosition</span></td>
+                    <td><p>Indicating the validity of the right eye position.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Tobii.EyeX.EyePosition.html">EyePosition</a></td>
+                    <td><span class="parametername">leftEye</span></td>
+                    <td><p>Left eye position in 3D space.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Tobii.EyeX.EyePosition.html">EyePosition</a></td>
+                    <td><span class="parametername">leftEyeNormalized</span></td>
+                    <td><p>Normalized eye position in 3D space.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Tobii.EyeX.EyePosition.html">EyePosition</a></td>
+                    <td><span class="parametername">rightEye</span></td>
+                    <td><p>Right eye position in 3D space.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Tobii.EyeX.EyePosition.html">EyePosition</a></td>
+                    <td><span class="parametername">rightEyeNormalized</span></td>
+                    <td><p>Normalized right eye position in 3D space.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="properties">Properties
+              </h3>
+              
+              
+              <a id="Tobii_EyeX_EyePositionData_HasLeftEyePosition_" data-uid="Tobii.EyeX.EyePositionData.HasLeftEyePosition*"></a>
+              <h4 id="Tobii_EyeX_EyePositionData_HasLeftEyePosition" data-uid="Tobii.EyeX.EyePositionData.HasLeftEyePosition">HasLeftEyePosition</h4>
+              <div class="markdown level1 summary"><p>Gets a value indicating the validity of the left eye position.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public int HasLeftEyePosition { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_EyeX_EyePositionData_HasRightEyePosition_" data-uid="Tobii.EyeX.EyePositionData.HasRightEyePosition*"></a>
+              <h4 id="Tobii_EyeX_EyePositionData_HasRightEyePosition" data-uid="Tobii.EyeX.EyePositionData.HasRightEyePosition">HasRightEyePosition</h4>
+              <div class="markdown level1 summary"><p>Gets a value indicating the validity of the right eye position.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public int HasRightEyePosition { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_EyeX_EyePositionData_LeftEye_" data-uid="Tobii.EyeX.EyePositionData.LeftEye*"></a>
+              <h4 id="Tobii_EyeX_EyePositionData_LeftEye" data-uid="Tobii.EyeX.EyePositionData.LeftEye">LeftEye</h4>
+              <div class="markdown level1 summary"><p>Gets the left eye position.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public EyePosition LeftEye { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Tobii.EyeX.EyePosition.html">EyePosition</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_EyeX_EyePositionData_LeftEyeNormalized_" data-uid="Tobii.EyeX.EyePositionData.LeftEyeNormalized*"></a>
+              <h4 id="Tobii_EyeX_EyePositionData_LeftEyeNormalized" data-uid="Tobii.EyeX.EyePositionData.LeftEyeNormalized">LeftEyeNormalized</h4>
+              <div class="markdown level1 summary"><p>Gets the normalized left eye position.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public EyePosition LeftEyeNormalized { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Tobii.EyeX.EyePosition.html">EyePosition</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_EyeX_EyePositionData_RightEye_" data-uid="Tobii.EyeX.EyePositionData.RightEye*"></a>
+              <h4 id="Tobii_EyeX_EyePositionData_RightEye" data-uid="Tobii.EyeX.EyePositionData.RightEye">RightEye</h4>
+              <div class="markdown level1 summary"><p>Gets the right eye position.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public EyePosition RightEye { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Tobii.EyeX.EyePosition.html">EyePosition</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_EyeX_EyePositionData_RightEyeNormalized_" data-uid="Tobii.EyeX.EyePositionData.RightEyeNormalized*"></a>
+              <h4 id="Tobii_EyeX_EyePositionData_RightEyeNormalized" data-uid="Tobii.EyeX.EyePositionData.RightEyeNormalized">RightEyeNormalized</h4>
+              <div class="markdown level1 summary"><p>Gets the normalized right eye position.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public EyePosition RightEyeNormalized { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Tobii.EyeX.EyePosition.html">EyePosition</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_EyeX_EyePositionData_Timestamp_" data-uid="Tobii.EyeX.EyePositionData.Timestamp*"></a>
+              <h4 id="Tobii_EyeX_EyePositionData_Timestamp" data-uid="Tobii.EyeX.EyePositionData.Timestamp">Timestamp</h4>
+              <div class="markdown level1 summary"><p>Gets a value for the timestamp of the eye position data.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public double Timestamp { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Double</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: #2c2c2c;
+}
+
+.navbar-brand > img {
+    display: block;
+}
+
+.navbar-brand .svg {
+    margin-left: 0.5em;
+    margin-top: 0.4em;
+}
+
+.navbar-nav {
+    margin-left: 100px;
+}
+
+.toc .nav > li.active > a {
+    color: #EC0088;
+}
+
+button, a {
+    color: #EC0088;
+    cursor: pointer;
+}
+
+.affix > ul > li.active > a, .affix > ul > li.active > a:before {
+    color: #EC0088;
+    font-weight: bold;
+}

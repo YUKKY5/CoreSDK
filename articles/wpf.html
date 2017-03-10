@@ -1,0 +1,482 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Windows Presentation Foundation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Windows Presentation Foundation ">
+    <meta name="generator" content="docfx 2.10.2.0">
+    
+    <link rel="shortcut icon" href=".././images/favicons.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:rel" content="../">
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse navbar_center ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src=".././images/tobii_logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="docs_wpf_chapter">
+              <h1 id="windows-presentation-foundation">Windows Presentation Foundation</h1>
+              
+<p>Here we are going to explore how to use the Unified Foundations when to develop a WPF application 
+with the eye tracking included. This chapter assumes that you already are familiar with 
+<a class="xref" href="interactors.html">Interactors</a> and how to use them.</p>
+<h2 id="lets-code">Let&#39;s code</h2>
+<p>We need to setup some basic components, such as a <a class="xref" href="../api/Tobii.EyeX.Host.html">Host</a> and an 
+<a class="xref" href="../api/Tobii.EyeX.Wpf.WpfInteractorAgent.html">WpfInteractorAgent</a>, to use the eye tracking in the WPF 
+application:</p>
+<pre><code class="lang-csharp">// App.xaml.cs file
+
+...
+using Tobii.EyeX;
+...
+
+public partial class App : Application 
+{
+    private Host _host;
+    private WpfInteractorAgent _wpfInteractorAgent;
+
+    ...
+
+    protected override void OnStartup(StartupEventArgs e)
+    {
+        _host = new Host();
+        _wpfInteractorAgent = _host.InitializeWpfAgent();
+    }
+
+    protected override void OnExit(ExitEventArgs e)
+    {
+        _host.Dispose();
+        base.OnExit(e);
+    }
+}
+</code></pre><ul>
+<li>To get access to the Unified Foundations features you need to instantiate the 
+<code>Host</code> and the <code>WpfInteractorAgent</code> classes. We have chosen to create the <code>_host</code> 
+and the <code>_wpfInteractionAgent</code> objects in the <code>OnStartup()</code> method in this example.</li>
+<li>The <code>_host</code> object is disposed in the <code>OnExit()</code> method.</li>
+</ul>
+<h3 id="gazeaware-behavior">GazeAware behavior</h3>
+<p>To illustrate the <a class="xref" href="../api/Tobii.EyeX.GazeAwareBehavior.html">GazeAwareBehavior</a> we have chosen the background color of the window based on the user&#39;s gaze. </p>
+<p>Let&#39;s make the <code>LayoutRoot</code> of the main window change it&#39;s background color based on where the gaze is 
+pointing. You can easily create an interactor out of any <code>FrameworkElement</code> instance by setting the <code>IsGazeAware</code> 
+attached property:</p>
+<pre><code class="lang-xml">&lt;!-- MainWindow.xaml file --&gt;
+
+&lt;Window 
+    ...
+        xmlns:tobii=&quot;clr-namespace:Tobii.EyeX.Wpf;assembly=Tobii.EyeX.Net&quot;
+    ...
+    &gt;
+    &lt;Grid 
+        x:Name=&quot;LayoutRoot&quot;
+        tobii:Behaviors.IsGazeAware=&quot;True&quot;&gt;
+    &lt;/Grid&gt;
+&lt;/Window&gt;
+</code></pre><ul>
+<li>The <a class="xref" href="../api/Tobii.EyeX.Wpf.WpfInteractorAgent.html">WpfInteractorAgent</a> will notice that you have added 
+the <code>IsGazeAware</code> behavior and creates a corresponding interactor for the <code>LayoutRoot</code> element.</li>
+<li>The <a class="xref" href="../api/Tobii.EyeX.Wpf.WpfInteractorAgent.html">WpfInteractorAgent</a> will also keep the 
+Interaction Engine updated in case the bounds or the location of the <code>LayoutRoot</code> element changes. </li>
+</ul>
+<p>The last thing to remember is to change the background color of the <code>LayoutRoot</code> element based on gaze 
+by defining a <code>Trigger</code>:</p>
+<pre><code class="lang-xml">...
+
+&lt;Grid x:Name=&quot;LayoutRoot&quot;
+        tobii:Behaviors.IsGazeAware=&quot;True&quot;&gt;
+    &lt;Grid.Style&gt;
+        &lt;Style TargetType=&quot;Grid&quot;&gt;
+            &lt;Setter Property=&quot;Background&quot; Value=&quot;White&quot; /&gt;
+
+            &lt;Style.Triggers&gt;
+                &lt;Trigger Property=&quot;tobii:Behaviors.HasGaze&quot; Value=&quot;True&quot;&gt;
+                    &lt;Setter Property=&quot;Background&quot; Value=&quot;Magenta&quot; /&gt;
+                &lt;/Trigger&gt;
+            &lt;/Style.Triggers&gt;
+        &lt;/Style&gt;
+    &lt;/Grid.Style&gt;
+&lt;/Grid&gt;
+</code></pre><ul>
+<li>The <code>LayoutRoot</code> shall be gaze aware by setting the <code>IsGazeAware=&quot;True&quot;</code> behavior.</li>
+<li>The <code>Grid</code> background color shall be white as default.</li>
+<li>The <code>Trigger</code> will change color to Magenta when <code>HasGaze=&quot;True&quot;</code>.</li>
+</ul>
+<p>Let&#39;s extend the code by setting the delay:</p>
+<pre><code class="lang-xml">...
+
+&lt;Grid x:Name=&quot;LayoutRoot&quot;
+      tobii:Behaviors.IsGazeAware=&quot;True&quot;
+      tobii:Behaviors.GazeAwareMode=&quot;Delayed&quot;
+      tobii:Behaviors.GazeAwareDelayTime=&quot;1000&quot;&gt;
+
+        ...
+
+    &lt;/Grid.Style&gt;
+&lt;/Grid&gt;
+</code></pre><ul>
+<li>Here, the gaze aware mode is set to <code>GazeAwareMode=&quot;Delayed&quot;</code> </li>
+<li>By setting the delay <code>GazeAwareDelayTime=&quot;1000&quot;</code> we have delayed the change of color by 1000 
+milliseconds.</li>
+</ul>
+<h3 id="activatable-behavior">Activatable behavior</h3>
+<p>The <em>Activatable</em> interactor has much in common with the <em>GazeAware</em> interactor above.</p>
+<p>Let&#39;s convert the previous example, where we just need to change a couple of the attached properties 
+in the code to get the <em>Activatable</em> behavior:</p>
+<pre><code class="lang-xml">...
+
+&lt;Grid x:Name=&quot;LayoutRoot&quot;
+        tobii:Behaviors.IsActivatable=&quot;True&quot;
+        tobii:Behaviors.IsTentativeFocusEnabled=&quot;True&quot;&gt;
+    &lt;Grid.Style&gt;
+        &lt;Style TargetType=&quot;Grid&quot;&gt;
+            &lt;Setter Property=&quot;Background&quot; Value=&quot;White&quot; /&gt;
+
+            &lt;Style.Triggers&gt;
+                &lt;Trigger Property=&quot;tobii:Behaviors.HasTentativeActivationFocus&quot; Value=&quot;True&quot;&gt;
+                    &lt;Setter Property=&quot;Background&quot; Value=&quot;Magenta&quot; /&gt;
+                &lt;/Trigger&gt;
+            &lt;/Style.Triggers&gt;
+        &lt;/Style&gt;
+    &lt;/Grid.Style&gt;
+&lt;/Grid&gt;
+</code></pre><ul>
+<li>Here, we have replaced the <code>IsGazeAware</code> with the <code>IsActivatable</code> behavior. </li>
+<li>To mimic the behavior of the <a class="xref" href="../api/Tobii.EyeX.GazeAwareBehavior.html">GazeAwareBehavior</a> we need 
+to set the <code>IsTentativeFocusEnabled=&quot;True&quot;</code> and then change the background color to Magenta when the 
+<code>HasTentativeActivationFocus=True</code> (in the <a class="xref" href="interactors.html">Interactors</a> chapter 
+there is a brief explanation on <em>TentativeFocus</em> and the <em>ActivatableFocus</em>).</li>
+</ul>
+<p>The next step is to switch the <code>activation mode</code>, on or off. One way to do this is by creating a
+handler for the preview event:</p>
+<pre><code class="lang-xml">&lt;!-- MainWindow.xaml file --&gt;
+&lt;Window 
+        ...
+        PreviewKeyDown=&quot;MainWindow_OnPreviewKeyDown&quot;
+        PreviewKeyUp=&quot;MainWindow_OnPreviewKeyUp&quot;
+        ...&gt;
+
+...
+
+&lt;/Window&gt;
+</code></pre><ul>
+<li><code>MainWindow_OnPreviewKeyDown</code> is the callback to be invoked on <code>PreviewKeyDown</code></li>
+<li><code>MainWindow_OnPreviewKeyUp</code> is the callback to be invoked on <code>PreviewKeyUp</code></li>
+</ul>
+<pre><code class="lang-csharp">// MainWindow.xaml.cs file
+
+...
+
+public partial class MainWindow : Window
+{
+    ...
+
+    private void MainWindow_OnPreviewKeyDown(object sender, KeyEventArgs e)
+    {
+
+    }
+
+    private void MainWindow_OnPreviewKeyUp(object sender, KeyEventArgs e)
+    {
+
+    }
+}
+</code></pre><ul>
+<li><code>MainWindow_OnPreviewKeyDown()</code> is the callback to be called on <code>PreviewKeyDown</code>, which is 
+empty for now.</li>
+<li><code>MainWindow_OnPreviewKeyUp()</code> is the callback to be called on <code>PreviewKeyUp</code>, which is 
+empty for now.</li>
+</ul>
+<p>You can tell the Interaction Engine to switch the activation mode on or off by using the 
+<a class="xref" href="../api/Tobii.EyeX.Host.html#Tobii_EyeX_Host_Commands">Commands</a> property of the <a class="xref" href="../api/Tobii.EyeX.Host.html">Host</a> class. 
+In order to do so, we are going to expose an instance of the <a class="xref" href="../api/Tobii.EyeX.Host.html">Host</a> class 
+from the <code>App</code> class so we could access it from the <code>MainWindow</code> code. </p>
+<p>This may not the best way to do such thing, but we are doing it only in order to have our sample terse:</p>
+<pre><code class="lang-csharp">// App.xaml.cs file
+
+...
+
+public Host Host
+{
+    get { return _host; }
+}
+
+...
+</code></pre><ul>
+<li>This is the public Host property exposing the <code>_host</code></li>
+</ul>
+<pre><code class="lang-csharp">// MainWindow.xaml.cs file
+
+...
+
+private void MainWindow_OnPreviewKeyDown(object sender, KeyEventArgs e)
+{
+    if (e.Key == Key.Space)
+    {
+        ((App)Application.Current).Host.Commands.Input.SendActivationModeOn();
+    }
+}
+
+private void MainWindow_OnPreviewKeyUp(object sender, KeyEventArgs e)
+{
+    if (e.Key == Key.Space)
+    {
+        ((App)Application.Current).Host.Commands.Input.SendActivationModeOff();
+    }
+}
+
+...
+</code></pre><ul>
+<li><code>MainWindow_OnPreviewKeyDown()</code> is the definition of the callback to be called on <code>PreviewKeyDown</code>. 
+If the event is a &#39;Key.Space&#39; event then call the <code>SendActivationModeOn()</code> </li>
+<li><code>MainWindow_OnPreviewKeyUp()</code> is the definition of the callback to be called on <code>PreviewKeyUp</code>, 
+If the event is a &#39;Key.Space&#39; event then call the <code>SendActivationModeOff()</code></li>
+</ul>
+<p>If you run the application you will see  when looking at the window <code>LayoutRoot</code> it 
+changes the background color as expected. But when you are looking at the window and hold
+the space bar down it changes its background color back to the default (white). It is because when the button is
+held down Interaction Engine switches <code>activation mode</code> on, as we specified, which means 
+activatable interactors will get <code>activation focus</code> and not <code>tentative focus</code>. </p>
+<p>In order to be explicit let&#39;s handle this case:</p>
+<pre><code class="lang-xml">&lt;!-- MainWindow.xaml file --&gt;
+
+...
+
+&lt;Style TargetType=&quot;Grid&quot;&gt;
+    &lt;Setter Property=&quot;Background&quot; Value=&quot;White&quot; /&gt;
+
+    &lt;Style.Triggers&gt;
+        ...
+
+        &lt;Trigger Property=&quot;tobii:Behaviors.HasActivationFocus&quot; Value=&quot;True&quot;&gt;
+            &lt;Setter Property=&quot;Background&quot; Value=&quot;Orange&quot; /&gt;
+        &lt;/Trigger&gt;
+    &lt;/Style.Triggers&gt;
+&lt;/Style&gt;
+
+...
+</code></pre><p>The final thing left is to add an actual action. We will create a counter and will increment it 
+every time the user presses space while gazing at the window. </p>
+<p>Let&#39;s start from by adding a <code>TextBlock</code> to visualize the amount of activations: </p>
+<pre><code class="lang-xml">&lt;!-- MainWindow.xaml file --&gt;
+
+...
+
+&lt;Grid x:Name=&quot;LayoutRoot&quot;
+        tobii:Behaviors.IsActivatable=&quot;True&quot;
+        tobii:Behaviors.IsTentativeFocusEnabled=&quot;True&quot;
+        tobii:Behaviors.Activated=&quot;LayoutRoot_OnActivated&quot;&gt;
+
+    ...
+
+    &lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;
+        &lt;TextBlock Text=&quot;Number of activations: &quot; /&gt;
+        &lt;TextBlock x:Name=&quot;NumberOfActivations&quot; Text=&quot;0&quot; /&gt;
+    &lt;/StackPanel&gt;
+&lt;/Grid&gt;
+</code></pre><pre><code class="lang-csharp">// MainWindow.xaml.cs file
+
+...
+
+private void LayoutRoot_OnActivated(object sender, ActivationRoutedEventArgs e)
+{
+
+}
+
+...
+</code></pre><p>Here, we also created a handler for the <code>Behaviors.Activated</code> event in our code above.</p>
+<p>We are going to send the activation command when the user is about to release the space key, and we
+are going to print the number of performed activations:</p>
+<pre><code class="lang-csharp">// MainWindow.xaml.cs file
+
+...
+
+private int _amountOfActivations; 
+
+...
+
+private void MainWindow_OnPreviewKeyUp(object sender, KeyEventArgs e)
+{
+    if (e.Key == Key.Space)
+    {
+        ((App)Application.Current).Host.Commands.Input.SendActivation();
+        ((App)Application.Current).Host.Commands.Input.SendActivationModeOff();
+    }
+}
+
+private void LayoutRoot_OnActivated(object sender, ActivationRoutedEventArgs e)
+{
+    _amountOfActivations++;
+    NumberOfActivations.Text = _amountOfActivations.ToString();
+}
+
+...
+</code></pre><p>If you run the application now you will see that whenever you are looking at the 
+window and press the space bar the number of activations is incremented. However, the counter 
+is not incremented until you release the key or when you are looking outside of the window.  </p>
+<h3 id="pannable-behavior">Pannable behavior</h3>
+<p>The Pannable behavior is suitable when you have a large scrollable area in your window, such as a 
+long list of items. </p>
+<p>Let&#39;s start by replacing the previous <code>LayoutRoot</code> content with a <code>ListBox</code> which we are going to fill 
+with data: </p>
+<pre><code class="lang-xml">&lt;!-- MainWindow.xaml file --&gt;
+
+...
+
+&lt;Grid x:Name=&quot;LayoutRoot&quot;&gt;
+    &lt;ListBox x:Name=&quot;ListOfItems&quot;&gt;&lt;/ListBox&gt;
+&lt;/Grid&gt;
+
+...
+</code></pre><pre><code class="lang-csharp">// MainWindow.xaml.cs file
+
+...
+
+public partial class MainWindow : Window
+{
+    private readonly ObservableCollection&lt;string&gt; _items = new ObservableCollection&lt;string&gt;(); 
+    public MainWindow()
+    {
+        InitializeComponent();
+        Loaded += OnLoaded;
+    }
+
+    private void OnLoaded(object sender, RoutedEventArgs routedEventArgs)
+    {
+        ListOfItems.ItemsSource = _items;
+        _items.Clear();
+
+        for (int i = 0; i &lt; 1000; i++)
+        {
+            _items.Add(string.Format(&quot;Item {0}&quot;, i));
+        }
+    }
+
+    private void MainWindow_OnPreviewKeyDown(object sender, KeyEventArgs e)
+    {
+    }
+
+    private void MainWindow_OnPreviewKeyUp(object sender, KeyEventArgs e)
+    {
+    }
+}
+
+...
+</code></pre><ul>
+<li>When you run this code you should see a long list of &#39;Item #&#39; strings, instead of the empty 
+window which changes its color when you are looking at it. </li>
+</ul>
+<p>Let&#39;s add panning with gaze:</p>
+<pre><code class="lang-xml">&lt;!-- MainWindow.xaml file --&gt;
+
+...
+
+&lt;Grid x:Name=&quot;LayoutRoot&quot;&gt;
+    &lt;ListBox x:Name=&quot;ListOfItems&quot; tobii:Behaviors.IsPannable=&quot;True&quot; /&gt;
+&lt;/Grid&gt;
+...
+</code></pre><ul>
+<li>The <code>IsPannable=&quot;True&quot;</code> activates the pannable feature.</li>
+</ul>
+<pre><code class="lang-csharp">// MainWindow.xaml.cs file
+
+...
+
+private void MainWindow_OnPreviewKeyDown(object sender, KeyEventArgs e)
+{
+    ((App)Application.Current).Host.Commands.Input.SendPanningBegin();
+}
+
+private void MainWindow_OnPreviewKeyUp(object sender, KeyEventArgs e)
+{
+    ((App)Application.Current).Host.Commands.Input.SendPanningEnd();
+}
+
+...
+</code></pre><ul>
+<li><code>MainWindow_OnPreviewKeyDown()</code> is the callback that starts the panning.</li>
+<li><code>MainWindow_OnPreviewKeyUp()</code> is the callback that stops the panning.</li>
+</ul>
+<p>And that&#39;s it! When you run this code you should see that when you press any key on the keyboard
+while looking at the bottom or- top half of the list it will be panned in same direction. </p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
