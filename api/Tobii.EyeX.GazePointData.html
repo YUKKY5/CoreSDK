@@ -35,7 +35,7 @@
               </button>
               
               <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src=".././images/tobii_logo.png" alt="">
+                <img id="logo" class="svg" src=".././images/tobii_coresdk_logo.png" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -91,13 +91,13 @@ The position is taken relative to the top left corner of the primary screen.</p>
               
               
               <a id="Tobii_EyeX_GazePointData__ctor_" data-uid="Tobii.EyeX.GazePointData.#ctor*"></a>
-              <h4 id="Tobii_EyeX_GazePointData__ctor_System_Double_System_Double_System_Double_" data-uid="Tobii.EyeX.GazePointData.#ctor(System.Double,System.Double,System.Double)">GazePointData(Double, Double, Double)</h4>
+              <h4 id="Tobii_EyeX_GazePointData__ctor_System_Double_System_Double_System_Double_System_Double_" data-uid="Tobii.EyeX.GazePointData.#ctor(System.Double,System.Double,System.Double,System.Double)">GazePointData(Double, Double, Double, Double)</h4>
               <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Tobii.EyeX.GazePointData.html">GazePointData</a> class.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public GazePointData(double timestamp, double x, double y)</code></pre>
+                <pre><code class="lang-csharp hljs">public GazePointData(double x, double y, double timestamp, double engineTimestamp)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -111,12 +111,6 @@ The position is taken relative to the top left corner of the primary screen.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Double</span></td>
-                    <td><span class="parametername">timestamp</span></td>
-                    <td><p>Timestamp for the <a class="xref" href="Tobii.EyeX.GazePointData.html">GazePointData</a> data point.</p>
-</td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Double</span></td>
                     <td><span class="parametername">x</span></td>
                     <td><p>Gaze point X component.</p>
 </td>
@@ -127,10 +121,48 @@ The position is taken relative to the top left corner of the primary screen.</p>
                     <td><p>Gaze point Y component.</p>
 </td>
                   </tr>
+                  <tr>
+                    <td><span class="xref">System.Double</span></td>
+                    <td><span class="parametername">timestamp</span></td>
+                    <td><p>Timestamp for the <a class="xref" href="Tobii.EyeX.GazePointData.html">GazePointData</a> data point.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Double</span></td>
+                    <td><span class="parametername">engineTimestamp</span></td>
+                    <td><p>Interaction engine timestamp for the <a class="xref" href="Tobii.EyeX.GazePointData.html">GazePointData</a>. Useful for syncing data streams.</p>
+</td>
+                  </tr>
                 </tbody>
               </table>
               <h3 id="properties">Properties
               </h3>
+              
+              
+              <a id="Tobii_EyeX_GazePointData_EngineTimestamp_" data-uid="Tobii.EyeX.GazePointData.EngineTimestamp*"></a>
+              <h4 id="Tobii_EyeX_GazePointData_EngineTimestamp" data-uid="Tobii.EyeX.GazePointData.EngineTimestamp">EngineTimestamp</h4>
+              <div class="markdown level1 summary"><p>Gets the interaction engine timestamp for the <a class="xref" href="Tobii.EyeX.GazePointData.html">GazePointData</a>. Useful for syncing data streams.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public double EngineTimestamp { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Double</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               
               
               <a id="Tobii_EyeX_GazePointData_Timestamp_" data-uid="Tobii.EyeX.GazePointData.Timestamp*"></a>

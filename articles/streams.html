@@ -33,7 +33,7 @@
               </button>
               
               <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src=".././images/tobii_logo.png" alt="">
+                <img id="logo" class="svg" src=".././images/tobii_coresdk_logo.png" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -78,14 +78,14 @@
 <p>Streams represent themselves as a continuous flow of data from the eye tracker. If you have 
 read the <a class="xref" href="getting_started.html">Getting started with Console</a> chapter you might 
 recall that we used the gaze points stream to print coordinates in the Console window. </p>
-<p>In this chapter we will look closer into the GazePointDataStream and the FixationDataStream, which are two types of streams that can be accessed with the Unified Foundations.</p>
+<p>In this chapter we will look closer into the GazePointDataStream and the FixationDataStream, which are two types of streams that can be accessed with the Tobii Core SDK.</p>
 <h2 id="gaze-point-data-stream">Gaze point data stream</h2>
 <p>In simple terms, a gaze point is the point on the screen where the user is looking at a given moment of time. 
 More technically it is the point on the screen where the eye tracker has calculated that a line 
 along the user&#39;s eye-gaze intersects with the screen plane. </p>
 <p>A common misconception regarding the gaze point is that is resembles the mouse pointer. 
 The eye tracking data is not as precise as mouse pointer data. Actually, it is physically impossible 
-due to how the eyes and the vision are working. Instead, think of a series of gaze points representing an area 
+due to how the eyes and the vision are working. Instead, think of it as a series of gaze points representing an area 
 where the user is looking. The accuracy and precision of the data varies from user to user, which needs to be 
 accounted for.</p>
 <h3 id="filtering">Filtering</h3>
@@ -93,7 +93,7 @@ accounted for.</p>
 provides a selection of filters that can be used to stabilize the signal. As usual when it comes
 to filtering, there is a trade-off between stability and responsiveness, so there cannot be one single 
 filter that is the best choice for all applications.</p>
-<p>At the moment the Unified Foundations provides the following filtering options:</p>
+<p>At the moment the Tobii Core SDK provides the following filtering options:</p>
 <ul>
 <li><p><em>Lightly filtered</em> (i.e. the default) is an adaptive filter which is weighted based on the age of the gaze data 
 points <a class="xref" href="../api/Tobii.EyeX.GazePointData.html">GazePointData</a> and the velocity of the eye movements. This filter is 
@@ -208,7 +208,7 @@ public class FixationDataToConsolePrinter : IDisposable {
     }
 }
 </code></pre><ul>
-<li>A <code>_host</code> object is created to access the the Unified Foundations features</li>
+<li>A <code>_host</code> object is created to access the Tobii Core SDK features</li>
 <li>The <code>_fixationDataStream</code> is created by calling the Host function <code>CreateFixationDataStream()</code>.</li>
 </ul>
 <p>In the section dedicated to the gaze point data stream we already mentioned that you have two options 

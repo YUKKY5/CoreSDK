@@ -35,7 +35,7 @@
               </button>
               
               <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src=".././images/tobii_logo.png" alt="">
+                <img id="logo" class="svg" src=".././images/tobii_coresdk_logo.png" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -90,13 +90,13 @@
               
               
               <a id="Tobii_EyeX_EyePositionData__ctor_" data-uid="Tobii.EyeX.EyePositionData.#ctor*"></a>
-              <h4 id="Tobii_EyeX_EyePositionData__ctor_System_Double_System_Int32_System_Int32_Tobii_EyeX_EyePosition_Tobii_EyeX_EyePosition_Tobii_EyeX_EyePosition_Tobii_EyeX_EyePosition_" data-uid="Tobii.EyeX.EyePositionData.#ctor(System.Double,System.Int32,System.Int32,Tobii.EyeX.EyePosition,Tobii.EyeX.EyePosition,Tobii.EyeX.EyePosition,Tobii.EyeX.EyePosition)">EyePositionData(Double, Int32, Int32, EyePosition, EyePosition, EyePosition, EyePosition)</h4>
+              <h4 id="Tobii_EyeX_EyePositionData__ctor_System_Int32_System_Int32_Tobii_EyeX_EyePosition_Tobii_EyeX_EyePosition_Tobii_EyeX_EyePosition_Tobii_EyeX_EyePosition_System_Double_System_Double_" data-uid="Tobii.EyeX.EyePositionData.#ctor(System.Int32,System.Int32,Tobii.EyeX.EyePosition,Tobii.EyeX.EyePosition,Tobii.EyeX.EyePosition,Tobii.EyeX.EyePosition,System.Double,System.Double)">EyePositionData(Int32, Int32, EyePosition, EyePosition, EyePosition, EyePosition, Double, Double)</h4>
               <div class="markdown level1 summary"><p>Initializes an instance of the <a class="xref" href="Tobii.EyeX.EyePosition.html">EyePosition</a> class.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public EyePositionData(double timestamp, int hasLeftEyePosition, int hasRightEyePosition, EyePosition leftEye, EyePosition leftEyeNormalized, EyePosition rightEye, EyePosition rightEyeNormalized)</code></pre>
+                <pre><code class="lang-csharp hljs">public EyePositionData(int hasLeftEyePosition, int hasRightEyePosition, EyePosition leftEye, EyePosition leftEyeNormalized, EyePosition rightEye, EyePosition rightEyeNormalized, double timestamp, double engineTimestamp)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -108,12 +108,6 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td><span class="xref">System.Double</span></td>
-                    <td><span class="parametername">timestamp</span></td>
-                    <td><p>Time stamp for the eye position data point.</p>
-</td>
-                  </tr>
                   <tr>
                     <td><span class="xref">System.Int32</span></td>
                     <td><span class="parametername">hasLeftEyePosition</span></td>
@@ -150,10 +144,48 @@
                     <td><p>Normalized right eye position in 3D space.</p>
 </td>
                   </tr>
+                  <tr>
+                    <td><span class="xref">System.Double</span></td>
+                    <td><span class="parametername">timestamp</span></td>
+                    <td><p>Time stamp for the eye position data point.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Double</span></td>
+                    <td><span class="parametername">engineTimestamp</span></td>
+                    <td><p>Interaction engine timestamp for the <a class="xref" href="Tobii.EyeX.EyePositionData.html">EyePositionData</a>. Useful for syncing data streams.</p>
+</td>
+                  </tr>
                 </tbody>
               </table>
               <h3 id="properties">Properties
               </h3>
+              
+              
+              <a id="Tobii_EyeX_EyePositionData_EngineTimestamp_" data-uid="Tobii.EyeX.EyePositionData.EngineTimestamp*"></a>
+              <h4 id="Tobii_EyeX_EyePositionData_EngineTimestamp" data-uid="Tobii.EyeX.EyePositionData.EngineTimestamp">EngineTimestamp</h4>
+              <div class="markdown level1 summary"><p>Gets the interaction engine timestamp for the <a class="xref" href="Tobii.EyeX.EyePositionData.html">EyePositionData</a>. Useful for syncing data streams.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public double EngineTimestamp { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Double</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               
               
               <a id="Tobii_EyeX_EyePositionData_HasLeftEyePosition_" data-uid="Tobii.EyeX.EyePositionData.HasLeftEyePosition*"></a>

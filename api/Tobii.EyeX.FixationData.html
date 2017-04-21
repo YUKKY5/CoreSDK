@@ -35,7 +35,7 @@
               </button>
               
               <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src=".././images/tobii_logo.png" alt="">
+                <img id="logo" class="svg" src=".././images/tobii_coresdk_logo.png" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -90,13 +90,13 @@
               
               
               <a id="Tobii_EyeX_FixationData__ctor_" data-uid="Tobii.EyeX.FixationData.#ctor*"></a>
-              <h4 id="Tobii_EyeX_FixationData__ctor_Tobii_EyeX_Framework_FixationDataMode_Tobii_EyeX_Framework_FixationDataEventType_System_Double_System_Double_System_Double_" data-uid="Tobii.EyeX.FixationData.#ctor(Tobii.EyeX.Framework.FixationDataMode,Tobii.EyeX.Framework.FixationDataEventType,System.Double,System.Double,System.Double)">FixationData(FixationDataMode, FixationDataEventType, Double, Double, Double)</h4>
+              <h4 id="Tobii_EyeX_FixationData__ctor_Tobii_EyeX_Framework_FixationDataMode_Tobii_EyeX_Framework_FixationDataEventType_System_Double_System_Double_System_Double_System_Double_" data-uid="Tobii.EyeX.FixationData.#ctor(Tobii.EyeX.Framework.FixationDataMode,Tobii.EyeX.Framework.FixationDataEventType,System.Double,System.Double,System.Double,System.Double)">FixationData(FixationDataMode, FixationDataEventType, Double, Double, Double, Double)</h4>
               <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Tobii.EyeX.FixationData.html">FixationData</a> class.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public FixationData(FixationDataMode fixationDataMode, FixationDataEventType eventType, double x, double y, double timestamp)</code></pre>
+                <pre><code class="lang-csharp hljs">public FixationData(FixationDataMode fixationDataMode, FixationDataEventType eventType, double x, double y, double timestamp, double engineTimestamp)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -138,10 +138,42 @@
                     <td><p>Timestamp for the <a class="xref" href="Tobii.EyeX.FixationData.html">FixationData</a> data point.</p>
 </td>
                   </tr>
+                  <tr>
+                    <td><span class="xref">System.Double</span></td>
+                    <td><span class="parametername">engineTimestamp</span></td>
+                    <td><p>Interaction engine timestamp for the <a class="xref" href="Tobii.EyeX.GazePointData.html">GazePointData</a>. Useful for syncing data streams.</p>
+</td>
+                  </tr>
                 </tbody>
               </table>
               <h3 id="properties">Properties
               </h3>
+              
+              
+              <a id="Tobii_EyeX_FixationData_EngineTimestamp_" data-uid="Tobii.EyeX.FixationData.EngineTimestamp*"></a>
+              <h4 id="Tobii_EyeX_FixationData_EngineTimestamp" data-uid="Tobii.EyeX.FixationData.EngineTimestamp">EngineTimestamp</h4>
+              <div class="markdown level1 summary"><p>Gets the interaction engine timestamp for the <a class="xref" href="Tobii.EyeX.GazePointData.html">GazePointData</a>. Useful for syncing data streams.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public double EngineTimestamp { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Double</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               
               
               <a id="Tobii_EyeX_FixationData_EventType_" data-uid="Tobii.EyeX.FixationData.EventType*"></a>

@@ -1,0 +1,443 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interactors </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interactors ">
+    <meta name="generator" content="docfx 2.10.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="interactors">Interactors</h1>
+              
+<p>When you start to develop applications with the eye tracking incorporated you’d usually just want to know if the user is looking 
+at a particular region on the screen. For example, it could be:</p>
+<ul>
+<li>an advertisement banner</li>
+<li>a character’s face in a game</li>
+<li>visual element of your application, like list of some data, link or button, etc.</li>
+<li>a location at the screen which in turn will trigger some contextual action when looked upon</li>
+</ul>
+<p>Common for these use cases is that they are usually spanned by bounded regions, covering smaller sections of the screen. If some 
+kind of actions shall be associated with the region in focus the first intention would be to use the gaze data provided by the 
+corresponding stream. A drawback this is that the raw data tends to be noisy and it is difficult to cover all the corner cases, 
+where the captured data for example falls outside the particular bounded region. Even if filtering is used there are still a few 
+questions to answer:</p>
+<ul>
+<li>How many data points do I need to receive in the region so I could say my user really looking at it?</li>
+<li>What if some points &#39;fall off&#39; the region?</li>
+<li>Do I care which of them are fixations and which are saccades?
+To resolve these questions, the concept of Interactors has been developed. </li>
+</ul>
+<p>The Interactors are simply regions in the application window with some action- or actions associated.</p>
+<p>Let&#39;s create a class which will help us greet user when she is looking at our application&#39;s main window and say farewell when she is not.
+And we will start from finding out what InteractorAgent is.</p>
+<h2 id="interactor-agent">Interactor agent</h2>
+<p>InteractorAgent helpes you create, find or remove interactors hiding all the routine of controlling their lifetime. </p>
+<pre><code class="lang-csharp">using Tobii.EyeX;
+...
+
+public class Greeter : IDisposable 
+{
+    private readonly Host _host;
+    private readonly UnboundInteractorAgent _interactorAgent;
+
+    public Greeter(string defaultWindowId)
+    {
+        _host = new Host();
+        _interactorAgent = _host.InitializeUnboundAgent(defaultWindowId);
+    }
+
+    public void Dispose() 
+    {
+        _host.Dispose();
+    }
+}
+</code></pre><p>To make <em>Greeter</em> available for various sorts of applications we have created <em>UnboundInteractorAgent</em> instance. Unified Foundation
+also provides <em>WpfInteractorAgent</em> and <em>FormsInteractorAgent</em> suitable for respective frameworks, but <em>UnboundInteractorAgent</em> 
+works great for all other scenarios. </p>
+<p>We have also provided <em>defaultWindowId</em> which will be used as a default value for WindowId parameter of interactors created with
+our <em>_interactorAgent</em>. <em>WindowId</em> specifies to which window interactor belongs to.</p>
+<h2 id="behaviors">Behaviors</h2>
+<p>Interactors follow some behavior. The most simple one is the <em>GazeAwareBehavior</em> which has two actions - one of them will trigger
+when user starts looking at the interactor with <em>GazeAwareBehavior</em> and the other one when the user stops. Sounds like perfect fit
+for our Greeter:</p>
+<pre><code class="lang-csharp">using Tobii.EyeX;
+using Tobii.EyeX.Client;
+...
+
+public class Greeter : IDisposable 
+{
+    private readonly Host _host;
+    private readonly UnboundInteractorAgent _interactorAgent;
+    private readonly UnboundInteractor _greetingInteractor;
+
+    public Greeter(string defaultWindowId, Rect defaultWindowBounds)
+    {
+        _host = new Host();
+        _interactorAgent = _host.InitializeUnboundAgent(defaultWindowId);
+        _greetingInteractor = _interactorAgent.AddInteractorFor(defaultWindowBounds);
+        _greetingInteractor
+            .WithGazeAware()
+            .HasGaze(onGazeEnters)
+            .LostGaze(onGazeLeaves);
+    }
+
+    public void Dispose() 
+    {
+        _host.Dispose();
+    }
+}
+</code></pre><p>What we have changed from our previous snippet is that we pass bounds of the window to which we will add interactor with <em>GazeAwareBehavior</em>.
+You can now use <em>Greeter</em> in your application. </p>
+<p>Let&#39;s see how we can use <em>Greeter</em> in new console application. </p>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
+using Tobii.EyeX;
+using Tobii.EyeX.Client;
+
+namespace GazeAwareInteractorEx
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            var handle = Process.GetCurrentProcess().MainWindowHandle;
+            var windowBounds = GetWindowBounds(handle);
+
+            Console.ReadKey();
+        }
+
+        #region Helpers 
+        private static Rect GetWindowBounds(IntPtr windowHandle)
+        {
+            NativeRect nativeNativeRect;
+            if (GetWindowRect(windowHandle, out nativeNativeRect))
+                return new Rect
+                {
+                    X = nativeNativeRect.Left,
+                    Y = nativeNativeRect.Top,
+                    Width = nativeNativeRect.Right,
+                    Height = nativeNativeRect.Bottom
+                };
+
+            return new Rect { X = 0, Y = 0, Width = 1000, Height = 1000 };
+        }
+
+        [DllImport(&quot;user32.dll&quot;, SetLastError = true)]
+        static extern bool GetWindowRect(IntPtr hWnd, out NativeRect nativeRect);
+
+        [StructLayout(LayoutKind.Sequential)]
+        public struct NativeRect
+        {
+            public int Left;
+            public int Top;
+            public int Right;
+            public int Bottom;
+        }
+
+        #endregion
+    }
+}
+</code></pre><p>Here we have created a new console application. We want to greet user when they look at the console window and tell goodbye when 
+they look somewhere else. To get console application window bounds we are using WinAPI. We also have added a helper functionality
+<em>GetWindowBounds</em> which convert <em>NativeRect</em> returned by <em>GetWindowRect</em> to Unified Foundation&#39;s rectangle type <em>Rect</em>. We also
+get handle to the console window. Let&#39;s add <em>Greeter</em>.</p>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
+using Tobii.EyeX;
+using Tobii.EyeX.Client;
+
+namespace GazeAwareInteractorEx
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            var handle = Process.GetCurrentProcess().MainWindowHandle;
+            var windowBounds = GetWindowBounds(handle);
+
+            var greeter = new Greeter(
+                handle.ToString(),
+                windowBounds,
+                () =&gt; Console.WriteLine(&quot;Greetings!&quot;),
+                () =&gt; Console.WriteLine(&quot;Bye...&quot;));
+
+            Console.ReadKey();
+        }
+
+        #region Helpers 
+        private static Rect GetWindowBounds(IntPtr windowHandle)
+        {
+            NativeRect nativeNativeRect;
+            if (GetWindowRect(windowHandle, out nativeNativeRect))
+                return new Rect
+                {
+                    X = nativeNativeRect.Left,
+                    Y = nativeNativeRect.Top,
+                    Width = nativeNativeRect.Right,
+                    Height = nativeNativeRect.Bottom
+                };
+
+            return new Rect { X = 0, Y = 0, Width = 1000, Height = 1000 };
+        }
+
+        [DllImport(&quot;user32.dll&quot;, SetLastError = true)]
+        static extern bool GetWindowRect(IntPtr hWnd, out NativeRect nativeRect);
+
+        [StructLayout(LayoutKind.Sequential)]
+        public struct NativeRect
+        {
+            public int Left;
+            public int Top;
+            public int Right;
+            public int Bottom;
+        }
+
+        #endregion
+    }
+
+    public class Greeter : IDisposable
+    {
+        private readonly Host _host;
+        private readonly UnboundInteractorAgent _interactorAgent;
+        private readonly UnboundInteractor _greetingInteractor;
+
+        public Greeter(string defaultWindowId, Rect defaultWindowBounds, Action onGazeEnters, Action onGazeLeaves)
+        {
+            _host = new Host();
+            _interactorAgent = _host.InitializeUnboundAgent(defaultWindowId);
+            _greetingInteractor = _interactorAgent.AddInteractorFor(defaultWindowBounds);
+            _greetingInteractor
+                .WithGazeAware()
+                .HasGaze(onGazeEnters)
+                .LostGaze(onGazeLeaves);
+        }
+
+        public void Dispose()
+        {
+            _host.Dispose();
+        }
+    }
+}
+</code></pre><h2 id="behaviors-1">Behaviors</h2>
+<p>Interactors are simply regions in application&#39;s window with some action or actions associated with them. 
+Triggering those actions is dictated by behavior assigned to interactor. Unified Foundation
+provides following behaviors for interactors:</p>
+<ul>
+<li><em>Gaze aware</em> - triggers when user&#39;s gaze enters or leaves interactor&#39;s bounds</li>
+<li><em>Activatable</em> - triggers when user is looking at interactor and also press some specified activation key (e.g. keyboard button)</li>
+<li><em>Pannable</em> - similar to Activatable but provides panning functionality instead of simple activations.</li>
+<li><em>Gaze point</em> - same as Gaze Point stream, but triggers only when user is looking at interactor&#39;s bounds</li>
+<li><em>Fixations</em> - same as Fixations stream, but triggers only when user is looking at interactor&#39;s bounds</li>
+<li><em>Eye position</em> - same as Eye position stream, but triggers only when user is looking at interactor&#39;s bounds</li>
+</ul>
+<p>Let&#39;s start exploring interactors by creating a new console application. For simplicity we have
+omitted namespace.</p>
+<pre><code class="lang-csharp">using System;
+using Tobii.EyeX;
+
+public class Program {
+    public static void Main(string[] args) {
+        var greeter = new Greeter();
+        // next line is to prevent console application from exit.
+        Console.ReadKey();
+
+        greeter.Dispose();
+    }
+}
+
+public class Greeter : IDisposable {
+    private readonly Host _host;
+
+    public Greeter() {
+        _host = new Host();
+    }
+
+    public void Dispose() {
+        _host.Dispose();
+    }
+}
+</code></pre><p>Every interactor belongs to some window and cannot exist outside it&#39;s boundaries. Even though we could use
+console window itself, to be more specific let&#39;s create a simple Windows Forms window.</p>
+<pre><code class="lang-csharp">using System;
+using System.Drawing;
+using System.Windows.Forms;
+using Tobii.EyeX;
+
+public class Program {
+    public static void Main(string[] args) {
+        var form = new Form
+            {
+                StartPosition = FormStartPosition.Manual,
+                Location = new Point(100, 100),
+                Size = new Size(200, 200)
+            };
+
+        form.Show();
+
+        var greeter = new Greeter();
+        // next line is to prevent console application from exit.
+        Console.ReadKey();
+
+        greeter.Dispose();
+        form.Hide();
+        form.Dispose();
+    }
+}
+
+public class Greeter : IDisposable {
+    private readonly Host _host;
+
+    public Greeter() {
+        _host = new Host();
+    }
+
+    public void Dispose() {
+        _host.Dispose();
+    }
+}
+</code></pre><h2 id="interactor-agent-1">Interactor agent</h2>
+<p>When you create, modify or update interactors you need to notify Interaction engine. <em>InteractorAgent</em> does that for
+you and also provides lots of helpful methods to manipulate interactors.</p>
+<pre><code class="lang-csharp">using System;
+using System.Drawing;
+using System.Windows.Forms;
+using Tobii.EyeX;
+
+public class Program {
+    public static void Main(string[] args) {
+        var form = new Form
+            {
+                StartPosition = FormStartPosition.Manual,
+                Location = new Point(100, 100),
+                Size = new Size(200, 200)
+            };
+
+        form.Show();
+
+        var greeter = new Greeter(form.Handle);
+        // next line is to prevent console application from exit.
+        Console.ReadKey();
+
+        greeter.Dispose();
+        form.Hide();
+        form.Dispose();
+    }
+}
+
+public class Greeter : IDisposable {
+    private readonly Host _host;
+    private readonly UnboundInteractorAgent _agent;
+
+    public Greeter(IntPtr windowHandle) {
+        _host = new Host();
+        _agent = _host.InitializeUnboundAgent(windowHandle);
+    }
+
+    public void Dispose() {
+        _host.Dispose();
+    }
+}
+</code></pre><p>Here we created an unbound InteractorAgent. Unbound means it can be used anywhere counter to <em>WpfInteractorAgent</em> or 
+<em>FormsInteractorAgent</em>. Creation of UnboundInteractorAgent requires window&#39;s handle so we have changed our code
+accordingly and we are using handle for the Forms window we have created earlier. That means all interactors
+created by our InteractorAgent will be bound to that Forms window.</p>
+<h2 id="gaze-aware-behavior">Gaze aware behavior</h2>
+<p>Now as we have InteractorAgent we will create interactor.   </p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

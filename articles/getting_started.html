@@ -33,7 +33,7 @@
               </button>
               
               <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src=".././images/tobii_logo.png" alt="">
+                <img id="logo" class="svg" src=".././images/tobii_coresdk_logo.png" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -78,28 +78,26 @@
 <p>This chapter shows how to setup a simple application that uses eye tracking. There is one example on how to setup a Console application and another for the WPF application. </p>
 <h2 id="installation">Installation</h2>
 <p>No development for eye tracking can successfully be done without the eye tracking device itself. 
-Please, make sure that the eye tracker and its corresponding software has been setup properly before proceeding. </p>
-<p>If you have a laptop or a monitor with built-in eye tracker you are most probably ready to start. 
+Please, make sure that the eye tracker and its corresponding software has been installed and setup properly before proceeding. </p>
+<p>If you are on a laptop or using a monitor with built-in eye tracker you are most probably ready to start. 
 However, if you possess a peripheral eye tracker you may need to carry out the instructions provided with your device to 
-download and install the Tobii EyeX SDK from <a href="http://developer.tobii.com/">developer.tobii.com</a> before proceeding with 
+download and install the Tobii Core SDK from <a href="http://developer.tobii.com/">developer.tobii.com</a> before proceeding with 
 the code examples.</p>
-<h3 id="unified-foundations-package">Unified Foundations package</h3>
-<p>The Unified Foundations provides all tools needed to start exploring the eye tracking features. 
-We have chosen to reference it from NuGet server via the solution explorer that hosts your project, both for the 
-Console- and the WPF applications below. The NuGet package manager is a great and convenient way to add 
-third party libraries to your application, such as the Unified Foundations.</p>
-<p>We add the Unified Foundations package by:</p>
+<h3 id="tobii-core-sdk-package">Tobii Core SDK package</h3>
+<p>The Tobii Core SDK provides all tools needed to start exploring the eye tracking features. 
+We have chosen to reference the software development kit from NuGet server via the solution explorer that hosts your project, both for the Console- and the WPF applications below. The NuGet package manager is a great and convenient way to add third party libraries to your application, such as the Tobii Core SDK.</p>
+<p>We add the Tobii Core SDK package by:</p>
 <ul>
 <li><p>Right click on the project&#39;s reference folder and choose <code>Manage NuGet Packages...</code> from the menu. </p>
 </li>
-<li><p>Browse for the <code>Tobii.EyeX.UnifiedFoundation</code> package and click install. The project shall now be referencing 
+<li><p>Browse for the <code>Tobii Core SDK</code> package and click install. The project shall now be referencing 
 <code>Tobii.EyeX.Model.dll</code> and <code>Tobii.EyeX.Net.dll</code>. Also, notice that <code>project.json</code> has been added/updated 
 in the project folder. </p>
 </li>
 </ul>
 <p>Configure the build architecture to <code>x86</code> to prevent potential warnings and build errors.</p>
 <h2 id="lets-code">Let&#39;s code</h2>
-<p>Now when all components have been installed we are ready to write and test some code. </p>
+<p>Now when all components have been installed we are ready to write and test some sample code. </p>
 <h3 id="getting-started-with-a-console-application">Getting started with a Console application</h3>
 <p>This example shows how to use eye tracking by incorporating it with a simple Console application. The easiest way is probably to create a new Console application in C# by using Visual Studio. If you prefer to start from an already existing WPF application you may jump straight into the <em>Getting started with a WPF application</em> below. </p>
 <p>We have chosen to output the coordinates of the user&#39;s gaze when looking at the screen.
@@ -118,7 +116,7 @@ public static void Main(string[] args)
 // ...
 </code></pre><p>When running this example you will see a constant stream of coordinates in the Console window.</p>
 <ul>
-<li><p>First we have instantiated the <a class="xref" href="../api/Tobii.EyeX.Host.html">Host</a> which serves as entry point into the Unified Foundations. The <code>host</code> primarily provides us with various eye tracking features, but it also creates a connection between the application and the Interaction Engine.</p>
+<li><p>First we have instantiated the <a class="xref" href="../api/Tobii.EyeX.Host.html">Host</a> which serves as entry point into the Tobii Core SDK. The <code>host</code> primarily provides us with various eye tracking features, but it also creates a connection between the application and the Interaction Engine. The Interaction Engine is part of the Tobii Core Software Bundle and works as a back-end which provides connection to the eye tracker, keeps firmware up-to-date and makes development for eye tracking easier.</p>
 </li>
 <li><p>Next we have used <code>host</code> to instantiate the <a class="xref" href="../api/Tobii.EyeX.GazePointDataStream.html">GazePointDataStream</a>, as <code>gazePointDataStream</code>. It contains coordinates, <a class="xref" href="../api/Tobii.EyeX.GazePointData.html">GazePointData</a>, of your gaze location plus the corresponding timestamps. </p>
 </li>
@@ -127,7 +125,8 @@ public static void Main(string[] args)
 </ul>
 <h3 id="getting-started-with-a-wpf-application">Getting started with a WPF application</h3>
 <p>In this example we are going to add gaze features into your WPF application in Visual Studio C#. We have chosen to let the window change color when the user is looking at it, which is called <a class="xref" href="../api/Tobii.EyeX.GazeAwareBehavior.html">GazeAwareBehavior</a>.</p>
-<p>In order for your application to use the eye tracker it needs to be registered as an Interaction Engine client. The Interaction Engine is part of the Tobii Core Software Bundle and works as a back-end which provides connection to the eye tracker, keeps firmware up-to-date and makes development for eye tracking easier.</p>
+<p>In order for your application to use the eye tracker it needs to be registered as an Interaction Engine client, for 
+to communicate with the eye tracker.</p>
 <p>Open the <code>App.xaml.cs</code> of your WPF application and add the following code:</p>
 <pre><code class="lang-csharp">// Inside App.xaml.cs
 
@@ -154,7 +153,7 @@ public partial class App : Application
         base.OnExit(e);
     }
 }
-</code></pre><p>For now, we do not care about the precise meaning of this code. We will look into the details later in the 
+</code></pre><p>For now, we do not care about the precise meaning of the code. We will look into the details later in the 
 <a class="xref" href="interactors.html">Interactors</a> chapter. The main thing here is to get the application 
 up and running.</p>
 <p>In order to figure out if the user is looking at the window we use the <a class="xref" href="../api/Tobii.EyeX.GazeAwareBehavior.html">GazeAwareBehavior</a>. So let&#39;s specify that the <code>Grid</code> shall become <code>gaze aware</code> by typing the following code:</p>

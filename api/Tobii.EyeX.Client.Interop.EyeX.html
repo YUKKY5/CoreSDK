@@ -35,7 +35,7 @@
               </button>
               
               <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src=".././images/tobii_logo.png" alt="">
+                <img id="logo" class="svg" src=".././images/tobii_coresdk_logo.png" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -1175,6 +1175,63 @@
               </table>
               
               
+              <a id="Tobii_EyeX_Client_Interop_EyeX_CreateProfileAsync_" data-uid="Tobii.EyeX.Client.Interop.EyeX.CreateProfileAsync*"></a>
+              <h4 id="Tobii_EyeX_Client_Interop_EyeX_CreateProfileAsync_SafeHandle_System_String_Tobii_EyeX_Client_Interop_AsyncDataCallback_IntPtr_" data-uid="Tobii.EyeX.Client.Interop.EyeX.CreateProfileAsync(SafeHandle,System.String,Tobii.EyeX.Client.Interop.AsyncDataCallback,IntPtr)">CreateProfileAsync(SafeHandle, String, AsyncDataCallback, IntPtr)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static ResultCode CreateProfileAsync(SafeHandle hContext, string profileName, AsyncDataCallback completionHandler, IntPtr userParam)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">SafeHandle</span></td>
+                    <td><span class="parametername">hContext</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">profileName</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Tobii.EyeX.Client.Interop.AsyncDataCallback.html">AsyncDataCallback</a></td>
+                    <td><span class="parametername">completionHandler</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">IntPtr</span></td>
+                    <td><span class="parametername">userParam</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Tobii.EyeX.Framework.ResultCode.html">ResultCode</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
               <a id="Tobii_EyeX_Client_Interop_EyeX_CreateProperty_" data-uid="Tobii.EyeX.Client.Interop.EyeX.CreateProperty*"></a>
               <h4 id="Tobii_EyeX_Client_Interop_EyeX_CreateProperty_SafeHandle_IntPtr__System_String_" data-uid="Tobii.EyeX.Client.Interop.EyeX.CreateProperty(SafeHandle,IntPtr@,System.String)">CreateProperty(SafeHandle, out IntPtr, String)</h4>
               <div class="markdown level1 summary"></div>
@@ -1747,13 +1804,13 @@
               </table>
               
               
-              <a id="Tobii_EyeX_Client_Interop_EyeX_DeleteProfile_" data-uid="Tobii.EyeX.Client.Interop.EyeX.DeleteProfile*"></a>
-              <h4 id="Tobii_EyeX_Client_Interop_EyeX_DeleteProfile_SafeHandle_System_String_Tobii_EyeX_Client_Interop_AsyncDataCallback_IntPtr_" data-uid="Tobii.EyeX.Client.Interop.EyeX.DeleteProfile(SafeHandle,System.String,Tobii.EyeX.Client.Interop.AsyncDataCallback,IntPtr)">DeleteProfile(SafeHandle, String, AsyncDataCallback, IntPtr)</h4>
+              <a id="Tobii_EyeX_Client_Interop_EyeX_DeleteProfileAsync_" data-uid="Tobii.EyeX.Client.Interop.EyeX.DeleteProfileAsync*"></a>
+              <h4 id="Tobii_EyeX_Client_Interop_EyeX_DeleteProfileAsync_SafeHandle_System_String_Tobii_EyeX_Client_Interop_AsyncDataCallback_IntPtr_" data-uid="Tobii.EyeX.Client.Interop.EyeX.DeleteProfileAsync(SafeHandle,System.String,Tobii.EyeX.Client.Interop.AsyncDataCallback,IntPtr)">DeleteProfileAsync(SafeHandle, String, AsyncDataCallback, IntPtr)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static ResultCode DeleteProfile(SafeHandle hContext, string profileName, AsyncDataCallback completionHandler, IntPtr userParam)</code></pre>
+                <pre><code class="lang-csharp hljs">public static ResultCode DeleteProfileAsync(SafeHandle hContext, string profileName, AsyncDataCallback completionHandler, IntPtr userParam)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -6873,6 +6930,68 @@
               </table>
               
               
+              <a id="Tobii_EyeX_Client_Interop_EyeX_RenameProfileAsync_" data-uid="Tobii.EyeX.Client.Interop.EyeX.RenameProfileAsync*"></a>
+              <h4 id="Tobii_EyeX_Client_Interop_EyeX_RenameProfileAsync_SafeHandle_System_String_System_String_Tobii_EyeX_Client_Interop_AsyncDataCallback_IntPtr_" data-uid="Tobii.EyeX.Client.Interop.EyeX.RenameProfileAsync(SafeHandle,System.String,System.String,Tobii.EyeX.Client.Interop.AsyncDataCallback,IntPtr)">RenameProfileAsync(SafeHandle, String, String, AsyncDataCallback, IntPtr)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static ResultCode RenameProfileAsync(SafeHandle hContext, string oldProfileName, string profileName, AsyncDataCallback completionHandler, IntPtr userParam)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">SafeHandle</span></td>
+                    <td><span class="parametername">hContext</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">oldProfileName</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">profileName</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Tobii.EyeX.Client.Interop.AsyncDataCallback.html">AsyncDataCallback</a></td>
+                    <td><span class="parametername">completionHandler</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">IntPtr</span></td>
+                    <td><span class="parametername">userParam</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Tobii.EyeX.Framework.ResultCode.html">ResultCode</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
               <a id="Tobii_EyeX_Client_Interop_EyeX_SetActivatableBehaviorParams_" data-uid="Tobii.EyeX.Client.Interop.EyeX.SetActivatableBehaviorParams*"></a>
               <h4 id="Tobii_EyeX_Client_Interop_EyeX_SetActivatableBehaviorParams_SafeHandle_Tobii_EyeX_Client_ActivatableParams__" data-uid="Tobii.EyeX.Client.Interop.EyeX.SetActivatableBehaviorParams(SafeHandle,Tobii.EyeX.Client.ActivatableParams@)">SetActivatableBehaviorParams(SafeHandle, ref ActivatableParams)</h4>
               <div class="markdown level1 summary"></div>
@@ -7061,13 +7180,13 @@
               </table>
               
               
-              <a id="Tobii_EyeX_Client_Interop_EyeX_SetCurrentProfile_" data-uid="Tobii.EyeX.Client.Interop.EyeX.SetCurrentProfile*"></a>
-              <h4 id="Tobii_EyeX_Client_Interop_EyeX_SetCurrentProfile_SafeHandle_System_String_Tobii_EyeX_Client_Interop_AsyncDataCallback_IntPtr_" data-uid="Tobii.EyeX.Client.Interop.EyeX.SetCurrentProfile(SafeHandle,System.String,Tobii.EyeX.Client.Interop.AsyncDataCallback,IntPtr)">SetCurrentProfile(SafeHandle, String, AsyncDataCallback, IntPtr)</h4>
+              <a id="Tobii_EyeX_Client_Interop_EyeX_SetCurrentProfileAsync_" data-uid="Tobii.EyeX.Client.Interop.EyeX.SetCurrentProfileAsync*"></a>
+              <h4 id="Tobii_EyeX_Client_Interop_EyeX_SetCurrentProfileAsync_SafeHandle_System_String_Tobii_EyeX_Client_Interop_AsyncDataCallback_IntPtr_" data-uid="Tobii.EyeX.Client.Interop.EyeX.SetCurrentProfileAsync(SafeHandle,System.String,Tobii.EyeX.Client.Interop.AsyncDataCallback,IntPtr)">SetCurrentProfileAsync(SafeHandle, String, AsyncDataCallback, IntPtr)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static ResultCode SetCurrentProfile(SafeHandle hContext, string profileName, AsyncDataCallback completionHandler, IntPtr userParam)</code></pre>
+                <pre><code class="lang-csharp hljs">public static ResultCode SetCurrentProfileAsync(SafeHandle hContext, string profileName, AsyncDataCallback completionHandler, IntPtr userParam)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -7520,6 +7639,88 @@
                   <tr>
                     <td><a class="xref" href="Tobii.EyeX.Client.PannableParams.html">PannableParams</a></td>
                     <td><span class="parametername">pParams</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Tobii.EyeX.Framework.ResultCode.html">ResultCode</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_EyeX_Client_Interop_EyeX_SetProfileCalibrationDataAsync_" data-uid="Tobii.EyeX.Client.Interop.EyeX.SetProfileCalibrationDataAsync*"></a>
+              <h4 id="Tobii_EyeX_Client_Interop_EyeX_SetProfileCalibrationDataAsync_SafeHandle_System_String_System_String_System_String_System_Int32_IntPtr_System_Int32__Tobii_EyeX_Client_Interop_AsyncDataCallback_IntPtr_" data-uid="Tobii.EyeX.Client.Interop.EyeX.SetProfileCalibrationDataAsync(SafeHandle,System.String,System.String,System.String,System.Int32,IntPtr,System.Int32@,Tobii.EyeX.Client.Interop.AsyncDataCallback,IntPtr)">SetProfileCalibrationDataAsync(SafeHandle, String, String, String, Int32, IntPtr, ref Int32, AsyncDataCallback, IntPtr)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static ResultCode SetProfileCalibrationDataAsync(SafeHandle hContext, string profileName, string trackerUri, string timestamp, int numOfCalibrationPoints, IntPtr calibrationData, ref int calibrationDataSize, AsyncDataCallback completionHandler, IntPtr userParam)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">SafeHandle</span></td>
+                    <td><span class="parametername">hContext</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">profileName</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">trackerUri</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">timestamp</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><span class="parametername">numOfCalibrationPoints</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">IntPtr</span></td>
+                    <td><span class="parametername">calibrationData</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><span class="parametername">calibrationDataSize</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Tobii.EyeX.Client.Interop.AsyncDataCallback.html">AsyncDataCallback</a></td>
+                    <td><span class="parametername">completionHandler</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">IntPtr</span></td>
+                    <td><span class="parametername">userParam</span></td>
                     <td></td>
                   </tr>
                 </tbody>

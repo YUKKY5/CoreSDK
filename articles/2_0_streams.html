@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Streams </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Streams ">
+    <meta name="generator" content="docfx 2.10.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="streams">Streams</h1>
+              
+<p>Streams represent themselves a continuous flow of data from the eye tracker. If you have already read the Getting started chapter you might remember that we used the gaze points stream. In this
+chapter we will look closer at which kind of streams you can access using Unified Foundation. </p>
+<h2 id="gaze-point-data-stream">Gaze point data stream</h2>
+<p>In simple terms, gaze point is the point on the screen where you looking at given moment of time. More technically it is the point on the screen where the eye tracker has calculated 
+that a line along the user&#39;s eye-gaze intersects with the screen plane. </p>
+<p>Common misconception regarding gaze point could be that it resembles mouse pointer. Unfortunately, it is not true. 
+Eye tracking data is not as precise as mouse pointer data - it is actually physically impossible due to how our eyes and seeing works. Instead, think of a series of gaze points 
+representing an area where the user is looking. The accuracy and precision of the data varies from user to user, which needs to be accounted for.</p>
+<h3 id="filtering">Filtering</h3>
+<p>Because the gaze point is an intrinsically noisy signal, the <em>GazePointData</em> stream provides a selection of filters that can be used to stabilize the signal. As usual when it comes
+to filtering, there is a trade-off between stability and responsiveness, so there cannot be a single filter that is the best choice for all applications.</p>
+<p>At the moment Unified Foundation provides the following filtering options:</p>
+<ul>
+<li><em>Lightly filtered (default)</em> - an adaptive filter which is weighted based on both the age of the data points and the velocity of the eye movements. This filter is designed to remove noise 
+and at the same time being responsive to quick eye movements.</li>
+<li><em>Unfiltered</em> - no filtering is performed by the Interaction Engine. (Except for the removal of invalid data points and the averaging of the gaze points from both eyes.)</li>
+</ul>
+<h3 id="lets-code">Let&#39;s code</h3>
+<p>To start using the <em>GazePointData</em> stream you need an instance of the Host class:</p>
+<pre><code class="lang-csharp">using Tobii.EyeX;
+
+public class GazeDataToConsolePrinter : IDisposable {
+    private readonly Host _host;
+
+    public GazeDataToConsolePrinter() {
+        _host = new Host();
+    }
+
+    public void Dispose() {
+        _host.Dispose();
+    }
+}
+</code></pre><p>You would need to create an instance of the <em>GazePointData</em> stream next:</p>
+<pre><code class="lang-csharp">using Tobii.EyeX;
+
+public class GazeDataToConsolePrinter : IDisposable {
+    private readonly Host _host;
+    private readonly GazePointDataStream _gazePointDataStream;
+
+    public GazeDataToConsolePrinter() {
+        _host = new Host();
+        _gazePointDataStream = host.Streams.CreateGazePointDataStream();
+    }
+
+    public void Dispose() {
+        _host.Dispose();
+    }
+}
+</code></pre><p>You have two options of how to subscribe to a GazePointData, by either using the <em>GazePoint()</em> callback method or the event <em>Next</em> depending on your preferences. To demonstrate 
+both options modify previous snippet by creating two different streams - one with the lightly filtered data and the other one as unfiltered:</p>
+<pre><code class="lang-csharp">using Tobii.EyeX;
+using Tobii.EyeX.Framework;
+
+public class GazeDataToConsolePrinter : IDisposable {
+    private readonly Host _host;
+    private readonly GazePointDataStream _lightlyFilteredGazePointDataStream;
+    private readonly GazePointDataStream _unfilteredGazePointDataStream;
+
+    public GazeDataToConsolePrinter() {
+        _host = new Host();
+        _lightlyFilteredGazePointDataStream = _host.Streams.CreateGazePointDataStream();
+
+        _unfilteredGazePointDataStream = _host.Streams.CreateGazePointDataStream(GazePointDataMode.Unfiltered);
+    }
+
+    public void Print() {
+        _lightlyFilteredGazePointDataStream.GazePoint((x, y, ts) =&gt; Console.WriteLine(&quot;Lightly filtered: Timestamp: {0}\t X: {1} Y:{2}&quot;, ts, x, y));
+        _unfilteredGazePointDataStream.Next += OnGazePointData;
+    }
+
+    public void Dispose() {
+        _unfilteredGazePointDataStream.Next -= OnGazePointData;
+        _host.Dispose();
+    }
+
+    private void OnGazePointData(object sender, StreamData&lt;GazePointData&gt; streamData) {
+        Console.WriteLine(&quot;Unfiltered: Timestamp: {0}\t X: {1} Y:{2}&quot;, streamData.Data.Timestamp, streamData.Data.X, streamData.Data.Y);            
+    }
+}
+</code></pre><p>It is worth mentioning that coordinates of the gaze points originate from the top left corner. Also if you have checked the <em>streamData</em> argument you could
+notice that it also contains the field <em>InteractorId</em>. We will cover <strong>interactors</strong> in depth in their own chapter.</p>
+<h2 id="fixation-data-stream">Fixation data stream</h2>
+<p>Gaze data exists in two forms - saccades and fixations. When we covered the <em>GazePointData</em> stream we didn&#39;t mention that those points are either of type saccades or fixations. 
+Fixations are the moments of time between saccades when eyes are relatively stationary and visual input occurs. In other words you &quot;see&quot; during fixation and you &quot;blind&quot; during saccades. 
+FixationDataStream provides information about when you are fixating your eyes at the single location. This stream could be used to get understanding of where user&#39;s attention is, because 
+during fixation brain is processing information at the point of fixation.</p>
+<p>Fixations happens as a series of gaze points: point representing beginning of the fixation, points during fixation and point corresponding to the end of the fixation. </p>
+<h3 id="filtering-1">Filtering</h3>
+<p>As with the GazePointData stream, fixation stream will be filtered in one of two ways:</p>
+<ul>
+<li><em>Sensitive (default)</em> - which will result in many fixations, sometimes very quick in succession.</li>
+<li><em>Slow</em> - which will result in fairly stable fixations, but may leave somewhat late.         </li>
+</ul>
+<h3 id="lets-code-1">Let&#39;s code</h3>
+<p>To help explore fixations in a better way let&#39;s write a new class which will use FixationDataStream:</p>
+<pre><code class="lang-csharp">using Tobii.EyeX;
+
+public class FixationDataToConsolePrinter : IDisposable {
+    private readonly Host _host;
+    private readonly FixationDataStream _fixationDataStream;
+
+    public FixationDataToConsolePrinter() {
+        _host = new Host();
+        _fixationDataStream = _host.Streams.CreateFixationDataStream();
+    }
+
+    public void Dispose() {
+        _host.Dispose();
+    }
+}
+</code></pre><p>In the section dedicated to gaze point data stream we have already mentioned that you have two options of how to subscribe to the stream&#39;s data, so we will use only one way here:
+Let&#39;s extend our code with the following:</p>
+<pre><code class="lang-csharp">using Tobii.EyeX;
+
+public class FixationDataToConsolePrinter : IDisposable {
+    private readonly Host _host;
+    private readonly FixationDataStream _fixationDataStream;
+
+    public FixationDataToConsolePrinter() {
+        _host = new Host();
+        _fixationDataStream = _host.Streams.CreateFixationDataStream();
+    }
+
+    public void Print() {
+        _fixationDataStream.Begin((x, y, timestamp) =&gt; Console.WriteLine(&quot;Begin fixation at X: {0} Y: {1}&quot;, x, y));
+        _fixationDataStream.Data((x, y, timestamp) =&gt; Console.WriteLine(&quot;During fixation at X: {0} Y: {1}&quot;, x, y));
+        _fixationDataStream.End((x, y, timestamp) =&gt; Console.WriteLine(&quot;End fixation at X: {0} Y: {1}&quot;, x, y));
+    }
+
+    public void Dispose() {
+        _host.Dispose();
+    }
+}
+</code></pre><p>As with gaze point data stream fixation point coordinates are screen based and originate at the top left corner of it. </p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -35,7 +35,7 @@
               </button>
               
               <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src=".././images/tobii_logo.png" alt="">
+                <img id="logo" class="svg" src=".././images/tobii_coresdk_logo.png" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -328,6 +328,38 @@
               </table>
               
               
+              <a id="Tobii_EyeX_Model_IContext_CreateProfileAsync_" data-uid="Tobii.EyeX.Model.IContext.CreateProfileAsync*"></a>
+              <h4 id="Tobii_EyeX_Model_IContext_CreateProfileAsync_System_String_Tobii_EyeX_Model_AsyncDataHandler_" data-uid="Tobii.EyeX.Model.IContext.CreateProfileAsync(System.String,Tobii.EyeX.Model.AsyncDataHandler)">CreateProfileAsync(String, AsyncDataHandler)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">void CreateProfileAsync(string profileName, AsyncDataHandler completionHandler)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">profileName</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Tobii.EyeX.Model.AsyncDataHandler.html">AsyncDataHandler</a></td>
+                    <td><span class="parametername">completionHandler</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
               <a id="Tobii_EyeX_Model_IContext_CreatePropertyBag_" data-uid="Tobii.EyeX.Model.IContext.CreatePropertyBag*"></a>
               <h4 id="Tobii_EyeX_Model_IContext_CreatePropertyBag_Tobii_EyeX_Client_PropertyBagType_" data-uid="Tobii.EyeX.Model.IContext.CreatePropertyBag(Tobii.EyeX.Client.PropertyBagType)">CreatePropertyBag(PropertyBagType)</h4>
               <div class="markdown level1 summary"></div>
@@ -563,13 +595,13 @@
               </table>
               
               
-              <a id="Tobii_EyeX_Model_IContext_DeleteProfile_" data-uid="Tobii.EyeX.Model.IContext.DeleteProfile*"></a>
-              <h4 id="Tobii_EyeX_Model_IContext_DeleteProfile_System_String_Tobii_EyeX_Model_AsyncDataHandler_" data-uid="Tobii.EyeX.Model.IContext.DeleteProfile(System.String,Tobii.EyeX.Model.AsyncDataHandler)">DeleteProfile(String, AsyncDataHandler)</h4>
+              <a id="Tobii_EyeX_Model_IContext_DeleteProfileAsync_" data-uid="Tobii.EyeX.Model.IContext.DeleteProfileAsync*"></a>
+              <h4 id="Tobii_EyeX_Model_IContext_DeleteProfileAsync_System_String_Tobii_EyeX_Model_AsyncDataHandler_" data-uid="Tobii.EyeX.Model.IContext.DeleteProfileAsync(System.String,Tobii.EyeX.Model.AsyncDataHandler)">DeleteProfileAsync(String, AsyncDataHandler)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">void DeleteProfile(string profileName, AsyncDataHandler completionHandler)</code></pre>
+                <pre><code class="lang-csharp hljs">void DeleteProfileAsync(string profileName, AsyncDataHandler completionHandler)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1208,13 +1240,50 @@
               </table>
               
               
-              <a id="Tobii_EyeX_Model_IContext_SetCurrentProfile_" data-uid="Tobii.EyeX.Model.IContext.SetCurrentProfile*"></a>
-              <h4 id="Tobii_EyeX_Model_IContext_SetCurrentProfile_System_String_Tobii_EyeX_Model_AsyncDataHandler_" data-uid="Tobii.EyeX.Model.IContext.SetCurrentProfile(System.String,Tobii.EyeX.Model.AsyncDataHandler)">SetCurrentProfile(String, AsyncDataHandler)</h4>
+              <a id="Tobii_EyeX_Model_IContext_RenameProfileAsync_" data-uid="Tobii.EyeX.Model.IContext.RenameProfileAsync*"></a>
+              <h4 id="Tobii_EyeX_Model_IContext_RenameProfileAsync_System_String_System_String_Tobii_EyeX_Model_AsyncDataHandler_" data-uid="Tobii.EyeX.Model.IContext.RenameProfileAsync(System.String,System.String,Tobii.EyeX.Model.AsyncDataHandler)">RenameProfileAsync(String, String, AsyncDataHandler)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">void SetCurrentProfile(string profileName, AsyncDataHandler completionHandler)</code></pre>
+                <pre><code class="lang-csharp hljs">void RenameProfileAsync(string oldProfileName, string profileName, AsyncDataHandler completionHandler)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">oldProfileName</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">profileName</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Tobii.EyeX.Model.AsyncDataHandler.html">AsyncDataHandler</a></td>
+                    <td><span class="parametername">completionHandler</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_EyeX_Model_IContext_SetCurrentProfileAsync_" data-uid="Tobii.EyeX.Model.IContext.SetCurrentProfileAsync*"></a>
+              <h4 id="Tobii_EyeX_Model_IContext_SetCurrentProfileAsync_System_String_Tobii_EyeX_Model_AsyncDataHandler_" data-uid="Tobii.EyeX.Model.IContext.SetCurrentProfileAsync(System.String,Tobii.EyeX.Model.AsyncDataHandler)">SetCurrentProfileAsync(String, AsyncDataHandler)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">void SetCurrentProfileAsync(string profileName, AsyncDataHandler completionHandler)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1229,6 +1298,58 @@
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">profileName</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Tobii.EyeX.Model.AsyncDataHandler.html">AsyncDataHandler</a></td>
+                    <td><span class="parametername">completionHandler</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_EyeX_Model_IContext_SetProfileCalibrationDataAsync_" data-uid="Tobii.EyeX.Model.IContext.SetProfileCalibrationDataAsync*"></a>
+              <h4 id="Tobii_EyeX_Model_IContext_SetProfileCalibrationDataAsync_System_String_Uri_System_String_System_Int32_System_Byte___Tobii_EyeX_Model_AsyncDataHandler_" data-uid="Tobii.EyeX.Model.IContext.SetProfileCalibrationDataAsync(System.String,Uri,System.String,System.Int32,System.Byte[],Tobii.EyeX.Model.AsyncDataHandler)">SetProfileCalibrationDataAsync(String, Uri, String, Int32, Byte[], AsyncDataHandler)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">void SetProfileCalibrationDataAsync(string profileName, Uri trackerUri, string timestamp, int numOfDataPoints, byte[] data, AsyncDataHandler completionHandler)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">profileName</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Uri</span></td>
+                    <td><span class="parametername">trackerUri</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">timestamp</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><span class="parametername">numOfDataPoints</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Byte</span>[]</td>
+                    <td><span class="parametername">data</span></td>
                     <td></td>
                   </tr>
                   <tr>

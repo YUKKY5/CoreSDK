@@ -35,7 +35,7 @@
               </button>
               
               <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src=".././images/tobii_logo.png" alt="">
+                <img id="logo" class="svg" src=".././images/tobii_coresdk_logo.png" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -306,7 +306,7 @@ The behavior will be created and added if it do not already exist on the interac
                 <tbody>
                   <tr>
                     <td><span class="xref">TInteractor</span></td>
-                    <td><p>The same <em>TInteractor</em> instance so that multiple calls can be chained.</p>
+                    <td><p>The same <span class="typeparamref">TInteractor</span> instance so that multiple calls can be chained.</p>
 </td>
                   </tr>
                 </tbody>
@@ -395,72 +395,6 @@ The behaviors will be created and added if they do not already exist on the inte
                     <td><span class="parametername">TInteractor</span></td>
                     <td>The interactor type.</td>
                   </tr>
-                  <tr>
-                    <td><span class="parametername">TBehavior</span></td>
-                    <td>The behavior type.</td>
-                  </tr>
-                </tbody>
-              </table>
-              
-              
-              <a id="Tobii_EyeX_InteractorExtensions_ModifyBehavior_" data-uid="Tobii.EyeX.InteractorExtensions.ModifyBehavior*"></a>
-              <h4 id="Tobii_EyeX_InteractorExtensions_ModifyBehavior__1_Tobii_EyeX_IInteractor_Action___0__" data-uid="Tobii.EyeX.InteractorExtensions.ModifyBehavior``1(Tobii.EyeX.IInteractor,Action{``0})">ModifyBehavior&lt;TBehavior&gt;(IInteractor, Action&lt;TBehavior&gt;)</h4>
-              <div class="markdown level1 summary"><p>Modifies the behavior using the specified action.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static TBehavior ModifyBehavior&lt;TBehavior&gt;(this IInteractor interactor, Action&lt;TBehavior&gt; action)where TBehavior : class, IBehavior</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Tobii.EyeX.IInteractor.html">IInteractor</a></td>
-                    <td><span class="parametername">interactor</span></td>
-                    <td><p>The interactor.</p>
-</td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">Action</span>&lt;TBehavior&gt;</td>
-                    <td><span class="parametername">action</span></td>
-                    <td><p>The action to use to modify the behavior.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">TBehavior</span></td>
-                    <td><p>The modified behavior or <code>null</code> if not found.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="typeParameters">Type Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
                   <tr>
                     <td><span class="parametername">TBehavior</span></td>
                     <td>The behavior type.</td>
@@ -564,7 +498,7 @@ The behavior will be created and added if it do not already exist.</p>
               <a id="Tobii_EyeX_InteractorExtensions_WithActivatable_" data-uid="Tobii.EyeX.InteractorExtensions.WithActivatable*"></a>
               <h4 id="Tobii_EyeX_InteractorExtensions_WithActivatable__1___0_Action_Tobii_EyeX_ActivatableBehavior__" data-uid="Tobii.EyeX.InteractorExtensions.WithActivatable``1(``0,Action{Tobii.EyeX.ActivatableBehavior})">WithActivatable&lt;TInteractor&gt;(TInteractor, Action&lt;ActivatableBehavior&gt;)</h4>
               <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Tobii.EyeX.ActivatableBehavior.html">ActivatableBehavior</a> on the specified interactor if it is not present,
-and configures it using the specified <em>action</em>.</p>
+and configures it using the specified <span class="paramref">action</span>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -631,7 +565,7 @@ and configures it using the specified <em>action</em>.</p>
               <a id="Tobii_EyeX_InteractorExtensions_WithActivatable_" data-uid="Tobii.EyeX.InteractorExtensions.WithActivatable*"></a>
               <h4 id="Tobii_EyeX_InteractorExtensions_WithActivatable__1_IEnumerable___0__Action_Tobii_EyeX_ActivatableBehavior__" data-uid="Tobii.EyeX.InteractorExtensions.WithActivatable``1(IEnumerable{``0},Action{Tobii.EyeX.ActivatableBehavior})">WithActivatable&lt;TInteractor&gt;(IEnumerable&lt;TInteractor&gt;, Action&lt;ActivatableBehavior&gt;)</h4>
               <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Tobii.EyeX.ActivatableBehavior.html">ActivatableBehavior</a> on all the specified interactors if it is not present,
-and configures them using the specified <em>action</em>.</p>
+and configures them using the specified <span class="paramref">action</span>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -790,7 +724,7 @@ The behavior will be created and added if it do not already exist.</p>
               <a id="Tobii_EyeX_InteractorExtensions_WithGazeAware_" data-uid="Tobii.EyeX.InteractorExtensions.WithGazeAware*"></a>
               <h4 id="Tobii_EyeX_InteractorExtensions_WithGazeAware__1___0_Action_Tobii_EyeX_GazeAwareBehavior__" data-uid="Tobii.EyeX.InteractorExtensions.WithGazeAware``1(``0,Action{Tobii.EyeX.GazeAwareBehavior})">WithGazeAware&lt;TInteractor&gt;(TInteractor, Action&lt;GazeAwareBehavior&gt;)</h4>
               <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Tobii.EyeX.GazeAwareBehavior.html">GazeAwareBehavior</a> on the specified interactor if it is not present,
-and configures it using the specified <em>action</em>.</p>
+and configures it using the specified <span class="paramref">action</span>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -857,7 +791,7 @@ and configures it using the specified <em>action</em>.</p>
               <a id="Tobii_EyeX_InteractorExtensions_WithGazeAware_" data-uid="Tobii.EyeX.InteractorExtensions.WithGazeAware*"></a>
               <h4 id="Tobii_EyeX_InteractorExtensions_WithGazeAware__1_IEnumerable___0__Action_Tobii_EyeX_GazeAwareBehavior__" data-uid="Tobii.EyeX.InteractorExtensions.WithGazeAware``1(IEnumerable{``0},Action{Tobii.EyeX.GazeAwareBehavior})">WithGazeAware&lt;TInteractor&gt;(IEnumerable&lt;TInteractor&gt;, Action&lt;GazeAwareBehavior&gt;)</h4>
               <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Tobii.EyeX.GazeAwareBehavior.html">GazeAwareBehavior</a> on all the specified interactors if it is not present,
-and configures them using the specified <em>action</em>.</p>
+and configures them using the specified <span class="paramref">action</span>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1016,7 +950,7 @@ The behavior will be created and added if it do not already exist.</p>
               <a id="Tobii_EyeX_InteractorExtensions_WithPannable_" data-uid="Tobii.EyeX.InteractorExtensions.WithPannable*"></a>
               <h4 id="Tobii_EyeX_InteractorExtensions_WithPannable__1___0_Action_Tobii_EyeX_PannableBehavior__" data-uid="Tobii.EyeX.InteractorExtensions.WithPannable``1(``0,Action{Tobii.EyeX.PannableBehavior})">WithPannable&lt;TInteractor&gt;(TInteractor, Action&lt;PannableBehavior&gt;)</h4>
               <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Tobii.EyeX.PannableBehavior.html">PannableBehavior</a> on the specified interactor if it is not present,
-and configures it using the specified <em>action</em>.</p>
+and configures it using the specified <span class="paramref">action</span>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1083,7 +1017,7 @@ and configures it using the specified <em>action</em>.</p>
               <a id="Tobii_EyeX_InteractorExtensions_WithPannable_" data-uid="Tobii.EyeX.InteractorExtensions.WithPannable*"></a>
               <h4 id="Tobii_EyeX_InteractorExtensions_WithPannable__1_IEnumerable___0__Action_Tobii_EyeX_PannableBehavior__" data-uid="Tobii.EyeX.InteractorExtensions.WithPannable``1(IEnumerable{``0},Action{Tobii.EyeX.PannableBehavior})">WithPannable&lt;TInteractor&gt;(IEnumerable&lt;TInteractor&gt;, Action&lt;PannableBehavior&gt;)</h4>
               <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Tobii.EyeX.PannableBehavior.html">PannableBehavior</a> on all the specified interactors if it is not present,
-and configures them using the specified <em>action</em>.</p>
+and configures them using the specified <span class="paramref">action</span>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>

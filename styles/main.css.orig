@@ -1,0 +1,60 @@
+<<<<<<< Updated upstream
+.navbar-inverse {
+    border-color: #02161F;
+    background-color: #02161F;
+=======
+<<<<<<< Updated upstream
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: #2c2c2c;
+=======
+.navbar {
+    border-width: 0px;
+}
+
+.navbar-inverse {
+    border-color: #02161F;
+    background-color: #02161F;
+>>>>>>> Stashed changes
+}
+
+.navbar-inverse .navbar-nav > .active > a {
+    background-color: #02161F;
+}
+
+.navbar-default {
+    background-color: #343741;
+>>>>>>> Stashed changes
+}
+
+.navbar-brand > img {
+    display: block;
+    max-height: 36px;
+}
+
+.navbar-brand .svg {
+    margin-left: 0.5em;
+    margin-top: 0.4em;
+}
+
+.navbar-nav {
+    margin-left: 100px;
+}
+
+.toc .nav > li.active > a {
+    color: #00BEFF;
+}
+
+button, a {
+    color: #00BEFF;
+    cursor: pointer;
+}
+
+.affix > ul > li.active > a, .affix > ul > li.active > a:before {
+    color: #00BEFF;
+    font-weight: bold;
+}
+
+code {
+    background-color: #F9FDFF;
+    color: #00BEFF;
+}

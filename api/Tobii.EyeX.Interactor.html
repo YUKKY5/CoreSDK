@@ -35,7 +35,7 @@
               </button>
               
               <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src=".././images/tobii_logo.png" alt="">
+                <img id="logo" class="svg" src=".././images/tobii_coresdk_logo.png" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -80,6 +80,8 @@
                   <div class="level1"><a class="xref" href="Tobii.EyeX.EventHandlingBase.html">EventHandlingBase</a></div>
                   <div class="level2"><a class="xref" href="Tobii.EyeX.InteractorBase.html">InteractorBase</a></div>
                   <div class="level3"><span class="xref">Interactor</span></div>
+                  <div class="level4"><a class="xref" href="Tobii.EyeX.CachedBoundsInteractor.html">CachedBoundsInteractor</a></div>
+                  <div class="level4"><a class="xref" href="Tobii.EyeX.Wpf.WpfInteractor.html">WpfInteractor</a></div>
               </div>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
@@ -97,6 +99,9 @@
                 </div>
                 <div>
                   <a class="xref" href="Tobii.EyeX.InteractorBase.html#Tobii_EyeX_InteractorBase_IsDeleted">InteractorBase.IsDeleted</a>
+                </div>
+                <div>
+                  <a class="xref" href="Tobii.EyeX.InteractorBase.html#Tobii_EyeX_InteractorBase_IsEnabled">InteractorBase.IsEnabled</a>
                 </div>
                 <div>
                   <a class="xref" href="Tobii.EyeX.InteractorBase.html#Tobii_EyeX_InteractorBase_GetBounds">InteractorBase.GetBounds()</a>
@@ -257,7 +262,7 @@
               
               <a id="Tobii_EyeX_Interactor_AddBehaviorObserver_" data-uid="Tobii.EyeX.Interactor.AddBehaviorObserver*"></a>
               <h4 id="Tobii_EyeX_Interactor_AddBehaviorObserver__1_System_Object_Action___0_System_Boolean__" data-uid="Tobii.EyeX.Interactor.AddBehaviorObserver``1(System.Object,Action{``0,System.Boolean})">AddBehaviorObserver&lt;TBehavior&gt;(Object, Action&lt;TBehavior, Boolean&gt;)</h4>
-              <div class="markdown level1 summary"><p>Adds a behavior observer and an <see cref="!:Action"></see> that will execute when the interactor&#39;s behavior of type <em>TBehavior</em> changes.</p>
+              <div class="markdown level1 summary"><p>Adds a behavior observer and an <see cref="!:Action"></see> that will execute when the interactor&#39;s behavior of type <span class="typeparamref">TBehavior</span> changes.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -394,7 +399,7 @@
                     <td><a class="xref" href="Tobii.EyeX.IBehavior.html">IBehavior</a></td>
                     <td><span class="parametername">behavior</span></td>
                     <td><p>When this method returns, contains the behavior with a behavior type
-equivalent of the behavior type contained in <em>behaviorType</em>,
+equivalent of the behavior type contained in <span class="paramref">behaviorType</span>,
 if the operation succeeded, or <code>null</code> if the operation failed.</p>
 </td>
                   </tr>

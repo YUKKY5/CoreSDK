@@ -1,9 +1,28 @@
-.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-    border-color: #2c2c2c;
+.navbar-inverse {
+    border-color: #02161F;
+    background-color: #02161F;
+}
+
+.navbar {
+    border-width: 0px;
+}
+
+.navbar-inverse {
+    border-color: #02161F;
+    background-color: #02161F;
+}
+
+.navbar-inverse .navbar-nav > .active > a {
+    background-color: #02161F;
+}
+
+.navbar-default {
+    background-color: #343741;
 }
 
 .navbar-brand > img {
     display: block;
+    max-height: 36px;
 }
 
 .navbar-brand .svg {
@@ -16,15 +35,20 @@
 }
 
 .toc .nav > li.active > a {
-    color: #EC0088;
+    color: #00BEFF;
 }
 
 button, a {
-    color: #EC0088;
+    color: #00BEFF;
     cursor: pointer;
 }
 
 .affix > ul > li.active > a, .affix > ul > li.active > a:before {
-    color: #EC0088;
+    color: #00BEFF;
     font-weight: bold;
+}
+
+code {
+    background-color: #F2FBFF;
+    color: #00BEFF;
 }

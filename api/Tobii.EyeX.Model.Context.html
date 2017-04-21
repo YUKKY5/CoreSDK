@@ -35,7 +35,7 @@
               </button>
               
               <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src=".././images/tobii_logo.png" alt="">
+                <img id="logo" class="svg" src=".././images/tobii_coresdk_logo.png" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -426,6 +426,59 @@ Typically used for debugging purposes when having multiple contexts (this name w
                   <div><a class="xref" href="Tobii.EyeX.Model.IContext.html#Tobii_EyeX_Model_IContext_CreateInteractionObject_Tobii_EyeX_Model_PropertyBag_">IContext.CreateInteractionObject(PropertyBag)</a></div>
               
               
+              <a id="Tobii_EyeX_Model_Context_CreateProfileAsync_" data-uid="Tobii.EyeX.Model.Context.CreateProfileAsync*"></a>
+              <h4 id="Tobii_EyeX_Model_Context_CreateProfileAsync_System_String_Tobii_EyeX_Model_AsyncDataHandler_" data-uid="Tobii.EyeX.Model.Context.CreateProfileAsync(System.String,Tobii.EyeX.Model.AsyncDataHandler)">CreateProfileAsync(String, AsyncDataHandler)</h4>
+              <div class="markdown level1 summary"><p>Create a profile asynchronously. </p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void CreateProfileAsync(string profileName, AsyncDataHandler completionHandler)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">profileName</span></td>
+                    <td><p>The name of the profile to delete.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Tobii.EyeX.Model.AsyncDataHandler.html">AsyncDataHandler</a></td>
+                    <td><span class="parametername">completionHandler</span></td>
+                    <td><p>The completion handler invoked when the response from the server arrives. Can be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Tobii.EyeX.Model.IContext.html#Tobii_EyeX_Model_IContext_CreateProfileAsync_System_String_Tobii_EyeX_Model_AsyncDataHandler_">IContext.CreateProfileAsync(String, AsyncDataHandler)</a></div>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Tobii.EyeX.Client.InteractionApiException.html">InteractionApiException</a></td>
+                    <td><p>Will be thrown on errors.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
               <a id="Tobii_EyeX_Model_Context_CreatePropertyBag_" data-uid="Tobii.EyeX.Model.Context.CreatePropertyBag*"></a>
               <h4 id="Tobii_EyeX_Model_Context_CreatePropertyBag_Tobii_EyeX_Client_PropertyBagType_" data-uid="Tobii.EyeX.Model.Context.CreatePropertyBag(Tobii.EyeX.Client.PropertyBagType)">CreatePropertyBag(PropertyBagType)</h4>
               <div class="markdown level1 summary"><p>Creates an empty <a class="xref" href="Tobii.EyeX.Model.PropertyBag.html">PropertyBag</a>.</p>
@@ -801,14 +854,14 @@ Typically used for debugging purposes when having multiple contexts (this name w
               </table>
               
               
-              <a id="Tobii_EyeX_Model_Context_DeleteProfile_" data-uid="Tobii.EyeX.Model.Context.DeleteProfile*"></a>
-              <h4 id="Tobii_EyeX_Model_Context_DeleteProfile_System_String_Tobii_EyeX_Model_AsyncDataHandler_" data-uid="Tobii.EyeX.Model.Context.DeleteProfile(System.String,Tobii.EyeX.Model.AsyncDataHandler)">DeleteProfile(String, AsyncDataHandler)</h4>
-              <div class="markdown level1 summary"><p>Delete a profile. </p>
+              <a id="Tobii_EyeX_Model_Context_DeleteProfileAsync_" data-uid="Tobii.EyeX.Model.Context.DeleteProfileAsync*"></a>
+              <h4 id="Tobii_EyeX_Model_Context_DeleteProfileAsync_System_String_Tobii_EyeX_Model_AsyncDataHandler_" data-uid="Tobii.EyeX.Model.Context.DeleteProfileAsync(System.String,Tobii.EyeX.Model.AsyncDataHandler)">DeleteProfileAsync(String, AsyncDataHandler)</h4>
+              <div class="markdown level1 summary"><p>Delete a profile asynchronously. </p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void DeleteProfile(string profileName, AsyncDataHandler completionHandler)</code></pre>
+                <pre><code class="lang-csharp hljs">public void DeleteProfileAsync(string profileName, AsyncDataHandler completionHandler)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -835,7 +888,7 @@ Typically used for debugging purposes when having multiple contexts (this name w
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Tobii.EyeX.Model.IContext.html#Tobii_EyeX_Model_IContext_DeleteProfile_System_String_Tobii_EyeX_Model_AsyncDataHandler_">IContext.DeleteProfile(String, AsyncDataHandler)</a></div>
+                  <div><a class="xref" href="Tobii.EyeX.Model.IContext.html#Tobii_EyeX_Model_IContext_DeleteProfileAsync_System_String_Tobii_EyeX_Model_AsyncDataHandler_">IContext.DeleteProfileAsync(String, AsyncDataHandler)</a></div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
@@ -1815,14 +1868,73 @@ When a state that matches the specified path is changed a <a class="xref" href="
               <div><a class="xref" href="Tobii.EyeX.Model.HandleWrapper.html#Tobii_EyeX_Model_HandleWrapper_ReleaseNativeObject_IntPtr_">HandleWrapper.ReleaseNativeObject(IntPtr)</a></div>
               
               
-              <a id="Tobii_EyeX_Model_Context_SetCurrentProfile_" data-uid="Tobii.EyeX.Model.Context.SetCurrentProfile*"></a>
-              <h4 id="Tobii_EyeX_Model_Context_SetCurrentProfile_System_String_Tobii_EyeX_Model_AsyncDataHandler_" data-uid="Tobii.EyeX.Model.Context.SetCurrentProfile(System.String,Tobii.EyeX.Model.AsyncDataHandler)">SetCurrentProfile(String, AsyncDataHandler)</h4>
-              <div class="markdown level1 summary"><p>Set current profile. </p>
+              <a id="Tobii_EyeX_Model_Context_RenameProfileAsync_" data-uid="Tobii.EyeX.Model.Context.RenameProfileAsync*"></a>
+              <h4 id="Tobii_EyeX_Model_Context_RenameProfileAsync_System_String_System_String_Tobii_EyeX_Model_AsyncDataHandler_" data-uid="Tobii.EyeX.Model.Context.RenameProfileAsync(System.String,System.String,Tobii.EyeX.Model.AsyncDataHandler)">RenameProfileAsync(String, String, AsyncDataHandler)</h4>
+              <div class="markdown level1 summary"><p>Rename a profile asynchronously.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void SetCurrentProfile(string profileName, AsyncDataHandler completionHandler)</code></pre>
+                <pre><code class="lang-csharp hljs">public void RenameProfileAsync(string oldProfileName, string profileName, AsyncDataHandler completionHandler)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">oldProfileName</span></td>
+                    <td><p>The name of the profile to rename.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">profileName</span></td>
+                    <td><p>The new name of the profile.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Tobii.EyeX.Model.AsyncDataHandler.html">AsyncDataHandler</a></td>
+                    <td><span class="parametername">completionHandler</span></td>
+                    <td><p>The completion handler invoked when the response from the server arrives. Can be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Tobii.EyeX.Model.IContext.html#Tobii_EyeX_Model_IContext_RenameProfileAsync_System_String_System_String_Tobii_EyeX_Model_AsyncDataHandler_">IContext.RenameProfileAsync(String, String, AsyncDataHandler)</a></div>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Tobii.EyeX.Client.InteractionApiException.html">InteractionApiException</a></td>
+                    <td><p>Will be thrown on errors.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_EyeX_Model_Context_SetCurrentProfileAsync_" data-uid="Tobii.EyeX.Model.Context.SetCurrentProfileAsync*"></a>
+              <h4 id="Tobii_EyeX_Model_Context_SetCurrentProfileAsync_System_String_Tobii_EyeX_Model_AsyncDataHandler_" data-uid="Tobii.EyeX.Model.Context.SetCurrentProfileAsync(System.String,Tobii.EyeX.Model.AsyncDataHandler)">SetCurrentProfileAsync(String, AsyncDataHandler)</h4>
+              <div class="markdown level1 summary"><p>Set current profile asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void SetCurrentProfileAsync(string profileName, AsyncDataHandler completionHandler)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1849,7 +1961,84 @@ When a state that matches the specified path is changed a <a class="xref" href="
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Tobii.EyeX.Model.IContext.html#Tobii_EyeX_Model_IContext_SetCurrentProfile_System_String_Tobii_EyeX_Model_AsyncDataHandler_">IContext.SetCurrentProfile(String, AsyncDataHandler)</a></div>
+                  <div><a class="xref" href="Tobii.EyeX.Model.IContext.html#Tobii_EyeX_Model_IContext_SetCurrentProfileAsync_System_String_Tobii_EyeX_Model_AsyncDataHandler_">IContext.SetCurrentProfileAsync(String, AsyncDataHandler)</a></div>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Tobii.EyeX.Client.InteractionApiException.html">InteractionApiException</a></td>
+                    <td><p>Will be thrown on errors.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_EyeX_Model_Context_SetProfileCalibrationDataAsync_" data-uid="Tobii.EyeX.Model.Context.SetProfileCalibrationDataAsync*"></a>
+              <h4 id="Tobii_EyeX_Model_Context_SetProfileCalibrationDataAsync_System_String_Uri_System_String_System_Int32_System_Byte___Tobii_EyeX_Model_AsyncDataHandler_" data-uid="Tobii.EyeX.Model.Context.SetProfileCalibrationDataAsync(System.String,Uri,System.String,System.Int32,System.Byte[],Tobii.EyeX.Model.AsyncDataHandler)">SetProfileCalibrationDataAsync(String, Uri, String, Int32, Byte[], AsyncDataHandler)</h4>
+              <div class="markdown level1 summary"><p>Store a calibration to a profile asynchronously. </p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void SetProfileCalibrationDataAsync(string profileName, Uri trackerUri, string timestamp, int numOfDataPoints, byte[] data, AsyncDataHandler completionHandler)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">profileName</span></td>
+                    <td><p>The name of the profile to store a calibration for.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Uri</span></td>
+                    <td><span class="parametername">trackerUri</span></td>
+                    <td><p>Url to the tracker to set calibration data for.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">timestamp</span></td>
+                    <td><p>Timestamp for when the calibration was made. Format is MM/dd/yyyy hh:mm:ss tt, e.g. 10/12/2016 1:33:08 PM.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><span class="parametername">numOfDataPoints</span></td>
+                    <td><p>Number of calibration points.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Byte</span>[]</td>
+                    <td><span class="parametername">data</span></td>
+                    <td><p>The calibration data.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Tobii.EyeX.Model.AsyncDataHandler.html">AsyncDataHandler</a></td>
+                    <td><span class="parametername">completionHandler</span></td>
+                    <td><p>The completion handler invoked when the response from the server arrives. Can be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Tobii.EyeX.Model.IContext.html#Tobii_EyeX_Model_IContext_SetProfileCalibrationDataAsync_System_String_Uri_System_String_System_Int32_System_Byte___Tobii_EyeX_Model_AsyncDataHandler_">IContext.SetProfileCalibrationDataAsync(String, Uri, String, Int32, Byte[], AsyncDataHandler)</a></div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>

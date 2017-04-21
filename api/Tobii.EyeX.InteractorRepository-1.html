@@ -35,7 +35,7 @@
               </button>
               
               <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src=".././images/tobii_logo.png" alt="">
+                <img id="logo" class="svg" src=".././images/tobii_coresdk_logo.png" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -78,6 +78,7 @@
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">InteractorRepository&lt;TInteractor&gt;</span></div>
+                  <div class="level2"><a class="xref" href="Tobii.EyeX.VirtualWindowsRepository.html">VirtualWindowsRepository</a></div>
               </div>
               <h6><strong>Namespace</strong>:Tobii.EyeX</h6>
               <h6><strong>Assembly</strong>:Tobii.EyeX.Net.dll</h6>
@@ -198,14 +199,14 @@
                   <div><a class="xref" href="Tobii.EyeX.IInteractorRepository.html#Tobii_EyeX_IInteractorRepository_Clear">IInteractorRepository.Clear()</a></div>
               
               
-              <a id="Tobii_EyeX_InteractorRepository_1_CollectInteractorsAsync_" data-uid="Tobii.EyeX.InteractorRepository`1.CollectInteractorsAsync*"></a>
-              <h4 id="Tobii_EyeX_InteractorRepository_1_CollectInteractorsAsync_Func__0_System_Boolean__" data-uid="Tobii.EyeX.InteractorRepository`1.CollectInteractorsAsync(Func{`0,System.Boolean})">CollectInteractorsAsync(Func&lt;TInteractor, Boolean&gt;)</h4>
+              <a id="Tobii_EyeX_InteractorRepository_1_CollectInteractors_" data-uid="Tobii.EyeX.InteractorRepository`1.CollectInteractors*"></a>
+              <h4 id="Tobii_EyeX_InteractorRepository_1_CollectInteractors_Func__0_System_Boolean__" data-uid="Tobii.EyeX.InteractorRepository`1.CollectInteractors(Func{`0,System.Boolean})">CollectInteractors(Func&lt;TInteractor, Boolean&gt;)</h4>
               <div class="markdown level1 summary"><p>Returns a list of <a class="xref" href="Tobii.EyeX.IInteractor.html">IInteractor</a>s which fulfills the predicate. </p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">protected Task&lt;IReadOnlyList&lt;IInteractor&gt;&gt; CollectInteractorsAsync(Func&lt;TInteractor, bool&gt; predicate)</code></pre>
+                <pre><code class="lang-csharp hljs">protected IEnumerable&lt;IInteractor&gt; CollectInteractors(Func&lt;TInteractor, bool&gt; predicate)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -235,13 +236,13 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Task</span>&lt;<span class="xref">IReadOnlyList</span>&lt;<a class="xref" href="Tobii.EyeX.IInteractor.html">IInteractor</a>&gt;&gt;</td>
-                    <td><p>A <see cref="!:Task"></see> that will result in a list of interactors.</p>
+                    <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Tobii.EyeX.IInteractor.html">IInteractor</a>&gt;</td>
+                    <td><p>A enumerable that will provide interactors.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h5 id="Tobii_EyeX_InteractorRepository_1_CollectInteractorsAsync_Func__0_System_Boolean___remarks">Remarks</h5>
+              <h5 id="Tobii_EyeX_InteractorRepository_1_CollectInteractors_Func__0_System_Boolean___remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>Also includes interactors marked for deletion. This is kind of a hack to include them into a snapshot
 so they&#39;re forcefully deleted on the server side. Deleted interactors are always included, regardless
 if they fulfill the predicate or not.</p>
@@ -302,7 +303,7 @@ if they fulfill the predicate or not.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">protected virtual Task&lt;IReadOnlyList&lt;IInteractor&gt;&gt; FindIntersectingAsync(Query query, CancellationToken cancellationToken)</code></pre>
+                <pre><code class="lang-csharp hljs">protected virtual Task&lt;IEnumerable&lt;IInteractor&gt;&gt; FindIntersectingAsync(Query query, CancellationToken cancellationToken)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -338,7 +339,7 @@ if they fulfill the predicate or not.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Task</span>&lt;<span class="xref">IReadOnlyList</span>&lt;<a class="xref" href="Tobii.EyeX.IInteractor.html">IInteractor</a>&gt;&gt;</td>
+                    <td><span class="xref">Task</span>&lt;<span class="xref">IEnumerable</span>&lt;<a class="xref" href="Tobii.EyeX.IInteractor.html">IInteractor</a>&gt;&gt;</td>
                     <td><p>A task that represents the asynchronous operation
 resulting in a collection of interactors.</p>
 </td>
@@ -495,7 +496,7 @@ resulting in a collection of interactors.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyList&lt;IInteractor&gt;&gt; IInteractorProvider.FindIntersectingAsync(Query query, CancellationToken cancellationToken)</code></pre>
+                <pre><code class="lang-csharp hljs">Task&lt;IEnumerable&lt;IInteractor&gt;&gt; IInteractorProvider.FindIntersectingAsync(Query query, CancellationToken cancellationToken)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -529,7 +530,7 @@ resulting in a collection of interactors.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Task</span>&lt;<span class="xref">IReadOnlyList</span>&lt;<a class="xref" href="Tobii.EyeX.IInteractor.html">IInteractor</a>&gt;&gt;</td>
+                    <td><span class="xref">Task</span>&lt;<span class="xref">IEnumerable</span>&lt;<a class="xref" href="Tobii.EyeX.IInteractor.html">IInteractor</a>&gt;&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>

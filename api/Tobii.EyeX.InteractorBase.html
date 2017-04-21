@@ -35,7 +35,7 @@
               </button>
               
               <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src=".././images/tobii_logo.png" alt="">
+                <img id="logo" class="svg" src=".././images/tobii_coresdk_logo.png" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -79,6 +79,8 @@
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><a class="xref" href="Tobii.EyeX.EventHandlingBase.html">EventHandlingBase</a></div>
                   <div class="level2"><span class="xref">InteractorBase</span></div>
+                  <div class="level3"><a class="xref" href="Tobii.EyeX.Interactor.html">Interactor</a></div>
+                  <div class="level3"><a class="xref" href="Tobii.EyeX.VirtualWindowInteractorBase.html">VirtualWindowInteractorBase</a></div>
               </div>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
@@ -210,7 +212,7 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public bool IsDeleted { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public bool IsDeleted { get; protected set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -230,6 +232,35 @@
               </table>
               <h5 class="implements">Implements</h5>
                   <div><a class="xref" href="Tobii.EyeX.IInteractor.html#Tobii_EyeX_IInteractor_IsDeleted">IInteractor.IsDeleted</a></div>
+              
+              
+              <a id="Tobii_EyeX_InteractorBase_IsEnabled_" data-uid="Tobii.EyeX.InteractorBase.IsEnabled*"></a>
+              <h4 id="Tobii_EyeX_InteractorBase_IsEnabled" data-uid="Tobii.EyeX.InteractorBase.IsEnabled">IsEnabled</h4>
+              <div class="markdown level1 summary"><p>Gets/sets the IsEnabled flag of the interactor.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool IsEnabled { get; protected set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><p>The IsEnabled flag of the interactor.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Tobii.EyeX.IInteractor.html#Tobii_EyeX_IInteractor_IsEnabled">IInteractor.IsEnabled</a></div>
               
               
               <a id="Tobii_EyeX_InteractorBase_Mask_" data-uid="Tobii.EyeX.InteractorBase.Mask*"></a>
@@ -264,7 +295,8 @@ Will be null when the interactor has no mask (the normal case).</p>
               <a id="Tobii_EyeX_InteractorBase_MaskBounds_" data-uid="Tobii.EyeX.InteractorBase.MaskBounds*"></a>
               <h4 id="Tobii_EyeX_InteractorBase_MaskBounds" data-uid="Tobii.EyeX.InteractorBase.MaskBounds">MaskBounds</h4>
               <div class="markdown level1 summary"><p>Gets a rectangle describing the mask bounds. The mask bounds describe the geometry over which the mask applies.
-The X and Y coordinates are relative to the X and Y coordinates of the interactor bounds.</p>
+The X and Y coordinates are relative to the X and Y coordinates of the interactor bounds.
+If no bounds are supplied the same bounds as for the interactor will be assumed.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -533,7 +565,7 @@ the behavior&#39;s type.</p>
                     <td><a class="xref" href="Tobii.EyeX.IBehavior.html">IBehavior</a></td>
                     <td><span class="parametername">behavior</span></td>
                     <td><p>When this method returns, contains the behavior with a behavior type
-equivalent of the behavior type contained in <em>behaviorType</em>,
+equivalent of the behavior type contained in <span class="paramref">behaviorType</span>,
 if the operation succeeded, or <code>null</code> if the operation failed.</p>
 </td>
                   </tr>

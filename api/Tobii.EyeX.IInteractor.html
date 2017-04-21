@@ -35,7 +35,7 @@
               </button>
               
               <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src=".././images/tobii_logo.png" alt="">
+                <img id="logo" class="svg" src=".././images/tobii_coresdk_logo.png" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -151,7 +151,7 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">bool IsDeleted { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">bool IsDeleted { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -165,6 +165,33 @@
                   <tr>
                     <td><span class="xref">System.Boolean</span></td>
                     <td><p>The IsDeleted flag of the interactor.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_EyeX_IInteractor_IsEnabled_" data-uid="Tobii.EyeX.IInteractor.IsEnabled*"></a>
+              <h4 id="Tobii_EyeX_IInteractor_IsEnabled" data-uid="Tobii.EyeX.IInteractor.IsEnabled">IsEnabled</h4>
+              <div class="markdown level1 summary"><p>Gets the IsEnabled flag of the interactor.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">bool IsEnabled { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><p>The IsEnabled flag of the interactor.</p>
 </td>
                   </tr>
                 </tbody>
@@ -201,7 +228,8 @@ Will be <code>null</code> when the interactor has no mask (the normal case).</p>
               <a id="Tobii_EyeX_IInteractor_MaskBounds_" data-uid="Tobii.EyeX.IInteractor.MaskBounds*"></a>
               <h4 id="Tobii_EyeX_IInteractor_MaskBounds" data-uid="Tobii.EyeX.IInteractor.MaskBounds">MaskBounds</h4>
               <div class="markdown level1 summary"><p>Gets a rectangle describing the mask bounds. The mask bounds describe the geometry over which the mask applies.
-The X and Y coordinates are relative to the X and Y coordinates of the interactor bounds.</p>
+The X and Y coordinates are relative to the X and Y coordinates of the interactor bounds.
+If null, the same bounds as for the interactor will be assumed.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -423,7 +451,7 @@ the behavior&#39;s type.</p>
                     <td><a class="xref" href="Tobii.EyeX.IBehavior.html">IBehavior</a></td>
                     <td><span class="parametername">behavior</span></td>
                     <td><p>When this method returns, contains the behavior with a behavior type
-equivalent of the behavior type contained in <em>behaviorType</em>, 
+equivalent of the behavior type contained in <span class="paramref">behaviorType</span>, 
 if the operation succeeded, or <code>null</code> if the operation failed.</p>
 </td>
                   </tr>
@@ -451,9 +479,6 @@ if the operation succeeded, or <code>null</code> if the operation failed.</p>
               </div>
               <div>
                   <a class="xref" href="Tobii.EyeX.InteractorExtensions.html#Tobii_EyeX_InteractorExtensions_GetBehavior_Tobii_EyeX_IInteractor_Tobii_EyeX_Framework_BehaviorType_">InteractorExtensions.GetBehavior(IInteractor, BehaviorType)</a>
-              </div>
-              <div>
-                  <a class="xref" href="Tobii.EyeX.InteractorExtensions.html#Tobii_EyeX_InteractorExtensions_ModifyBehavior__1_Tobii_EyeX_IInteractor_Action___0__">InteractorExtensions.ModifyBehavior&lt;TBehavior&gt;(IInteractor, Action&lt;TBehavior&gt;)</a>
               </div>
             </article>
           </div>

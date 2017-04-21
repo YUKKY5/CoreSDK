@@ -35,7 +35,7 @@
               </button>
               
               <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src=".././images/tobii_logo.png" alt="">
+                <img id="logo" class="svg" src=".././images/tobii_coresdk_logo.png" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -104,7 +104,7 @@
                   <a class="xref" href="Tobii.EyeX.InteractorRepository-1.html#Tobii_EyeX_InteractorRepository_1_Find_Func__0_System_Boolean__">InteractorRepository&lt;VirtualWindowInteractorBase&gt;.Find(Func&lt;VirtualWindowInteractorBase, Boolean&gt;)</a>
                 </div>
                 <div>
-                  <a class="xref" href="Tobii.EyeX.InteractorRepository-1.html#Tobii_EyeX_InteractorRepository_1_CollectInteractorsAsync_Func__0_System_Boolean__">InteractorRepository&lt;VirtualWindowInteractorBase&gt;.CollectInteractorsAsync(Func&lt;VirtualWindowInteractorBase, Boolean&gt;)</a>
+                  <a class="xref" href="Tobii.EyeX.InteractorRepository-1.html#Tobii_EyeX_InteractorRepository_1_CollectInteractors_Func__0_System_Boolean__">InteractorRepository&lt;VirtualWindowInteractorBase&gt;.CollectInteractors(Func&lt;VirtualWindowInteractorBase, Boolean&gt;)</a>
                 </div>
                 <div>
                   <span class="xref">Tobii.EyeX.InteractorRepository&lt;Tobii.EyeX.VirtualWindowInteractorBase&gt;.Tobii.EyeX.IInteractorRepository.Add(Tobii.EyeX.IInteractor)</span>
@@ -159,12 +159,12 @@
               
               <a id="Tobii_EyeX_VirtualWindowsRepository_FindIntersectingAsync_" data-uid="Tobii.EyeX.VirtualWindowsRepository.FindIntersectingAsync*"></a>
               <h4 id="Tobii_EyeX_VirtualWindowsRepository_FindIntersectingAsync_Tobii_EyeX_Model_Query_CancellationToken_" data-uid="Tobii.EyeX.VirtualWindowsRepository.FindIntersectingAsync(Tobii.EyeX.Model.Query,CancellationToken)">FindIntersectingAsync(Query, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Returns a <see cref="!:Task"></see> which result in a collection of <a class="xref" href="Tobii.EyeX.IInteractor.html">IInteractor</a>s that intersect the <em>query</em>.</p>
+              <div class="markdown level1 summary"><p>Returns a <see cref="!:Task"></see> which result in a collection of <a class="xref" href="Tobii.EyeX.IInteractor.html">IInteractor</a>s that intersect the <span class="paramref">query</span>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">protected override Task&lt;IReadOnlyList&lt;IInteractor&gt;&gt; FindIntersectingAsync(Query query, CancellationToken cancellationToken)</code></pre>
+                <pre><code class="lang-csharp hljs">protected override Task&lt;IEnumerable&lt;IInteractor&gt;&gt; FindIntersectingAsync(Query query, CancellationToken cancellationToken)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -200,8 +200,8 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Task</span>&lt;<span class="xref">IReadOnlyList</span>&lt;<a class="xref" href="Tobii.EyeX.IInteractor.html">IInteractor</a>&gt;&gt;</td>
-                    <td><p>a <see cref="!:Task"></see> which result in a collection of <a class="xref" href="Tobii.EyeX.IInteractor.html">IInteractor</a>s that intersect the <em>query</em></p>
+                    <td><span class="xref">Task</span>&lt;<span class="xref">IEnumerable</span>&lt;<a class="xref" href="Tobii.EyeX.IInteractor.html">IInteractor</a>&gt;&gt;</td>
+                    <td><p>a <see cref="!:Task"></see> which result in a collection of <a class="xref" href="Tobii.EyeX.IInteractor.html">IInteractor</a>s that intersect the <span class="paramref">query</span></p>
 </td>
                   </tr>
                 </tbody>

@@ -33,7 +33,7 @@
               </button>
               
               <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src=".././images/tobii_logo.png" alt="">
+                <img id="logo" class="svg" src=".././images/tobii_coresdk_logo.png" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -75,7 +75,7 @@
             <article class="content wrap" id="_content" data-uid="docs_interactors_chapter">
               <h1 id="interactors">Interactors</h1>
               
-<p>Because of its nature, the gaze is not as precise and accurate as a mouse pointer. That is one of the reasons why the Unified Foundations 
+<p>Because of its nature, the gaze is not as precise and accurate as a mouse pointer. That is one of the reasons why the Tobii Core SDK 
 abstracts away all the complexity of handling raw gaze data by introducing the concept of Interactors. </p>
 <p>They are designed to help the developer overcome the low-level signal processing of raw gaze data, and instead 
 exploring the full potential of the eye tracking use cases.</p>
@@ -90,8 +90,8 @@ exploring the full potential of the eye tracking use cases.</p>
 </ul>
 <h3 id="gazeaware-interactor">GazeAware interactor</h3>
 <p>This is probably the simplest interactor to setup and use. Basically, the <em>GazeAware</em> interactor will trigger its callback functions when the user&#39;s gaze enters- or leaves the predefined region on the screen.</p>
-<p>In this example, we have created the <code>Greeter</code> class performs all the setup of the interactor. Depending on where the user is looking the callbacks will either print “Welcome!” or “Goodbye!” in the console window.</p>
-<p>The code sample below is all that is needed to setup the interactor:</p>
+<p>In this example, we have created the <code>Greeter</code> class that performs all the setup of the interactor. Depending on where the user is looking the callbacks will either print “Welcome!” or “Goodbye!” in the console window.</p>
+<p>The code sample below is all that is needed to setup a <em>GazeAware</em> interactor:</p>
 <pre><code class="lang-csharp">using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
@@ -249,9 +249,9 @@ public struct NativeRect
 }
 </code></pre><p>The components required to setup the interactor are basically: <a class="xref" href="../api/Tobii.EyeX.Host.html">Host</a>, <a class="xref" href="../api/Tobii.EyeX.UnboundInteractorAgent.html">UnboundInteractorAgent</a> and <a class="xref" href="../api/Tobii.EyeX.UnboundInteractor.html">UnboundInteractor</a>. In addition to these we need to set the properties of the unbound interactor to get the wanted behavior. </p>
 <ul>
-<li><p>The <code>_host</code> object manages the connection to the Interaction Engine and the Unified Foundations functionality.</p>
+<li><p>The <code>_host</code> object manages the connection to the Interaction Engine and the Tobii Core SDK functionality.</p>
 </li>
-<li><p>From <code>_host</code> we initialize the <code>_interactorAgent</code> with the application&#39;s <code>defaultWindowId</code>, which means that we hook up the unbounded interactor agent with the window. The <code>UnboundInteractorAgent</code> provides a simple and elegant way of configuring unbound interactors for the window elements. </p>
+<li><p>From <code>_host</code> we initialize the <code>_interactorAgent</code> with the application&#39;s <code>defaultWindowId</code>, which means that we hook up the unbounded interactor agent to the window. The <code>UnboundInteractorAgent</code> provides a simple and elegant way of configuring unbound interactors for the window elements. </p>
 </li>
 <li><p>The <code>_greetingInteractor</code> makes it possible to interact with various applications. By telling the <code>_interactorAgent</code> that we want to add an interactor for the area <code>defaultWindowBounds</code> we now have activated that region. </p>
 </li>
@@ -370,7 +370,7 @@ and keyboard input. From a user perspective the triggered actions are totally co
 }
 </code></pre><p>Basically, there are two components involved to setup the interactor: the <a class="xref" href="../api/Tobii.EyeX.Host.html">Host</a>, the <a class="xref" href="../api/Tobii.EyeX.UnboundInteractorAgent.html">UnboundInteractorAgent</a></p>
 <ul>
-<li><p>The <code>host</code> object manages the connection to the Tobii Engine and provides the Unified Foundations functionality.</p>
+<li><p>The <code>host</code> object manages the connection to the Tobii Engine and provides the Tobii Core SDK functionality.</p>
 </li>
 <li><p>The <code>currentWindowHandle</code> is fetched from the <code>Process.GetCurrentProcess</code>.</p>
 </li>
