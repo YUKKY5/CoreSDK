@@ -1,0 +1,1216 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class WpfInteractorAgent&lt;TWpfInteractor&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class WpfInteractorAgent&lt;TWpfInteractor&gt;
+   ">
+    <meta name="generator" content="docfx 2.10.2.0">
+    
+    <link rel="shortcut icon" href=".././images/favicons.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse navbar_center ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src=".././images/tobii_coresdk_logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Tobii_Interaction_Wpf_WpfInteractorAgent_1" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1">Class WpfInteractorAgent&lt;TWpfInteractor&gt;
+              </h1>
+              <div class="markdown level0 summary"><p>Basic implementation of an <a class="xref" href="Tobii.Interaction.IInteractorAgent.html">IInteractorAgent</a> for WPF.
+This generic base class is meant to be inherited.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><a class="xref" href="Tobii.Interaction.InteractorAgent.html">InteractorAgent</a></div>
+                  <div class="level2"><a class="xref" href="Tobii.Interaction.ProviderInteractorAgent-1.html">ProviderInteractorAgent</a>&lt;<a class="xref" href="Tobii.Interaction.WpfInteractorProvider-1.html">WpfInteractorProvider</a>&lt;TWpfInteractor&gt;&gt;</div>
+                  <div class="level3"><span class="xref">WpfInteractorAgent&lt;TWpfInteractor&gt;</span></div>
+                  <div class="level4"><a class="xref" href="Tobii.Interaction.Wpf.WpfInteractorAgent.html">WpfInteractorAgent</a></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <a class="xref" href="Tobii.Interaction.ProviderInteractorAgent-1.html#Tobii_Interaction_ProviderInteractorAgent_1_Provider">ProviderInteractorAgent&lt;WpfInteractorProvider&lt;TWpfInteractor&gt;&gt;.Provider</a>
+                </div>
+                <div>
+                  <a class="xref" href="Tobii.Interaction.ProviderInteractorAgent-1.html#Tobii_Interaction_ProviderInteractorAgent_1_FindInteractorsAsync_Tobii_Interaction_Model_Query_CancellationToken_">ProviderInteractorAgent&lt;WpfInteractorProvider&lt;TWpfInteractor&gt;&gt;.FindInteractorsAsync(Query, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Tobii.Interaction.ProviderInteractorAgent-1.html#Tobii_Interaction_ProviderInteractorAgent_1_PopulateSnapshotAsync_Tobii_Interaction_Model_Snapshot_Tobii_Interaction_Model_Query_CancellationToken_">ProviderInteractorAgent&lt;WpfInteractorProvider&lt;TWpfInteractor&gt;&gt;.PopulateSnapshotAsync(Snapshot, Query, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Tobii.Interaction.InteractorAgent.html#Tobii_Interaction_InteractorAgent_Id">InteractorAgent.Id</a>
+                </div>
+                <div>
+                  <a class="xref" href="Tobii.Interaction.InteractorAgent.html#Tobii_Interaction_InteractorAgent_IsDisposed">InteractorAgent.IsDisposed</a>
+                </div>
+                <div>
+                  <a class="xref" href="Tobii.Interaction.InteractorAgent.html#Tobii_Interaction_InteractorAgent_SnapshotsSuspended">InteractorAgent.SnapshotsSuspended</a>
+                </div>
+                <div>
+                  <a class="xref" href="Tobii.Interaction.InteractorAgent.html#Tobii_Interaction_InteractorAgent_HandleEvent_Tobii_Interaction_Model_InteractionEvent_">InteractorAgent.HandleEvent(InteractionEvent)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Tobii.Interaction.InteractorAgent.html#Tobii_Interaction_InteractorAgent_PreviewHandleQueryAsync_Tobii_Interaction_Model_Query_CancellationToken_">InteractorAgent.PreviewHandleQueryAsync(Query, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Tobii.Interaction.InteractorAgent.html#Tobii_Interaction_InteractorAgent_PopulateSnapshotWithInteractor_Tobii_Interaction_Model_Snapshot_Tobii_Interaction_IInteractor_">InteractorAgent.PopulateSnapshotWithInteractor(Snapshot, IInteractor)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Tobii.Interaction.InteractorAgent.html#Tobii_Interaction_InteractorAgent_Dispose">InteractorAgent.Dispose()</a>
+                </div>
+                <div>
+                  <span class="xref">Tobii.Interaction.InteractorAgent.Tobii.Interaction.IInteractorAgent.PopulateSnapshotAsync(Tobii.Interaction.Model.Snapshot, Tobii.Interaction.Model.Query, CancellationToken)</span>
+                </div>
+                <div>
+                  <span class="xref">Tobii.Interaction.InteractorAgent.Tobii.Interaction.IInteractorAgent.HandleEvent(Tobii.Interaction.Model.InteractionEvent)</span>
+                </div>
+                <div>
+                  <span class="xref">Tobii.Interaction.InteractorAgent.Tobii.Interaction.IInteractorAgent.PreviewHandleQueryAsync(Tobii.Interaction.Model.Query, CancellationToken)</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Tobii.Interaction.Wpf</h6>
+              <h6><strong>Assembly</strong>:Tobii.Interaction.Net.dll</h6>
+              <h5 id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public class WpfInteractorAgent&lt;TWpfInteractor&gt; : ProviderInteractorAgent&lt;WpfInteractorProvider&lt;TWpfInteractor&gt;&gt;, IInteractorAgent, IDisposable, IWpfInteractorAgentXaml, IWpfInteractorAgent where TWpfInteractor : WpfInteractor</code></pre>
+              </div>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="parametername">TWpfInteractor</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="constructors">Constructors
+              </h3>
+              
+              
+              <a id="Tobii_Interaction_Wpf_WpfInteractorAgent_1__ctor_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.#ctor*"></a>
+              <h4 id="Tobii_Interaction_Wpf_WpfInteractorAgent_1__ctor_System_String_Tobii_Interaction_WpfInteractorProvider__0__" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.#ctor(System.String,Tobii.Interaction.WpfInteractorProvider{`0})">WpfInteractorAgent(String, WpfInteractorProvider&lt;TWpfInteractor&gt;)</h4>
+              <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Tobii.Interaction.Wpf.WpfInteractorAgent.html">WpfInteractorAgent</a> class.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public WpfInteractorAgent(string id, WpfInteractorProvider&lt;TWpfInteractor&gt; provider)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">id</span></td>
+                    <td><p>The identifier.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Tobii.Interaction.WpfInteractorProvider-1.html">WpfInteractorProvider</a>&lt;TWpfInteractor&gt;</td>
+                    <td><span class="parametername">provider</span></td>
+                    <td><p>The WPF interactor provider.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="methods">Methods
+              </h3>
+              
+              
+              <a id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_AddInteractorFor_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.AddInteractorFor*"></a>
+              <h4 id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_AddInteractorFor_FrameworkElement_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.AddInteractorFor(FrameworkElement)">AddInteractorFor(FrameworkElement)</h4>
+              <div class="markdown level1 summary"><p>Adds an interactor for a framework element.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public TWpfInteractor AddInteractorFor(FrameworkElement element)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">FrameworkElement</span></td>
+                    <td><span class="parametername">element</span></td>
+                    <td><p>The framework element to add an interactor for.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TWpfInteractor</span></td>
+                    <td><p>An interactor associated with the provided framework element.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_AddInteractorsFor_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.AddInteractorsFor*"></a>
+              <h4 id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_AddInteractorsFor_FrameworkElement___" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.AddInteractorsFor(FrameworkElement[])">AddInteractorsFor(FrameworkElement[])</h4>
+              <div class="markdown level1 summary"><p>Adds interactors for an array of framework elements.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IEnumerable&lt;TWpfInteractor&gt; AddInteractorsFor(params FrameworkElement[] elements)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">FrameworkElement</span>[]</td>
+                    <td><span class="parametername">elements</span></td>
+                    <td><p>The framework elements.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">IEnumerable</span>&lt;TWpfInteractor&gt;</td>
+                    <td><p>A sequence of interactors associated with the provided framework elements.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_AddInteractorsFor_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.AddInteractorsFor*"></a>
+              <h4 id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_AddInteractorsFor_IEnumerable_FrameworkElement__" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.AddInteractorsFor(IEnumerable{FrameworkElement})">AddInteractorsFor(IEnumerable&lt;FrameworkElement&gt;)</h4>
+              <div class="markdown level1 summary"><p>Adds interactors for a sequence of framework elements.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IEnumerable&lt;TWpfInteractor&gt; AddInteractorsFor(IEnumerable&lt;FrameworkElement&gt; elements)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">IEnumerable</span>&lt;<span class="xref">FrameworkElement</span>&gt;</td>
+                    <td><span class="parametername">elements</span></td>
+                    <td><p>The framework elements.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">IEnumerable</span>&lt;TWpfInteractor&gt;</td>
+                    <td><p>A sequence of interactors associated with the provided framework elements.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_BeginInvokeOnDispatcherWithCheck_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.BeginInvokeOnDispatcherWithCheck*"></a>
+              <h4 id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_BeginInvokeOnDispatcherWithCheck__1_Dispatcher_Func___0__" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.BeginInvokeOnDispatcherWithCheck``1(Dispatcher,Func{``0})">BeginInvokeOnDispatcherWithCheck&lt;TResult&gt;(Dispatcher, Func&lt;TResult&gt;)</h4>
+              <div class="markdown level1 summary"><p>Invokes an operation of type <see cref="!:Func&lt;TResult&gt;"></see> on a <see cref="!:Dispatcher"></see> with a check against the dispatcher access.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected static Task&lt;TResult&gt; BeginInvokeOnDispatcherWithCheck&lt;TResult&gt;(Dispatcher dispatcher, Func&lt;TResult&gt; operation)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Dispatcher</span></td>
+                    <td><span class="parametername">dispatcher</span></td>
+                    <td><p>The dispatcher.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Func</span>&lt;TResult&gt;</td>
+                    <td><span class="parametername">operation</span></td>
+                    <td><p>The operation.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Task</span>&lt;TResult&gt;</td>
+                    <td><p>A <see cref="!:Task&lt;TResult&gt;"></see> representing the dispatched operation.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="parametername">TResult</span></td>
+                    <td>The generic result type.</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_DisableActivatableEventEffects_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.DisableActivatableEventEffects*"></a>
+              <h4 id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_DisableActivatableEventEffects" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.DisableActivatableEventEffects">DisableActivatableEventEffects()</h4>
+              <div class="markdown level1 summary"><p>Disables all activatable event effects.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public WpfInteractorAgent&lt;TWpfInteractor&gt; DisableActivatableEventEffects()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Tobii.Interaction.Wpf.WpfInteractorAgent-1.html">WpfInteractorAgent</a>&lt;TWpfInteractor&gt;</td>
+                    <td><p>The <a class="xref" href="Tobii.Interaction.Wpf.WpfInteractorAgent-1.html">WpfInteractorAgent&lt;TWpfInteractor&gt;</a>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_DisableEventEffects_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.DisableEventEffects*"></a>
+              <h4 id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_DisableEventEffects" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.DisableEventEffects">DisableEventEffects()</h4>
+              <div class="markdown level1 summary"><p>Disables all event effects.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public WpfInteractorAgent&lt;TWpfInteractor&gt; DisableEventEffects()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Tobii.Interaction.Wpf.WpfInteractorAgent-1.html">WpfInteractorAgent</a>&lt;TWpfInteractor&gt;</td>
+                    <td><p>The <a class="xref" href="Tobii.Interaction.Wpf.WpfInteractorAgent-1.html">WpfInteractorAgent&lt;TWpfInteractor&gt;</a>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_DispatchWithCheck_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.DispatchWithCheck*"></a>
+              <h4 id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_DispatchWithCheck_Dispatcher_Action_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.DispatchWithCheck(Dispatcher,Action)">DispatchWithCheck(Dispatcher, Action)</h4>
+              <div class="markdown level1 summary"><p>Invokes an operation on a <see cref="!:Dispatcher"></see> with a check against the dispatcher access.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected static void DispatchWithCheck(Dispatcher dispatcher, Action operation)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Dispatcher</span></td>
+                    <td><span class="parametername">dispatcher</span></td>
+                    <td><p>The dispatcher.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Action</span></td>
+                    <td><span class="parametername">operation</span></td>
+                    <td><p>The operation.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_Dispose_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.Dispose*"></a>
+              <h4 id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_Dispose_System_Boolean_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected override void Dispose(bool disposing)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><span class="parametername">disposing</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Tobii.Interaction.InteractorAgent.html#Tobii_Interaction_InteractorAgent_Dispose_System_Boolean_">InteractorAgent.Dispose(Boolean)</a></div>
+              
+              
+              <a id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_EnableActivatableEventEffects_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.EnableActivatableEventEffects*"></a>
+              <h4 id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_EnableActivatableEventEffects" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.EnableActivatableEventEffects">EnableActivatableEventEffects()</h4>
+              <div class="markdown level1 summary"><p>Enables all activatable event effects.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public WpfInteractorAgent&lt;TWpfInteractor&gt; EnableActivatableEventEffects()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Tobii.Interaction.Wpf.WpfInteractorAgent-1.html">WpfInteractorAgent</a>&lt;TWpfInteractor&gt;</td>
+                    <td><p>The <a class="xref" href="Tobii.Interaction.Wpf.WpfInteractorAgent-1.html">WpfInteractorAgent&lt;TWpfInteractor&gt;</a>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_EnableEventEffects_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.EnableEventEffects*"></a>
+              <h4 id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_EnableEventEffects" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.EnableEventEffects">EnableEventEffects()</h4>
+              <div class="markdown level1 summary"><p>Enables all event effects.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public WpfInteractorAgent&lt;TWpfInteractor&gt; EnableEventEffects()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Tobii.Interaction.Wpf.WpfInteractorAgent-1.html">WpfInteractorAgent</a>&lt;TWpfInteractor&gt;</td>
+                    <td><p>The <a class="xref" href="Tobii.Interaction.Wpf.WpfInteractorAgent-1.html">WpfInteractorAgent&lt;TWpfInteractor&gt;</a>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_FindElement_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.FindElement*"></a>
+              <h4 id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_FindElement_System_String_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.FindElement(System.String)">FindElement(String)</h4>
+              <div class="markdown level1 summary"><p>Finds a framework element by an interactor identifier.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public FrameworkElement FindElement(string interactorId)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">interactorId</span></td>
+                    <td><p>The interactor identifier.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">FrameworkElement</span></td>
+                    <td><p>The framework, or <code>null</code> if not found.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_FindInteractor_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.FindInteractor*"></a>
+              <h4 id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_FindInteractor_FrameworkElement_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.FindInteractor(FrameworkElement)">FindInteractor(FrameworkElement)</h4>
+              <div class="markdown level1 summary"><p>Finds the interactor associated with the framework element.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public TWpfInteractor FindInteractor(FrameworkElement element)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">FrameworkElement</span></td>
+                    <td><span class="parametername">element</span></td>
+                    <td><p>The framework element to find a interactor for.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TWpfInteractor</span></td>
+                    <td><p>An interactor associated with the provided framework element, or <code>null</code> if not found.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_FindInteractor_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.FindInteractor*"></a>
+              <h4 id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_FindInteractor_System_String_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.FindInteractor(System.String)">FindInteractor(String)</h4>
+              <div class="markdown level1 summary"><p>Finds an interactor by it&#39;s identity.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public TWpfInteractor FindInteractor(string interactorId)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">interactorId</span></td>
+                    <td><p>The interactor identifier.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TWpfInteractor</span></td>
+                    <td><p>The interactor that corresponds to the provided identity, or <code>null</code> if not found.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_FindInteractors_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.FindInteractors*"></a>
+              <h4 id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_FindInteractors_FrameworkElement___" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.FindInteractors(FrameworkElement[])">FindInteractors(FrameworkElement[])</h4>
+              <div class="markdown level1 summary"><p>Adds interactors associated with an array of framework elements.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IEnumerable&lt;TWpfInteractor&gt; FindInteractors(params FrameworkElement[] elements)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">FrameworkElement</span>[]</td>
+                    <td><span class="parametername">elements</span></td>
+                    <td><p>The framework elements.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">IEnumerable</span>&lt;TWpfInteractor&gt;</td>
+                    <td><p>A sequence of interactors associated with the provided framework elements.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_FindInteractors_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.FindInteractors*"></a>
+              <h4 id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_FindInteractors_IEnumerable_FrameworkElement__" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.FindInteractors(IEnumerable{FrameworkElement})">FindInteractors(IEnumerable&lt;FrameworkElement&gt;)</h4>
+              <div class="markdown level1 summary"><p>Adds interactors associated with a sequence of framework elements.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IEnumerable&lt;TWpfInteractor&gt; FindInteractors(IEnumerable&lt;FrameworkElement&gt; elements)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">IEnumerable</span>&lt;<span class="xref">FrameworkElement</span>&gt;</td>
+                    <td><span class="parametername">elements</span></td>
+                    <td><p>The framework elements.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">IEnumerable</span>&lt;TWpfInteractor&gt;</td>
+                    <td><p>A sequence of interactors associated with the provided framework elements.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_InvokeOnElementAsync_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.InvokeOnElementAsync*"></a>
+              <h4 id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_InvokeOnElementAsync_FrameworkElement_Action_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.InvokeOnElementAsync(FrameworkElement,Action)">InvokeOnElementAsync(FrameworkElement, Action)</h4>
+              <div class="markdown level1 summary"><p>Invoke an <see cref="!:Action"></see> on the UI thread of a <see cref="!:FrameworkElement"></see>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Task InvokeOnElementAsync(FrameworkElement element, Action action)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">FrameworkElement</span></td>
+                    <td><span class="parametername">element</span></td>
+                    <td><p>The framework element.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Action</span></td>
+                    <td><span class="parametername">action</span></td>
+                    <td><p>The action.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Task</span></td>
+                    <td><p>A <see cref="!:Task"></see> representing the invocation.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_InvokeOnElementForInteractorAsync_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.InvokeOnElementForInteractorAsync*"></a>
+              <h4 id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_InvokeOnElementForInteractorAsync__1_System_String_Action___0__" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.InvokeOnElementForInteractorAsync``1(System.String,Action{``0})">InvokeOnElementForInteractorAsync&lt;TElement&gt;(String, Action&lt;TElement&gt;)</h4>
+              <div class="markdown level1 summary"><p>Invoke an <see cref="!:Action"></see> on the UI thread of the <see cref="!:FrameworkElement"></see> referenced by an interactor.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Task InvokeOnElementForInteractorAsync&lt;TElement&gt;(string interactorId, Action&lt;TElement&gt; action)where TElement : FrameworkElement</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">interactorId</span></td>
+                    <td><p>The interactor id.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Action</span>&lt;TElement&gt;</td>
+                    <td><span class="parametername">action</span></td>
+                    <td><p>The action</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Task</span></td>
+                    <td><p>A <see cref="!:Task"></see> representing the invocation.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="parametername">TElement</span></td>
+                    <td>A framework element.</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_RegisterElementEventEffect_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.RegisterElementEventEffect*"></a>
+              <h4 id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_RegisterElementEventEffect_System_String_Tobii_Interaction_Wpf_IElementEventEffect_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.RegisterElementEventEffect(System.String,Tobii.Interaction.Wpf.IElementEventEffect)">RegisterElementEventEffect(String, IElementEventEffect)</h4>
+              <div class="markdown level1 summary"><p>Registers an <a class="xref" href="Tobii.Interaction.Wpf.IElementEventEffect.html">IElementEventEffect</a> with the specified <span class="paramref">eventName</span>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void RegisterElementEventEffect(string eventName, IElementEventEffect effect)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">eventName</span></td>
+                    <td><p>The event name.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Tobii.Interaction.Wpf.IElementEventEffect.html">IElementEventEffect</a></td>
+                    <td><span class="parametername">effect</span></td>
+                    <td><p>The <a class="xref" href="Tobii.Interaction.Wpf.IElementEventEffect.html">IElementEventEffect</a>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_RemoveInteractor_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.RemoveInteractor*"></a>
+              <h4 id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_RemoveInteractor_FrameworkElement_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.RemoveInteractor(FrameworkElement)">RemoveInteractor(FrameworkElement)</h4>
+              <div class="markdown level1 summary"><p>Removes the interactor associated with the framework element.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void RemoveInteractor(FrameworkElement element)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">FrameworkElement</span></td>
+                    <td><span class="parametername">element</span></td>
+                    <td><p>The framework element to remove the associated interactor for.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_RemoveInteractors_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.RemoveInteractors*"></a>
+              <h4 id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_RemoveInteractors_FrameworkElement___" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.RemoveInteractors(FrameworkElement[])">RemoveInteractors(FrameworkElement[])</h4>
+              <div class="markdown level1 summary"><p>Removes the interactors associated with an array of framework elements.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void RemoveInteractors(params FrameworkElement[] elements)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">FrameworkElement</span>[]</td>
+                    <td><span class="parametername">elements</span></td>
+                    <td><p>The framework elements.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_RemoveInteractors_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.RemoveInteractors*"></a>
+              <h4 id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_RemoveInteractors_IEnumerable_FrameworkElement__" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.RemoveInteractors(IEnumerable{FrameworkElement})">RemoveInteractors(IEnumerable&lt;FrameworkElement&gt;)</h4>
+              <div class="markdown level1 summary"><p>Removes the interactors associated with a sequence of framework elements.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void RemoveInteractors(IEnumerable&lt;FrameworkElement&gt; elements)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">IEnumerable</span>&lt;<span class="xref">FrameworkElement</span>&gt;</td>
+                    <td><span class="parametername">elements</span></td>
+                    <td><p>The framework elements.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_Resume_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.Resume*"></a>
+              <h4 id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_Resume" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.Resume">Resume()</h4>
+              <div class="markdown level1 summary"><p>Resumes the agent allowing it to continue sending interactors.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Resume()</code></pre>
+              </div>
+              
+              
+              <a id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_Suspend_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.Suspend*"></a>
+              <h4 id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_Suspend" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.Suspend">Suspend()</h4>
+              <div class="markdown level1 summary"><p>Suspend agent. When suspended interactors won&#39;t be sent to Engine.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Suspend()</code></pre>
+              </div>
+              
+              
+              <a id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_TryCatchWithTaskCompletionSource_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.TryCatchWithTaskCompletionSource*"></a>
+              <h4 id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_TryCatchWithTaskCompletionSource__1_Func___0__TaskCompletionSource___0__" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.TryCatchWithTaskCompletionSource``1(Func{``0},TaskCompletionSource{``0})">TryCatchWithTaskCompletionSource&lt;TResult&gt;(Func&lt;TResult&gt;, TaskCompletionSource&lt;TResult&gt;)</h4>
+              <div class="markdown level1 summary"><p>Invokes an operation of type <see cref="!:Func&lt;TResult&gt;"></see> and binds it to a <see cref="!:TaskCompletionSource&lt;TResult&gt;"></see>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected static void TryCatchWithTaskCompletionSource&lt;TResult&gt;(Func&lt;TResult&gt; operation, TaskCompletionSource&lt;TResult&gt; source)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Func</span>&lt;TResult&gt;</td>
+                    <td><span class="parametername">operation</span></td>
+                    <td><p>The operation.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">TaskCompletionSource</span>&lt;TResult&gt;</td>
+                    <td><span class="parametername">source</span></td>
+                    <td><p>The task completion source.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="parametername">TResult</span></td>
+                    <td>The result type.</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_TryGetInteractor_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.TryGetInteractor*"></a>
+              <h4 id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_TryGetInteractor_System_String_Tobii_Interaction_IInteractor__" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.TryGetInteractor(System.String,Tobii.Interaction.IInteractor@)">TryGetInteractor(String, out IInteractor)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected override bool TryGetInteractor(string id, out IInteractor interactor)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">id</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Tobii.Interaction.IInteractor.html">IInteractor</a></td>
+                    <td><span class="parametername">interactor</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">Tobii.Interaction.ProviderInteractorAgent&lt;Tobii.Interaction.WpfInteractorProvider&lt;TWpfInteractor&gt;&gt;.TryGetInteractor(System.String, Tobii.Interaction.IInteractor)</span></div>
+              
+              
+              <a id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_UnregisterElementEventEffect_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.UnregisterElementEventEffect*"></a>
+              <h4 id="Tobii_Interaction_Wpf_WpfInteractorAgent_1_UnregisterElementEventEffect_System_String_Tobii_Interaction_Wpf_IElementEventEffect_" data-uid="Tobii.Interaction.Wpf.WpfInteractorAgent`1.UnregisterElementEventEffect(System.String,Tobii.Interaction.Wpf.IElementEventEffect)">UnregisterElementEventEffect(String, IElementEventEffect)</h4>
+              <div class="markdown level1 summary"><p>Unregisters an <a class="xref" href="Tobii.Interaction.Wpf.IElementEventEffect.html">IElementEventEffect</a> with the specified <span class="paramref">eventName</span>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void UnregisterElementEventEffect(string eventName, IElementEventEffect effect)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">eventName</span></td>
+                    <td><p>The event name.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Tobii.Interaction.Wpf.IElementEventEffect.html">IElementEventEffect</a></td>
+                    <td><span class="parametername">effect</span></td>
+                    <td><p>The <a class="xref" href="Tobii.Interaction.Wpf.IElementEventEffect.html">IElementEventEffect</a>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,666 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class UnboundInteractorAgent&lt;TInteractor, TData&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class UnboundInteractorAgent&lt;TInteractor, TData&gt;
+   ">
+    <meta name="generator" content="docfx 2.10.2.0">
+    
+    <link rel="shortcut icon" href=".././images/favicons.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse navbar_center ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src=".././images/tobii_coresdk_logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Tobii_Interaction_UnboundInteractorAgent_2" data-uid="Tobii.Interaction.UnboundInteractorAgent`2">Class UnboundInteractorAgent&lt;TInteractor, TData&gt;
+              </h1>
+              <div class="markdown level0 summary"><p>Basic implementation of an unbound <a class="xref" href="Tobii.Interaction.IInteractorAgent.html">IInteractorAgent</a>.
+This generic base class is meant to be inherited and lacks implementations of AddInteractorFor 
+and AddInteractorsFor to complete the common (implicit) ProviderInteractorAgent usage contract.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><a class="xref" href="Tobii.Interaction.InteractorAgent.html">InteractorAgent</a></div>
+                  <div class="level2"><a class="xref" href="Tobii.Interaction.ProviderInteractorAgent-1.html">ProviderInteractorAgent</a>&lt;<a class="xref" href="Tobii.Interaction.IInteractorRepository-1.html">IInteractorRepository</a>&lt;TInteractor&gt;&gt;</div>
+                  <div class="level3"><span class="xref">UnboundInteractorAgent&lt;TInteractor, TData&gt;</span></div>
+                  <div class="level4"><a class="xref" href="Tobii.Interaction.UnboundInteractorAgent.html">UnboundInteractorAgent</a></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <a class="xref" href="Tobii.Interaction.ProviderInteractorAgent-1.html#Tobii_Interaction_ProviderInteractorAgent_1_Provider">ProviderInteractorAgent&lt;IInteractorRepository&lt;TInteractor&gt;&gt;.Provider</a>
+                </div>
+                <div>
+                  <a class="xref" href="Tobii.Interaction.ProviderInteractorAgent-1.html#Tobii_Interaction_ProviderInteractorAgent_1_FindInteractorsAsync_Tobii_Interaction_Model_Query_CancellationToken_">ProviderInteractorAgent&lt;IInteractorRepository&lt;TInteractor&gt;&gt;.FindInteractorsAsync(Query, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Tobii.Interaction.ProviderInteractorAgent-1.html#Tobii_Interaction_ProviderInteractorAgent_1_PopulateSnapshotAsync_Tobii_Interaction_Model_Snapshot_Tobii_Interaction_Model_Query_CancellationToken_">ProviderInteractorAgent&lt;IInteractorRepository&lt;TInteractor&gt;&gt;.PopulateSnapshotAsync(Snapshot, Query, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Tobii.Interaction.ProviderInteractorAgent-1.html#Tobii_Interaction_ProviderInteractorAgent_1_TryGetInteractor_System_String_Tobii_Interaction_IInteractor__">ProviderInteractorAgent&lt;IInteractorRepository&lt;TInteractor&gt;&gt;.TryGetInteractor(String, IInteractor)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Tobii.Interaction.InteractorAgent.html#Tobii_Interaction_InteractorAgent_Id">InteractorAgent.Id</a>
+                </div>
+                <div>
+                  <a class="xref" href="Tobii.Interaction.InteractorAgent.html#Tobii_Interaction_InteractorAgent_IsDisposed">InteractorAgent.IsDisposed</a>
+                </div>
+                <div>
+                  <a class="xref" href="Tobii.Interaction.InteractorAgent.html#Tobii_Interaction_InteractorAgent_SnapshotsSuspended">InteractorAgent.SnapshotsSuspended</a>
+                </div>
+                <div>
+                  <a class="xref" href="Tobii.Interaction.InteractorAgent.html#Tobii_Interaction_InteractorAgent_HandleEvent_Tobii_Interaction_Model_InteractionEvent_">InteractorAgent.HandleEvent(InteractionEvent)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Tobii.Interaction.InteractorAgent.html#Tobii_Interaction_InteractorAgent_PreviewHandleQueryAsync_Tobii_Interaction_Model_Query_CancellationToken_">InteractorAgent.PreviewHandleQueryAsync(Query, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Tobii.Interaction.InteractorAgent.html#Tobii_Interaction_InteractorAgent_PopulateSnapshotWithInteractor_Tobii_Interaction_Model_Snapshot_Tobii_Interaction_IInteractor_">InteractorAgent.PopulateSnapshotWithInteractor(Snapshot, IInteractor)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Tobii.Interaction.InteractorAgent.html#Tobii_Interaction_InteractorAgent_Dispose">InteractorAgent.Dispose()</a>
+                </div>
+                <div>
+                  <span class="xref">Tobii.Interaction.InteractorAgent.Tobii.Interaction.IInteractorAgent.PopulateSnapshotAsync(Tobii.Interaction.Model.Snapshot, Tobii.Interaction.Model.Query, CancellationToken)</span>
+                </div>
+                <div>
+                  <span class="xref">Tobii.Interaction.InteractorAgent.Tobii.Interaction.IInteractorAgent.HandleEvent(Tobii.Interaction.Model.InteractionEvent)</span>
+                </div>
+                <div>
+                  <span class="xref">Tobii.Interaction.InteractorAgent.Tobii.Interaction.IInteractorAgent.PreviewHandleQueryAsync(Tobii.Interaction.Model.Query, CancellationToken)</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Tobii.Interaction</h6>
+              <h6><strong>Assembly</strong>:Tobii.Interaction.Net.dll</h6>
+              <h5 id="Tobii_Interaction_UnboundInteractorAgent_2_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public class UnboundInteractorAgent&lt;TInteractor, TData&gt; : ProviderInteractorAgent&lt;IInteractorRepository&lt;TInteractor&gt;&gt;, IInteractorAgent, IDisposable where TInteractor : IInteractor</code></pre>
+              </div>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="parametername">TInteractor</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="parametername">TData</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="constructors">Constructors
+              </h3>
+              
+              
+              <a id="Tobii_Interaction_UnboundInteractorAgent_2__ctor_" data-uid="Tobii.Interaction.UnboundInteractorAgent`2.#ctor*"></a>
+              <h4 id="Tobii_Interaction_UnboundInteractorAgent_2__ctor_System_String_System_String_Tobii_Interaction_IInteractorRepository__0__Tobii_Interaction_UnboundInteractorAgent__0__1__CreateInteractorDelegate_" data-uid="Tobii.Interaction.UnboundInteractorAgent`2.#ctor(System.String,System.String,Tobii.Interaction.IInteractorRepository{`0},Tobii.Interaction.UnboundInteractorAgent{`0,`1}.CreateInteractorDelegate)">UnboundInteractorAgent(String, String, IInteractorRepository&lt;TInteractor&gt;, UnboundInteractorAgent&lt;TInteractor, TData&gt;.CreateInteractorDelegate)</h4>
+              <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Tobii.Interaction.UnboundInteractorAgent-2.html">UnboundInteractorAgent&lt;TInteractor, TData&gt;</a> class.
+The optional repository and factory delegate allows for customizing the storage 
+and finding of interactors, and/or type of interactor used.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected UnboundInteractorAgent(string agentId, string defaultWindowId, IInteractorRepository&lt;TInteractor&gt; repository, UnboundInteractorAgent&lt;TInteractor, TData&gt;.CreateInteractorDelegate createInteractorDelegate)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">agentId</span></td>
+                    <td><p>The identifier.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">defaultWindowId</span></td>
+                    <td><p>The default window identifier. A window handle is usually an integer, but it should be converted to a string for usage here.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Tobii.Interaction.IInteractorRepository-1.html">IInteractorRepository</a>&lt;TInteractor&gt;</td>
+                    <td><span class="parametername">repository</span></td>
+                    <td><p>The repository to use.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Tobii.Interaction.UnboundInteractorAgent-2.CreateInteractorDelegate.html">UnboundInteractorAgent.CreateInteractorDelegate</a>&lt;&gt;</td>
+                    <td><span class="parametername">createInteractorDelegate</span></td>
+                    <td><p>The function to create interactors with</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="properties">Properties
+              </h3>
+              
+              
+              <a id="Tobii_Interaction_UnboundInteractorAgent_2_DefaultWindowId_" data-uid="Tobii.Interaction.UnboundInteractorAgent`2.DefaultWindowId*"></a>
+              <h4 id="Tobii_Interaction_UnboundInteractorAgent_2_DefaultWindowId" data-uid="Tobii.Interaction.UnboundInteractorAgent`2.DefaultWindowId">DefaultWindowId</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected string DefaultWindowId { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_UnboundInteractorAgent_2_Repository_" data-uid="Tobii.Interaction.UnboundInteractorAgent`2.Repository*"></a>
+              <h4 id="Tobii_Interaction_UnboundInteractorAgent_2_Repository" data-uid="Tobii.Interaction.UnboundInteractorAgent`2.Repository">Repository</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected IInteractorRepository&lt;TInteractor&gt; Repository { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Tobii.Interaction.IInteractorRepository-1.html">IInteractorRepository</a>&lt;TInteractor&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="methods">Methods
+              </h3>
+              
+              
+              <a id="Tobii_Interaction_UnboundInteractorAgent_2_AddInteractorFor_" data-uid="Tobii.Interaction.UnboundInteractorAgent`2.AddInteractorFor*"></a>
+              <h4 id="Tobii_Interaction_UnboundInteractorAgent_2_AddInteractorFor__1_" data-uid="Tobii.Interaction.UnboundInteractorAgent`2.AddInteractorFor(`1)">AddInteractorFor(TData)</h4>
+              <div class="markdown level1 summary"><p>Adds an unbound interactor.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public TInteractor AddInteractorFor(TData data)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TData</span></td>
+                    <td><span class="parametername">data</span></td>
+                    <td><p>Data specific to this unbound interactor.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TInteractor</span></td>
+                    <td><p>The added unbound interactor.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_UnboundInteractorAgent_2_AddInteractorFor_" data-uid="Tobii.Interaction.UnboundInteractorAgent`2.AddInteractorFor*"></a>
+              <h4 id="Tobii_Interaction_UnboundInteractorAgent_2_AddInteractorFor__1_System_String_System_Double_System_String_System_String_" data-uid="Tobii.Interaction.UnboundInteractorAgent`2.AddInteractorFor(`1,System.String,System.Double,System.String,System.String)">AddInteractorFor(TData, String, Double, String, String)</h4>
+              <div class="markdown level1 summary"><p>Adds an unbound interactor.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public TInteractor AddInteractorFor(TData data, string parentId = null, double z = 0, string windowId = null, string id = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TData</span></td>
+                    <td><span class="parametername">data</span></td>
+                    <td><p>Data specific to this unbound interactor.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">parentId</span></td>
+                    <td><p>The interactor&#39;s parent identifier.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Double</span></td>
+                    <td><span class="parametername">z</span></td>
+                    <td><p>The Z order of the interactor.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">windowId</span></td>
+                    <td><p>The window identifier that this interactor belongs to.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">id</span></td>
+                    <td><p>The identifier for this interactor.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TInteractor</span></td>
+                    <td><p>The added unbound interactor.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_UnboundInteractorAgent_2_AddInteractorsFor_" data-uid="Tobii.Interaction.UnboundInteractorAgent`2.AddInteractorsFor*"></a>
+              <h4 id="Tobii_Interaction_UnboundInteractorAgent_2_AddInteractorsFor__1___" data-uid="Tobii.Interaction.UnboundInteractorAgent`2.AddInteractorsFor(`1[])">AddInteractorsFor(TData[])</h4>
+              <div class="markdown level1 summary"><p>Adds unbound interactors for the specified sequence of data.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IEnumerable&lt;TInteractor&gt; AddInteractorsFor(params TData[] datas)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>TData[]</td>
+                    <td><span class="parametername">datas</span></td>
+                    <td><p>The sequence of data.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">IEnumerable</span>&lt;TInteractor&gt;</td>
+                    <td><p>The added unbound interactors.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_UnboundInteractorAgent_2_Clear_" data-uid="Tobii.Interaction.UnboundInteractorAgent`2.Clear*"></a>
+              <h4 id="Tobii_Interaction_UnboundInteractorAgent_2_Clear" data-uid="Tobii.Interaction.UnboundInteractorAgent`2.Clear">Clear()</h4>
+              <div class="markdown level1 summary"><p>Clears the interactor cache.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
+              </div>
+              
+              
+              <a id="Tobii_Interaction_UnboundInteractorAgent_2_Dispose_" data-uid="Tobii.Interaction.UnboundInteractorAgent`2.Dispose*"></a>
+              <h4 id="Tobii_Interaction_UnboundInteractorAgent_2_Dispose_System_Boolean_" data-uid="Tobii.Interaction.UnboundInteractorAgent`2.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected override void Dispose(bool disposing)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><span class="parametername">disposing</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Tobii.Interaction.InteractorAgent.html#Tobii_Interaction_InteractorAgent_Dispose_System_Boolean_">InteractorAgent.Dispose(Boolean)</a></div>
+              
+              
+              <a id="Tobii_Interaction_UnboundInteractorAgent_2_FindInteractor_" data-uid="Tobii.Interaction.UnboundInteractorAgent`2.FindInteractor*"></a>
+              <h4 id="Tobii_Interaction_UnboundInteractorAgent_2_FindInteractor_System_String_" data-uid="Tobii.Interaction.UnboundInteractorAgent`2.FindInteractor(System.String)">FindInteractor(String)</h4>
+              <div class="markdown level1 summary"><p>Finds an interactor using the specified interactor identifier.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public TInteractor FindInteractor(string interactorId)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">interactorId</span></td>
+                    <td><p>The interactor identifier.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TInteractor</span></td>
+                    <td><p>An unbound interactor, or <code>null</code> if not found.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_UnboundInteractorAgent_2_FindInteractors_" data-uid="Tobii.Interaction.UnboundInteractorAgent`2.FindInteractors*"></a>
+              <h4 id="Tobii_Interaction_UnboundInteractorAgent_2_FindInteractors_System_String___" data-uid="Tobii.Interaction.UnboundInteractorAgent`2.FindInteractors(System.String[])">FindInteractors(String[])</h4>
+              <div class="markdown level1 summary"><p>Finds interactors using the specified sequence of interactor identifiers.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IEnumerable&lt;TInteractor&gt; FindInteractors(params string[] ids)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span>[]</td>
+                    <td><span class="parametername">ids</span></td>
+                    <td><p>The interactor identifiers.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">IEnumerable</span>&lt;TInteractor&gt;</td>
+                    <td><p>A sequence of found unbound interactos.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_UnboundInteractorAgent_2_RemoveInteractor_" data-uid="Tobii.Interaction.UnboundInteractorAgent`2.RemoveInteractor*"></a>
+              <h4 id="Tobii_Interaction_UnboundInteractorAgent_2_RemoveInteractor_System_String_" data-uid="Tobii.Interaction.UnboundInteractorAgent`2.RemoveInteractor(System.String)">RemoveInteractor(String)</h4>
+              <div class="markdown level1 summary"><p>Removes an interactor using the specified interactor identifier.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void RemoveInteractor(string interactorId)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">interactorId</span></td>
+                    <td><p>The interactor identifier.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_UnboundInteractorAgent_2_RemoveInteractors_" data-uid="Tobii.Interaction.UnboundInteractorAgent`2.RemoveInteractors*"></a>
+              <h4 id="Tobii_Interaction_UnboundInteractorAgent_2_RemoveInteractors_System_String___" data-uid="Tobii.Interaction.UnboundInteractorAgent`2.RemoveInteractors(System.String[])">RemoveInteractors(String[])</h4>
+              <div class="markdown level1 summary"><p>Removes interactors using the specified sequence of interactor identifiers.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void RemoveInteractors(params string[] ids)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span>[]</td>
+                    <td><span class="parametername">ids</span></td>
+                    <td><p>The interactor identifiers.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_UnboundInteractorAgent_2_Resume_" data-uid="Tobii.Interaction.UnboundInteractorAgent`2.Resume*"></a>
+              <h4 id="Tobii_Interaction_UnboundInteractorAgent_2_Resume" data-uid="Tobii.Interaction.UnboundInteractorAgent`2.Resume">Resume()</h4>
+              <div class="markdown level1 summary"><p>Resumes the agent allowing it to continue sending interactors.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Resume()</code></pre>
+              </div>
+              
+              
+              <a id="Tobii_Interaction_UnboundInteractorAgent_2_Suspend_" data-uid="Tobii.Interaction.UnboundInteractorAgent`2.Suspend*"></a>
+              <h4 id="Tobii_Interaction_UnboundInteractorAgent_2_Suspend" data-uid="Tobii.Interaction.UnboundInteractorAgent`2.Suspend">Suspend()</h4>
+              <div class="markdown level1 summary"><p>Suspend agent. When suspended interactors won&#39;t be sent to Engine.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Suspend()</code></pre>
+              </div>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

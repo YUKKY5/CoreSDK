@@ -1,0 +1,1117 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class InteractorExtensions
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class InteractorExtensions
+   ">
+    <meta name="generator" content="docfx 2.10.2.0">
+    
+    <link rel="shortcut icon" href=".././images/favicons.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse navbar_center ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src=".././images/tobii_coresdk_logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Tobii_Interaction_InteractorExtensions" data-uid="Tobii.Interaction.InteractorExtensions">Class InteractorExtensions
+              </h1>
+              <div class="markdown level0 summary"><p>Contains extensions for <a class="xref" href="Tobii.Interaction.IInteractor.html">IInteractor</a>.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">InteractorExtensions</span></div>
+              </div>
+              <h6><strong>Namespace</strong>:Tobii.Interaction</h6>
+              <h6><strong>Assembly</strong>:Tobii.Interaction.Net.dll</h6>
+              <h5 id="Tobii_Interaction_InteractorExtensions_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static class InteractorExtensions : object</code></pre>
+              </div>
+              <h3 id="methods">Methods
+              </h3>
+              
+              
+              <a id="Tobii_Interaction_InteractorExtensions_GetBehavior_" data-uid="Tobii.Interaction.InteractorExtensions.GetBehavior*"></a>
+              <h4 id="Tobii_Interaction_InteractorExtensions_GetBehavior_Tobii_Interaction_IInteractor_Tobii_Interaction_Framework_BehaviorType_" data-uid="Tobii.Interaction.InteractorExtensions.GetBehavior(Tobii.Interaction.IInteractor,Tobii.Interaction.Framework.BehaviorType)">GetBehavior(IInteractor, BehaviorType)</h4>
+              <div class="markdown level1 summary"><p>Gets a behavior from the specified interactor.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static IBehavior GetBehavior(this IInteractor interactor, BehaviorType type)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Tobii.Interaction.IInteractor.html">IInteractor</a></td>
+                    <td><span class="parametername">interactor</span></td>
+                    <td><p>The interactor.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Tobii.Interaction.Framework.BehaviorType.html">BehaviorType</a></td>
+                    <td><span class="parametername">type</span></td>
+                    <td><p>The behavior type.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Tobii.Interaction.IBehavior.html">IBehavior</a></td>
+                    <td><p>A behavior or <code>null</code> if not found.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_InteractorExtensions_GetBehavior_" data-uid="Tobii.Interaction.InteractorExtensions.GetBehavior*"></a>
+              <h4 id="Tobii_Interaction_InteractorExtensions_GetBehavior__1_Tobii_Interaction_IInteractor_" data-uid="Tobii.Interaction.InteractorExtensions.GetBehavior``1(Tobii.Interaction.IInteractor)">GetBehavior&lt;TBehavior&gt;(IInteractor)</h4>
+              <div class="markdown level1 summary"><p>Gets a behavior from the specified interactor.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static TBehavior GetBehavior&lt;TBehavior&gt;(this IInteractor interactor)where TBehavior : class, IBehavior</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Tobii.Interaction.IInteractor.html">IInteractor</a></td>
+                    <td><span class="parametername">interactor</span></td>
+                    <td><p>The interactor.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TBehavior</span></td>
+                    <td><p>A behavior or <code>null</code> if not found.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="parametername">TBehavior</span></td>
+                    <td>The behavior type.</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_InteractorExtensions_GetOrAdd_" data-uid="Tobii.Interaction.InteractorExtensions.GetOrAdd*"></a>
+              <h4 id="Tobii_Interaction_InteractorExtensions_GetOrAdd__1_IEnumerable_Tobii_Interaction_IMutableBehaviorsInteractor__" data-uid="Tobii.Interaction.InteractorExtensions.GetOrAdd``1(IEnumerable{Tobii.Interaction.IMutableBehaviorsInteractor})">GetOrAdd&lt;TBehavior&gt;(IEnumerable&lt;IMutableBehaviorsInteractor&gt;)</h4>
+              <div class="markdown level1 summary"><p>Gets a specific behavior from a sequence of interactors.
+The behaviors will be created and added if they do not already exist on the interactor.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static IEnumerable&lt;TBehavior&gt; GetOrAdd&lt;TBehavior&gt;(this IEnumerable&lt;IMutableBehaviorsInteractor&gt; interactors)where TBehavior : class, IBehavior, new ()</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Tobii.Interaction.IMutableBehaviorsInteractor.html">IMutableBehaviorsInteractor</a>&gt;</td>
+                    <td><span class="parametername">interactors</span></td>
+                    <td><p>The interactors.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">IEnumerable</span>&lt;TBehavior&gt;</td>
+                    <td><p>A sequence of behaviors.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="parametername">TBehavior</span></td>
+                    <td>The behavior type.</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_InteractorExtensions_GetOrAdd_" data-uid="Tobii.Interaction.InteractorExtensions.GetOrAdd*"></a>
+              <h4 id="Tobii_Interaction_InteractorExtensions_GetOrAdd__2___0_Action___1__" data-uid="Tobii.Interaction.InteractorExtensions.GetOrAdd``2(``0,Action{``1})">GetOrAdd&lt;TInteractor, TBehavior&gt;(TInteractor, Action&lt;TBehavior&gt;)</h4>
+              <div class="markdown level1 summary"><p>Gets a specific behavior from an interactor and configures it using the specified action.
+The behavior will be created and added if it do not already exist on the interactor.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static TInteractor GetOrAdd&lt;TInteractor, TBehavior&gt;(this TInteractor interactor, Action&lt;TBehavior&gt; action)where TInteractor : IMutableBehaviorsInteractor where TBehavior : class, IBehavior, new ()</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TInteractor</span></td>
+                    <td><span class="parametername">interactor</span></td>
+                    <td><p>The interactor.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Action</span>&lt;TBehavior&gt;</td>
+                    <td><span class="parametername">action</span></td>
+                    <td><p>The action used to configure the behavior.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TInteractor</span></td>
+                    <td><p>The same <span class="typeparamref">TInteractor</span> instance so that multiple calls can be chained.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="parametername">TInteractor</span></td>
+                    <td>The interactor type.</td>
+                  </tr>
+                  <tr>
+                    <td><span class="parametername">TBehavior</span></td>
+                    <td>The behavior type.</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_InteractorExtensions_GetOrAdd_" data-uid="Tobii.Interaction.InteractorExtensions.GetOrAdd*"></a>
+              <h4 id="Tobii_Interaction_InteractorExtensions_GetOrAdd__2_IEnumerable___0__Action___1__" data-uid="Tobii.Interaction.InteractorExtensions.GetOrAdd``2(IEnumerable{``0},Action{``1})">GetOrAdd&lt;TInteractor, TBehavior&gt;(IEnumerable&lt;TInteractor&gt;, Action&lt;TBehavior&gt;)</h4>
+              <div class="markdown level1 summary"><p>Gets a specific behavior from a sequence of interactors and configures it using the specified action.
+The behaviors will be created and added if they do not already exist on the interactor.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static IEnumerable&lt;TInteractor&gt; GetOrAdd&lt;TInteractor, TBehavior&gt;(this IEnumerable&lt;TInteractor&gt; interactors, Action&lt;TBehavior&gt; action)where TInteractor : IMutableBehaviorsInteractor where TBehavior : class, IBehavior, new ()</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">IEnumerable</span>&lt;TInteractor&gt;</td>
+                    <td><span class="parametername">interactors</span></td>
+                    <td><p>The interactors.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Action</span>&lt;TBehavior&gt;</td>
+                    <td><span class="parametername">action</span></td>
+                    <td><p>The action used to configure the behaviors.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">IEnumerable</span>&lt;TInteractor&gt;</td>
+                    <td><p>The same <see cref="!:IEnumerable&lt;TInteractor&gt;"></see> instance so that multiple calls can be chained.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="parametername">TInteractor</span></td>
+                    <td>The interactor type.</td>
+                  </tr>
+                  <tr>
+                    <td><span class="parametername">TBehavior</span></td>
+                    <td>The behavior type.</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_InteractorExtensions_WithActivatable_" data-uid="Tobii.Interaction.InteractorExtensions.WithActivatable*"></a>
+              <h4 id="Tobii_Interaction_InteractorExtensions_WithActivatable_IEnumerable_Tobii_Interaction_IMutableBehaviorsInteractor__" data-uid="Tobii.Interaction.InteractorExtensions.WithActivatable(IEnumerable{Tobii.Interaction.IMutableBehaviorsInteractor})">WithActivatable(IEnumerable&lt;IMutableBehaviorsInteractor&gt;)</h4>
+              <div class="markdown level1 summary"><p>Gets an iterator to a sequence of <a class="xref" href="Tobii.Interaction.ActivatableBehavior.html">ActivatableBehavior</a> for the specified interactors.
+The behaviors will be created and added if they does not already exist.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static IEnumerable&lt;ActivatableBehavior&gt; WithActivatable(this IEnumerable&lt;IMutableBehaviorsInteractor&gt; interactors)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Tobii.Interaction.IMutableBehaviorsInteractor.html">IMutableBehaviorsInteractor</a>&gt;</td>
+                    <td><span class="parametername">interactors</span></td>
+                    <td><p>The interactors.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Tobii.Interaction.ActivatableBehavior.html">ActivatableBehavior</a>&gt;</td>
+                    <td><p>An iterator to a sequence of activatable behaviors.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_InteractorExtensions_WithActivatable_" data-uid="Tobii.Interaction.InteractorExtensions.WithActivatable*"></a>
+              <h4 id="Tobii_Interaction_InteractorExtensions_WithActivatable_Tobii_Interaction_IMutableBehaviorsInteractor_" data-uid="Tobii.Interaction.InteractorExtensions.WithActivatable(Tobii.Interaction.IMutableBehaviorsInteractor)">WithActivatable(IMutableBehaviorsInteractor)</h4>
+              <div class="markdown level1 summary"><p>Gets a <a class="xref" href="Tobii.Interaction.ActivatableBehavior.html">ActivatableBehavior</a> for the specified interactor.
+The behavior will be created and added if it do not already exist.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static ActivatableBehavior WithActivatable(this IMutableBehaviorsInteractor interactor)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Tobii.Interaction.IMutableBehaviorsInteractor.html">IMutableBehaviorsInteractor</a></td>
+                    <td><span class="parametername">interactor</span></td>
+                    <td><p>The interactor.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Tobii.Interaction.ActivatableBehavior.html">ActivatableBehavior</a></td>
+                    <td><p>An activatable behavior.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_InteractorExtensions_WithActivatable_" data-uid="Tobii.Interaction.InteractorExtensions.WithActivatable*"></a>
+              <h4 id="Tobii_Interaction_InteractorExtensions_WithActivatable__1___0_Action_Tobii_Interaction_ActivatableBehavior__" data-uid="Tobii.Interaction.InteractorExtensions.WithActivatable``1(``0,Action{Tobii.Interaction.ActivatableBehavior})">WithActivatable&lt;TInteractor&gt;(TInteractor, Action&lt;ActivatableBehavior&gt;)</h4>
+              <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Tobii.Interaction.ActivatableBehavior.html">ActivatableBehavior</a> on the specified interactor if it is not present,
+and configures it using the specified <span class="paramref">action</span>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static TInteractor WithActivatable&lt;TInteractor&gt;(this TInteractor interactor, Action&lt;ActivatableBehavior&gt; action)where TInteractor : IMutableBehaviorsInteractor</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TInteractor</span></td>
+                    <td><span class="parametername">interactor</span></td>
+                    <td><p>The interactor.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Action</span>&lt;<a class="xref" href="Tobii.Interaction.ActivatableBehavior.html">ActivatableBehavior</a>&gt;</td>
+                    <td><span class="parametername">action</span></td>
+                    <td><p>The action to configure the <a class="xref" href="Tobii.Interaction.ActivatableBehavior.html">ActivatableBehavior</a> with.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TInteractor</span></td>
+                    <td><p>The interactor.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="parametername">TInteractor</span></td>
+                    <td>An interactor of type <a class="xref" href="Tobii.Interaction.IMutableBehaviorsInteractor.html">IMutableBehaviorsInteractor</a>.</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_InteractorExtensions_WithActivatable_" data-uid="Tobii.Interaction.InteractorExtensions.WithActivatable*"></a>
+              <h4 id="Tobii_Interaction_InteractorExtensions_WithActivatable__1_IEnumerable___0__Action_Tobii_Interaction_ActivatableBehavior__" data-uid="Tobii.Interaction.InteractorExtensions.WithActivatable``1(IEnumerable{``0},Action{Tobii.Interaction.ActivatableBehavior})">WithActivatable&lt;TInteractor&gt;(IEnumerable&lt;TInteractor&gt;, Action&lt;ActivatableBehavior&gt;)</h4>
+              <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Tobii.Interaction.ActivatableBehavior.html">ActivatableBehavior</a> on all the specified interactors if it is not present,
+and configures them using the specified <span class="paramref">action</span>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static IEnumerable&lt;TInteractor&gt; WithActivatable&lt;TInteractor&gt;(this IEnumerable&lt;TInteractor&gt; interactors, Action&lt;ActivatableBehavior&gt; action)where TInteractor : IMutableBehaviorsInteractor</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">IEnumerable</span>&lt;TInteractor&gt;</td>
+                    <td><span class="parametername">interactors</span></td>
+                    <td><p>The interactors.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Action</span>&lt;<a class="xref" href="Tobii.Interaction.ActivatableBehavior.html">ActivatableBehavior</a>&gt;</td>
+                    <td><span class="parametername">action</span></td>
+                    <td><p>The action to configure the <a class="xref" href="Tobii.Interaction.ActivatableBehavior.html">ActivatableBehavior</a>s with.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">IEnumerable</span>&lt;TInteractor&gt;</td>
+                    <td><p>The interactors.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="parametername">TInteractor</span></td>
+                    <td>An interactor of type <a class="xref" href="Tobii.Interaction.IMutableBehaviorsInteractor.html">IMutableBehaviorsInteractor</a>.</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_InteractorExtensions_WithGazeAware_" data-uid="Tobii.Interaction.InteractorExtensions.WithGazeAware*"></a>
+              <h4 id="Tobii_Interaction_InteractorExtensions_WithGazeAware_IEnumerable_Tobii_Interaction_IMutableBehaviorsInteractor__" data-uid="Tobii.Interaction.InteractorExtensions.WithGazeAware(IEnumerable{Tobii.Interaction.IMutableBehaviorsInteractor})">WithGazeAware(IEnumerable&lt;IMutableBehaviorsInteractor&gt;)</h4>
+              <div class="markdown level1 summary"><p>Gets an iterator to a sequence of <a class="xref" href="Tobii.Interaction.GazeAwareBehavior.html">GazeAwareBehavior</a> for the specified interactors.
+The behaviors will be created and added if they does not already exist.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static IEnumerable&lt;GazeAwareBehavior&gt; WithGazeAware(this IEnumerable&lt;IMutableBehaviorsInteractor&gt; interactors)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Tobii.Interaction.IMutableBehaviorsInteractor.html">IMutableBehaviorsInteractor</a>&gt;</td>
+                    <td><span class="parametername">interactors</span></td>
+                    <td><p>The interactors.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Tobii.Interaction.GazeAwareBehavior.html">GazeAwareBehavior</a>&gt;</td>
+                    <td><p>An iterator to a sequence of gaze aware behaviors.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_InteractorExtensions_WithGazeAware_" data-uid="Tobii.Interaction.InteractorExtensions.WithGazeAware*"></a>
+              <h4 id="Tobii_Interaction_InteractorExtensions_WithGazeAware_Tobii_Interaction_IMutableBehaviorsInteractor_" data-uid="Tobii.Interaction.InteractorExtensions.WithGazeAware(Tobii.Interaction.IMutableBehaviorsInteractor)">WithGazeAware(IMutableBehaviorsInteractor)</h4>
+              <div class="markdown level1 summary"><p>Gets a <a class="xref" href="Tobii.Interaction.GazeAwareBehavior.html">GazeAwareBehavior</a> for the specified interactor.
+The behavior will be created and added if it do not already exist.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static GazeAwareBehavior WithGazeAware(this IMutableBehaviorsInteractor interactor)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Tobii.Interaction.IMutableBehaviorsInteractor.html">IMutableBehaviorsInteractor</a></td>
+                    <td><span class="parametername">interactor</span></td>
+                    <td><p>The interactor.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Tobii.Interaction.GazeAwareBehavior.html">GazeAwareBehavior</a></td>
+                    <td><p>A gaze aware behavior.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_InteractorExtensions_WithGazeAware_" data-uid="Tobii.Interaction.InteractorExtensions.WithGazeAware*"></a>
+              <h4 id="Tobii_Interaction_InteractorExtensions_WithGazeAware__1___0_Action_Tobii_Interaction_GazeAwareBehavior__" data-uid="Tobii.Interaction.InteractorExtensions.WithGazeAware``1(``0,Action{Tobii.Interaction.GazeAwareBehavior})">WithGazeAware&lt;TInteractor&gt;(TInteractor, Action&lt;GazeAwareBehavior&gt;)</h4>
+              <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Tobii.Interaction.GazeAwareBehavior.html">GazeAwareBehavior</a> on the specified interactor if it is not present,
+and configures it using the specified <span class="paramref">action</span>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static TInteractor WithGazeAware&lt;TInteractor&gt;(this TInteractor interactor, Action&lt;GazeAwareBehavior&gt; action)where TInteractor : IMutableBehaviorsInteractor</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TInteractor</span></td>
+                    <td><span class="parametername">interactor</span></td>
+                    <td><p>The interactor.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Action</span>&lt;<a class="xref" href="Tobii.Interaction.GazeAwareBehavior.html">GazeAwareBehavior</a>&gt;</td>
+                    <td><span class="parametername">action</span></td>
+                    <td><p>The action to configure the <a class="xref" href="Tobii.Interaction.GazeAwareBehavior.html">GazeAwareBehavior</a> with.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TInteractor</span></td>
+                    <td><p>The interactor.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="parametername">TInteractor</span></td>
+                    <td>An interactor of type <a class="xref" href="Tobii.Interaction.IMutableBehaviorsInteractor.html">IMutableBehaviorsInteractor</a>.</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_InteractorExtensions_WithGazeAware_" data-uid="Tobii.Interaction.InteractorExtensions.WithGazeAware*"></a>
+              <h4 id="Tobii_Interaction_InteractorExtensions_WithGazeAware__1_IEnumerable___0__Action_Tobii_Interaction_GazeAwareBehavior__" data-uid="Tobii.Interaction.InteractorExtensions.WithGazeAware``1(IEnumerable{``0},Action{Tobii.Interaction.GazeAwareBehavior})">WithGazeAware&lt;TInteractor&gt;(IEnumerable&lt;TInteractor&gt;, Action&lt;GazeAwareBehavior&gt;)</h4>
+              <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Tobii.Interaction.GazeAwareBehavior.html">GazeAwareBehavior</a> on all the specified interactors if it is not present,
+and configures them using the specified <span class="paramref">action</span>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static IEnumerable&lt;TInteractor&gt; WithGazeAware&lt;TInteractor&gt;(this IEnumerable&lt;TInteractor&gt; interactors, Action&lt;GazeAwareBehavior&gt; action)where TInteractor : IMutableBehaviorsInteractor</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">IEnumerable</span>&lt;TInteractor&gt;</td>
+                    <td><span class="parametername">interactors</span></td>
+                    <td><p>The interactors.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Action</span>&lt;<a class="xref" href="Tobii.Interaction.GazeAwareBehavior.html">GazeAwareBehavior</a>&gt;</td>
+                    <td><span class="parametername">action</span></td>
+                    <td><p>The action to configure the <a class="xref" href="Tobii.Interaction.GazeAwareBehavior.html">GazeAwareBehavior</a>s with.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">IEnumerable</span>&lt;TInteractor&gt;</td>
+                    <td><p>The interactors.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="parametername">TInteractor</span></td>
+                    <td>An interactor of type <a class="xref" href="Tobii.Interaction.IMutableBehaviorsInteractor.html">IMutableBehaviorsInteractor</a>.</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_InteractorExtensions_WithPannable_" data-uid="Tobii.Interaction.InteractorExtensions.WithPannable*"></a>
+              <h4 id="Tobii_Interaction_InteractorExtensions_WithPannable_IEnumerable_Tobii_Interaction_IMutableBehaviorsInteractor__" data-uid="Tobii.Interaction.InteractorExtensions.WithPannable(IEnumerable{Tobii.Interaction.IMutableBehaviorsInteractor})">WithPannable(IEnumerable&lt;IMutableBehaviorsInteractor&gt;)</h4>
+              <div class="markdown level1 summary"><p>Gets an iterator to a sequence of <a class="xref" href="Tobii.Interaction.PannableBehavior.html">PannableBehavior</a> for the specified interactors.
+The behaviors will be created and added if they does not already exist.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static IEnumerable&lt;PannableBehavior&gt; WithPannable(this IEnumerable&lt;IMutableBehaviorsInteractor&gt; interactors)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Tobii.Interaction.IMutableBehaviorsInteractor.html">IMutableBehaviorsInteractor</a>&gt;</td>
+                    <td><span class="parametername">interactors</span></td>
+                    <td><p>The interactors.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Tobii.Interaction.PannableBehavior.html">PannableBehavior</a>&gt;</td>
+                    <td><p>An iterator to a sequence of pannable behaviors.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_InteractorExtensions_WithPannable_" data-uid="Tobii.Interaction.InteractorExtensions.WithPannable*"></a>
+              <h4 id="Tobii_Interaction_InteractorExtensions_WithPannable_Tobii_Interaction_IMutableBehaviorsInteractor_" data-uid="Tobii.Interaction.InteractorExtensions.WithPannable(Tobii.Interaction.IMutableBehaviorsInteractor)">WithPannable(IMutableBehaviorsInteractor)</h4>
+              <div class="markdown level1 summary"><p>Gets a <a class="xref" href="Tobii.Interaction.PannableBehavior.html">PannableBehavior</a> for the specified interactor.
+The behavior will be created and added if it do not already exist.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static PannableBehavior WithPannable(this IMutableBehaviorsInteractor interactor)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Tobii.Interaction.IMutableBehaviorsInteractor.html">IMutableBehaviorsInteractor</a></td>
+                    <td><span class="parametername">interactor</span></td>
+                    <td><p>The interactor.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Tobii.Interaction.PannableBehavior.html">PannableBehavior</a></td>
+                    <td><p>A pannable behavior.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_InteractorExtensions_WithPannable_" data-uid="Tobii.Interaction.InteractorExtensions.WithPannable*"></a>
+              <h4 id="Tobii_Interaction_InteractorExtensions_WithPannable__1___0_Action_Tobii_Interaction_PannableBehavior__" data-uid="Tobii.Interaction.InteractorExtensions.WithPannable``1(``0,Action{Tobii.Interaction.PannableBehavior})">WithPannable&lt;TInteractor&gt;(TInteractor, Action&lt;PannableBehavior&gt;)</h4>
+              <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Tobii.Interaction.PannableBehavior.html">PannableBehavior</a> on the specified interactor if it is not present,
+and configures it using the specified <span class="paramref">action</span>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static TInteractor WithPannable&lt;TInteractor&gt;(this TInteractor interactor, Action&lt;PannableBehavior&gt; action)where TInteractor : IMutableBehaviorsInteractor</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TInteractor</span></td>
+                    <td><span class="parametername">interactor</span></td>
+                    <td><p>The interactor.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Action</span>&lt;<a class="xref" href="Tobii.Interaction.PannableBehavior.html">PannableBehavior</a>&gt;</td>
+                    <td><span class="parametername">action</span></td>
+                    <td><p>The action to configure the <a class="xref" href="Tobii.Interaction.PannableBehavior.html">PannableBehavior</a> with.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TInteractor</span></td>
+                    <td><p>The interactor.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="parametername">TInteractor</span></td>
+                    <td>An interactor of type <a class="xref" href="Tobii.Interaction.IMutableBehaviorsInteractor.html">IMutableBehaviorsInteractor</a>.</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="Tobii_Interaction_InteractorExtensions_WithPannable_" data-uid="Tobii.Interaction.InteractorExtensions.WithPannable*"></a>
+              <h4 id="Tobii_Interaction_InteractorExtensions_WithPannable__1_IEnumerable___0__Action_Tobii_Interaction_PannableBehavior__" data-uid="Tobii.Interaction.InteractorExtensions.WithPannable``1(IEnumerable{``0},Action{Tobii.Interaction.PannableBehavior})">WithPannable&lt;TInteractor&gt;(IEnumerable&lt;TInteractor&gt;, Action&lt;PannableBehavior&gt;)</h4>
+              <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Tobii.Interaction.PannableBehavior.html">PannableBehavior</a> on all the specified interactors if it is not present,
+and configures them using the specified <span class="paramref">action</span>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static IEnumerable&lt;TInteractor&gt; WithPannable&lt;TInteractor&gt;(this IEnumerable&lt;TInteractor&gt; interactors, Action&lt;PannableBehavior&gt; action)where TInteractor : IMutableBehaviorsInteractor</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">IEnumerable</span>&lt;TInteractor&gt;</td>
+                    <td><span class="parametername">interactors</span></td>
+                    <td><p>The interactors.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Action</span>&lt;<a class="xref" href="Tobii.Interaction.PannableBehavior.html">PannableBehavior</a>&gt;</td>
+                    <td><span class="parametername">action</span></td>
+                    <td><p>The action to configure the <a class="xref" href="Tobii.Interaction.PannableBehavior.html">PannableBehavior</a>s with.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">IEnumerable</span>&lt;TInteractor&gt;</td>
+                    <td><p>The interactors.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="parametername">TInteractor</span></td>
+                    <td>An interactor of type <a class="xref" href="Tobii.Interaction.IMutableBehaviorsInteractor.html">IMutableBehaviorsInteractor</a>.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
