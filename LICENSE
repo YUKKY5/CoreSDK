@@ -1,3 +1,14 @@
+============================================================================
+License agreement
+============================================================================
+The sample source code is licensed under the MIT License below, but it also requires 
+Tobii propriaritary binares (available on www.nuget.org) to access the eye tracker. 
+Please, note that these referenced libraries are covered by a separate license 
+agreement found at 
+
+https://developer.tobii.com/license-agreement/
+
+----------------------------------------------------------------------------
 MIT License
 
 Copyright (c) 2017 Tobii AB
@@ -19,3 +30,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+----------------------------------------------------------------------------
