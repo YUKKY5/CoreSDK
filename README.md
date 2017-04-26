@@ -33,32 +33,25 @@
 Change log below:
 
 What's new in version 2.1.1:
-============================
 	* Fix bug where WPF interactors did not get deleted properly when hiding the FrameworkElement
 
 What's new in version 2.1.0:
-============================
 	* Added Head Pose stream
 	* Fix bug where WPF interactors did not get deleted properly when removing the FrameworkElement
 
 What's new in version 2.0.5:
-============================
 	* Fix for deleting WPF-interactors which lost behaviors
 	* Fix bug for deleting virtual windows
 
 What's new in version 2.0.4:
-============================
 	* Fix for marshalling strings when handling profile commands
 
 What's new in version 2.0.3:
-============================
 	* Fix for broken interactors
 
 What's new in version 2.0.2:
-============================
 	* API changes
 
 What's new in version 2.0.1:
-============================
 	* Fixed issue which cased NullReferenceException while using WPF Behaviors during design time preview in VS
 	* Fixed issue when unsubscribing from the OnNext event from Streams didn't really unsubscribed.
