@@ -29,7 +29,7 @@ namespace Interaction_VirtualWindows_101
 
             var virtualWindowsAgent = host.InitializeVirtualWindowsAgent();
             var virtualWindow = virtualWindowsAgent.CreateFreeFloatingVirtualWindowAsync("MyVirtualWindow", screenBounds).Result;
-            var unboundInteractorsAgent = host.InitializeUnboundAgent(virtualWindow.Id);
+            var unboundInteractorsAgent = host.InitializeVirtualInteractorAgent(virtualWindow.Id);
 
             unboundInteractorsAgent
                 .AddInteractorFor(screenBounds)

@@ -48,7 +48,7 @@ namespace Interaction_Interactors_102
             // Let's also obtain its bounds using Windows API calls (hidden in a helper method below).
             var currentWindowBounds = GetWindowBounds(currentWindowHandle);
             // Let's create the InteractorAgent.
-            var interactorsAgent = host.InitializeUnboundAgent(currentWindowHandle, "ConsoleWindowAgent");
+            var interactorsAgent = host.InitializeVirtualInteractorAgent(currentWindowHandle, "ConsoleWindowAgent");
 
             interactorsAgent
                 // we will leave default params for everything except bounds and id

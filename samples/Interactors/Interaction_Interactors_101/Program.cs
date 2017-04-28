@@ -37,7 +37,7 @@ namespace Interaction_Interactors_101
             // Let's also obtain its bounds using Windows API calls (hidden in a helper method below).
             var currentWindowBounds = GetWindowBounds(currentWindowHandle);
             // Let's create the InteractorAgent.
-            var interactorAgent = host.InitializeUnboundAgent(currentWindowHandle, "ConsoleWindowAgent");
+            var interactorAgent = host.InitializeVirtualInteractorAgent(currentWindowHandle, "ConsoleWindowAgent");
 
             // Next we are going to create an interactor, which we will define with the gaze aware behavior.
             // Gaze aware behavior simply tells you whether somebody is looking at the interactor or not.
