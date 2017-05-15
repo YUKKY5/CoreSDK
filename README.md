@@ -1,6 +1,6 @@
 # Welcome to Tobii Core SDK samples for .NET!
 
-  This repository contains samples and [documentation](https://tobiitechnology.github.io/TobiiCoreSDK/articles/intro.html) to show developers how to use our API to build interactive _eye tracking_ enabled games and applications on the Microsoft .NET Framework.
+  This repository contains samples and [documentation](https://tobii.github.io/CoreSDK/articles/intro.html) to show developers how to use our API to build interactive _eye tracking_ enabled games and applications on the Microsoft .NET Framework.
 
   These samples are minimal samples designed to showcase the basic use cases.
 
@@ -21,8 +21,7 @@
   Specific features will require newer versions of the Tobii Interaction Engine as listed in the revision history below.
 
 # Dependencies
-  https://www.nuget.org/packages/Tobii.Interaction.Model.dll/   
-  https://www.nuget.org/packages/Tobii.Interaction.Net.dll/
+  https://www.nuget.org/packages/Tobii.Interaction/
 
 # License
 
